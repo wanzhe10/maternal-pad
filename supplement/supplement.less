@@ -1,0 +1,2388 @@
+@import "../css/reset.css";
+@import "../css/root.less";
+body {
+    background-color: #e8e8e8;
+    font-weight: 100;
+    position: relative;
+    .shadow {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+}
+
+input {
+    border: 1px solid #999 !important;
+}
+
+.borderColor {
+    border-color: red !important;
+}
+
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color: #f6f6f6 !important;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #68b7e7;
+    color: #fff;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i {
+    color: #68b7e7;
+}
+
+.layui-form-checkbox[lay-skin=primary] i {
+    border-radius: 100%;
+}
+
+.layui-form-checked[lay-skin=primary] i {
+    border-color: #68b7e7;
+    background-color: #68b7e7;
+    color: #fff;
+}
+
+.layui-form-checkbox[lay-skin=primary]:hover i {
+    border-color: #d2d2d2;
+    color: #fff;
+}
+
+.layui-form-checkbox[lay-skin=primary] span {
+    float: right;
+    background: 0 0;
+    color: #666;
+    .padding-right(15);
+    .line-height(32);
+}
+
+.layui-form-checkbox {
+    position: relative;
+    .height(30);
+    .line-height(30);
+    .margin-right(10);
+    .padding-right(30);
+    border: 1px solid #d2d2d2;
+    cursor: pointer;
+    font-size: 0;
+    border-radius: 2px;
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+    box-sizing: border-box;
+    .margin(20, 0, 20, 0);
+}
+
+.layui-form-checkbox span {
+    background-color: #d2d2d2;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    .padding(0, 10, 0, 10);
+    .font-size(32);
+}
+
+.mgr20 {
+    .margin-right(20) !important;
+}
+
+.mgr24 {
+    .margin-right(24) !important;
+}
+
+.mgr25 {
+    .margin-right(25) !important;
+}
+
+.mgr30 {
+    .margin-right(30);
+}
+
+.mgr40 {
+    .margin-right(40);
+}
+
+.mgr45 {
+    .margin-right(45);
+}
+
+.mgr50 {
+    .margin-right(50);
+}
+
+.mgr55 {
+    .margin-right(55);
+}
+
+.mgr80 {
+    .margin-right(80);
+}
+
+.mgr90 {
+    .margin-right(90);
+}
+
+.mgb30 {
+    .margin-bottom(30);
+}
+
+.marginL20 {
+    .margin-left(20);
+}
+
+.mgl10 {
+    .margin-left(10);
+}
+
+.mgl15 {
+    .margin-left(15);
+}
+
+.mgl20 {
+    position: relative;
+    .margin-left(10);
+    .letter-spacing(30);
+    display: inline-block;
+}
+
+.mgl21 {
+    .margin-left(21);
+}
+
+.mgl25 {
+    .margin-left(25);
+}
+
+.mgl30 {
+    .margin-left(30);
+}
+
+.mgl39 {
+    .margin-left(39) !important;
+}
+
+.mgl222 {
+    .margin-left(222) !important;
+}
+
+.mgl226 {
+    .margin-left(226) !important;
+}
+
+.mgl40 {
+    .margin-left(40);
+}
+
+.mgl48 {
+    .margin-left(48);
+}
+
+.mgl86 {
+    .margin-left(86);
+}
+
+.mgb33 {
+    .margin-bottom(33);
+}
+
+.mgb60 {
+    .margin-bottom(60);
+}
+
+.ls30 {
+    .letter-spacing(30);
+}
+
+.ls15 {
+    .letter-spacing(15);
+}
+
+.ls20 {
+    .letter-spacing(20);
+}
+
+.w120 {
+    .width(120);
+}
+
+.w134 {
+    .width(134);
+}
+
+.w200 {
+    .width(200);
+}
+
+.w238 {
+    .width(238) !important;
+}
+
+.w140 {
+    .width(140);
+}
+
+.w170 {
+    .width(170);
+}
+
+.w194 {
+    .width(194);
+}
+
+.w133 {
+    .width(133);
+}
+
+.w280 {
+    .width(280);
+}
+
+.w309 {
+    .width(300) !important;
+}
+
+.w150 {
+    .width(150) !important;
+}
+
+.w110 {
+    .width(110) !important;
+}
+
+.w115 {
+    .width(115) !important;
+}
+
+.w175 {
+    .width(175) !important;
+}
+
+.fl {
+    float: left; // .margin-bottom(28);
+}
+
+.fr {
+    float: right;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.db {
+    display: block;
+}
+
+.c999 {
+    color: #999999;
+}
+
+.essential_Fl {
+    .margin-right(30);
+    span {
+        float: left;
+        .margin(15, 40, 0, 0);
+    }
+}
+
+#mgr0 {
+    .margin-right(0);
+    .padding-right(15);
+}
+
+.redFont {
+    .letter-spacing(0);
+    .font-size(28);
+    color: #ff2002;
+    position: absolute;
+    .bottom(-35);
+    .left(0);
+    .margin-top(10);
+    display: none;
+}
+
+.errorIon {
+    .width(32);
+    .height(32);
+    position: absolute;
+    .top(20);
+    .right(17);
+    display: none;
+}
+
+#w245 {
+    .width(245);
+}
+
+.layui-tab-title .layui-this:after {
+    border-bottom: 2px solid #68b7e7;
+    .height(95); // .top(7);
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #68b7e7;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #68b7e7;
+}
+
+.layui-tab-title li {
+    .line-height(40);
+}
+
+.layui-input-block {
+    .margin-left(0);
+}
+
+.layui-form-select {
+    display: inline-block !important;
+    border: none;
+}
+
+.management {
+    position: relative;
+    .top(57);
+    .left(90);
+    .font-size(48);
+    color: @666;
+    position: fixed;
+    z-index: 10;
+    .top(57);
+    &:before {
+        content: ' ';
+        position: absolute;
+        .top(13);
+        .left(-18); // transform: translate(-50%,0);
+        .width(8);
+        .height(48);
+        background: #68b7e7;
+    }
+}
+
+.selItem {
+    position: relative;
+    .margin(0, 45, 0, 30);
+    display: inline-flex;
+    .line-height(84);
+    >span {
+        display: block;
+        .font-size(32);
+        color: @333;
+    }
+    >input {
+        .width(908);
+        .height(67);
+        .font-size(32);
+        color: #666666;
+        .margin-bottom(15);
+        border-color: #999999;
+        .margin-left(35);
+        .padding-left(30);
+    }
+    >a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    >img {
+        position: absolute; // .top(0);
+        top: 40%;
+        transform: translateY(-50%);
+        .right(35);
+        .width(18);
+        .height(28);
+    }
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    .margin(155, 40, 0, 40);
+    .padding-bottom(110);
+    .leftBox {
+        .box-shadow();
+        .height(1260);
+        position: relative;
+        float: left;
+        background-color: #fff;
+        .width(325);
+        position: fixed;
+        .top(155);
+        ul {
+            li {
+                position: relative;
+                .newsIcon {
+                    background: url("/maternal-ipad/functionPage/icon1.1.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .newsIcon2 {
+                    background: url("/maternal-ipad/functionPage/icon1.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .recordIcon {
+                    background: url("/maternal-ipad/functionPage/icon2.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .recordIcon2 {
+                    background: url("/maternal-ipad/functionPage/icon2.2.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .assessIcon {
+                    background: url("/maternal-ipad/functionPage/icon3.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .assessIcon2 {
+                    background: url("/maternal-ipad/functionPage/icon3.3.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .affirmIcon {
+                    background: url("/maternal-ipad/functionPage/icon4.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .affirmIcon2 {
+                    background: url("/maternal-ipad/functionPage/icon4.4.png") no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    .background-size(50,
+                    60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .icon2 {
+                    display: none;
+                }
+                position: relative;
+                .height(120);
+                .width(325);
+                border-bottom: 1px solid #cccccc;
+                text-align: center;
+                .line-height(120);
+                span {
+                    .margin-left(30);
+                    .font-size(36);
+                    color: #666666;
+                }
+                .active {
+                    color: #68b7e7;
+                }
+                .Icon1 {
+                    display: none;
+                }
+            }
+        }
+        .iocn {
+            .width(28);
+            .height(33);
+            .border-width(15);
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: white;
+            position: absolute;
+            .top(40);
+            .right(-30);
+            transition: 0.5s all;
+        }
+    }
+    .rightBox {
+        .box-shadow();
+        background-color: #fff;
+        float: right;
+        position: relative;
+        .content {
+            background-color: #fff;
+            .width(1610);
+            display: none;
+        } // 孕妇信息页
+        .womenInformation {
+            .tebBox {
+                ul {
+                    //   .height(102);
+                    .padding-bottom(120);
+                    li {
+                        .font-size(40); // color: #68b7e7;
+                        .margin(30,
+                        0,
+                        25,
+                        45);
+                        .padding(0,
+                        0,
+                        0,
+                        0);
+                    }
+                }
+                .layui-tab-content {
+                    // 孕妇基本信息
+                    .essential {
+                        .font-size(36);
+                        .margin(40,
+                        40,
+                        0,
+                        40);
+                        color: #333333; //  块1
+                        .essential_box1 {
+                            .padding-bottom(10);
+                            border-bottom: 1px dashed #999999;
+                            .layui-form {
+                                .essential_box1Div {
+                                    .margin-bottom(30);
+                                    position: relative;
+                                    display: inline-block;
+                                    border: 1px solid #999;
+                                }
+                                .mgl10 {
+                                    display: inline-block; //    float: left;
+                                    position: relative;
+                                    .margin(0,
+                                    37,
+                                    10,
+                                    36);
+                                    .margin-left(10);
+                                }
+                                input {
+                                    .width(512);
+                                    .height(78);
+                                    .font-size(32);
+                                    color: #666666;
+                                    .padding-left(30);
+                                    border: none !important;
+                                }
+                            }
+                            .birthBox {
+                                .width(512); //  .height(78);
+                                // border:1px solid #999;
+                                .pregnantDateBirth {
+                                    .width(342);
+                                    .height(78); //   border:none;
+                                    border: none !important;
+                                    border-right: 1px solid #999 !important;
+                                }
+                                .birth {
+                                    position: absolute;
+                                    .top(10);
+                                    .right(0);
+                                    display: inline;
+                                    .font-size(32);
+                                    color: #666666;
+                                    .birth_age {
+                                        position: relative;
+                                        .margin(10,
+                                        25,
+                                        25,
+                                        25);
+                                        &:before {
+                                            content: ' ';
+                                            position: absolute;
+                                            .top(-10);
+                                            .right(-30); // transform: translate(-50%,0);
+                                            .width(2);
+                                            .height(54);
+                                            background: #cccccc;
+                                        }
+                                    }
+                                    .birth_sex {
+                                        .margin(10,
+                                        25,
+                                        25,
+                                        25);
+                                    }
+                                }
+                            }
+                            .kg,
+                            .sui {
+                                .margin(10,
+                                0,
+                                25,
+                                25);
+                                .font-size(32);
+                                color: #666666;
+                                position: absolute;
+                                top: 0;
+                                .right(30);
+                                &:before {
+                                    content: ' ';
+                                    position: absolute;
+                                    .top(0);
+                                    .left(-30); // transform: translate(-50%,0);
+                                    .width(2);
+                                    .height(54);
+                                    background: #cccccc;
+                                }
+                            }
+                        }
+                        .essential_box2 {
+                            .padding-bottom(10);
+                            .padding-top(50);
+                            border-bottom: 1px dashed #999999;
+                            span {
+                                .margin-right(30);
+                            }
+                            .layui-form {
+                                div {
+                                    display: inline-block; //  .width(208);
+                                    .height(80);
+                                    .margin-bottom(30);
+                                    input {
+                                        .font-size(32);
+                                        .padding-left(30);
+                                    }
+                                }
+                                .layui-form-select {
+                                    // .margin-left(35);
+                                    .margin-bottom(45);
+                                }
+                                .layui-unselect {
+                                    // .width(208);
+                                    // .height(80);
+                                    width: 100%;
+                                    height: 100%;
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                    background-color: #f6f6f6;
+                                    color: #666666;
+                                    text-align: center;
+                                }
+                                .work {
+                                    .width(498);
+                                    .height(78);
+                                    border-width: 1px;
+                                    border-style: solid;
+                                    color: #666666;
+                                    border-color: #999999;
+                                    .padding-left(30);
+                                    .font-size(30);
+                                    .margin-left(30);
+                                }
+                            }
+                        }
+                        .essential_box3 {
+                            .padding-top(60);
+                            .layui-form {
+                                .layui-form-select {
+                                    .margin-left(35);
+                                    .margin-bottom(45);
+                                }
+                                .layui-unselect {
+                                    .width(400);
+                                    .height(67);
+                                    .font-size(32);
+                                    color: #666666;
+                                    .margin-bottom(15);
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                }
+                            }
+                            .essential_box3_top {
+                                .presentAddress,
+                                .registeredLocation {
+                                    .margin-bottom(35);
+                                    .margin-left(220);
+                                    .font-size(32);
+                                    .width(908);
+                                    .height(78); // display: block;
+                                    border-width: 1px;
+                                    .padding-left(30);
+                                    border-style: solid;
+                                    color: #666666;
+                                    border-color: #999999;
+                                }
+                                .selItem {
+                                    position: relative;
+                                    .margin(0,
+                                    45,
+                                    0,
+                                    30);
+                                    display: inline-flex;
+                                    .line-height(84);
+                                    >span {
+                                        display: block;
+                                        .font-size(32);
+                                        color: @333;
+                                    }
+                                    >input {
+                                        .margin-top(10);
+                                        .width(908);
+                                        .height(67);
+                                        .font-size(32);
+                                        color: #666666;
+                                        .margin-bottom(15);
+                                        border-color: #999999;
+                                        .margin-left(35);
+                                        .padding-left(30);
+                                    }
+                                    >a {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        z-index: 1;
+                                    }
+                                    >img {
+                                        position: absolute; // .top(0);
+                                        top: 40%;
+                                        transform: translateY(-50%);
+                                        .right(35);
+                                        .width(18);
+                                        .height(28);
+                                    }
+                                }
+                            }
+                        }
+                    } //  配偶一般信息
+                    .spouse {
+                        .font-size(36);
+                        .margin(40,
+                        40,
+                        0,
+                        40);
+                        color: #333333; //  块1
+                        .spouse_box1 {
+                            .padding-bottom(10);
+                            border-bottom: 2px dashed #999999;
+                            .layui-form {
+                                .box1Div {
+                                    .margin-bottom(30);
+                                    position: relative;
+                                    display: inline-block;
+                                    border: 1px solid #999;
+                                }
+                                .mgl10 {
+                                    display: inline-block;
+                                    position: relative;
+                                    .margin(0,
+                                    37,
+                                    10,
+                                    36);
+                                    .margin-left(10);
+                                }
+                                input {
+                                    .width(512);
+                                    .height(78);
+                                    .font-size(32);
+                                    color: #666666;
+                                    .padding-left(30);
+                                    border: none !important;
+                                }
+                            }
+                            .birthBox {
+                                .width(512);
+                                .height(78);
+                                border-width: 1px;
+                                border-style: solid;
+                                border-color: #999999;
+                                .pregnantDateBirth {
+                                    .width(342);
+                                    .height(70);
+                                    border: none !important;
+                                    border-right: 1px solid #999 !important;
+                                }
+                                .birth {
+                                    position: absolute;
+                                    .top(10);
+                                    .right(0);
+                                    display: inline;
+                                    .font-size(32);
+                                    color: #666666;
+                                    .birth_age {
+                                        position: relative;
+                                        .margin(10,
+                                        25,
+                                        25,
+                                        25);
+                                        &:before {
+                                            content: ' ';
+                                            position: absolute;
+                                            .top(-10);
+                                            .right(-30); // transform: translate(-50%,0);
+                                            .width(2);
+                                            .height(54);
+                                            background: #cccccc;
+                                        }
+                                    }
+                                    .birth_sex {
+                                        .margin(10,
+                                        25,
+                                        25,
+                                        25);
+                                    }
+                                }
+                            }
+                            .kg,
+                            .sui {
+                                .margin(10,
+                                0,
+                                25,
+                                25);
+                                .font-size(32);
+                                color: #666666;
+                                position: absolute;
+                                top: 0;
+                                .right(30);
+                                &:before {
+                                    content: ' ';
+                                    position: absolute;
+                                    .top(0);
+                                    .left(-30); // transform: translate(-50%,0);
+                                    .width(2);
+                                    .height(54);
+                                    background: #cccccc;
+                                }
+                            }
+                        } //  块2
+                        .spouse_box2 {
+                            .padding-bottom(10);
+                            .padding-top(50);
+                            border-bottom: 1px dashed #999999;
+                            span {
+                                .margin-right(30);
+                            }
+                            .layui-form {
+                                div {
+                                    display: inline-block;
+                                    .height(65);
+                                    .margin-bottom(50);
+                                    input {
+                                        .padding-left(30);
+                                        .font-size(32);
+                                    }
+                                }
+                                .layui-form-select {
+                                    // .margin-left(35);
+                                    .margin-bottom(45);
+                                }
+                                .layui-unselect {
+                                    width: 100%;
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                    background-color: #f6f6f6; // border-top:none;
+                                    color: #666;
+                                    text-align: center;
+                                }
+                                .work {
+                                    .width(498);
+                                    .height(78);
+                                    border-width: 1px;
+                                    border-style: solid;
+                                    color: #666666;
+                                    border-color: #999999;
+                                    .padding-left(30);
+                                    .font-size(30);
+                                    .margin-left(30);
+                                }
+                            }
+                        } // 块3
+                        .spouse_box3 {
+                            .padding(50,
+                            0,
+                            45,
+                            0);
+                            border-bottom: 1px dashed #999999;
+                            .layui-form {
+                                .layui-form-radio * {
+                                    .font-size(32);
+                                }
+                                .spouse_box3_top {
+                                    .padding-left(40);
+                                    background-color: #f6f6f6;
+                                    .height(125);
+                                    .line-height(125);
+                                    .margin-bottom(20);
+                                    .cigaretteNUm {
+                                        background-color: #ccc;
+                                    }
+                                    input {
+                                        .width(160);
+                                        .height(60);
+                                        .padding-left(30);
+                                        border-width: 1px;
+                                        border-color: #999999;
+                                        border-style: solid;
+                                        background-color: #fff;
+                                    }
+                                    span:nth-child(1) {
+                                        .margin-right(30);
+                                    }
+                                    .layui-form-radio {
+                                        .line-height(28);
+                                        .margin(0,
+                                        0,
+                                        0,
+                                        0);
+                                        font-size: 0;
+                                    }
+                                }
+                                .spouse_box3_bottom {
+                                    background-color: #f6f6f6;
+                                    .spouse_box3_bottom_left {
+                                        .width(185);
+                                        .height(185);
+                                        .font-size(36);
+                                        .line-height(185);
+                                        text-align: center;
+                                        .border-right(1);
+                                        border-right-color: #999999;
+                                        border-right-style: solid;
+                                    }
+                                    .spouse_box3_bottom_right {
+                                        .width(1000);
+                                        .choose {
+                                            position: relative;
+                                            .width(1195);
+                                            .padding(15,
+                                            0,
+                                            15,
+                                            30);
+                                            border-bottom: 1px;
+                                            border-bottom-color: #333333;
+                                            border-bottom-style: solid;
+                                            .choose_no {
+                                                // .margin-left(30);
+                                            }
+                                            .inquire {
+                                                .width(500);
+                                                .height(56);
+                                                background-color: #ccc;
+                                                border-width: 1px;
+                                                border-style: solid;
+                                                border-color: #999999;
+                                                .font-size(26);
+                                                color: #cccccc;
+                                                .padding-left(20);
+                                                .margin-left(70);
+                                            }
+                                            .hideBox {
+                                                .width(500);
+                                                .height(350);
+                                                background-color: #fff;
+                                                border-width: 1px;
+                                                border-style: solid;
+                                                border-color: #999999;
+                                                display: none;
+                                                position: absolute;
+                                                .top(75);
+                                                .right(335);
+                                                z-index: 10;
+                                                overflow: scroll;
+                                                li {
+                                                    .font-size(24);
+                                                    margin: 0;
+                                                    .padding(20,
+                                                    0,
+                                                    20,
+                                                    30);
+                                                    border-bottom: 1px;
+                                                    border-bottom-style: solid;
+                                                    border-bottom-color: #999;
+                                                }
+                                            }
+                                        }
+                                        .supeDisease {
+                                            // display: none;
+                                            div {
+                                                position: relative;
+                                                display: inline-block;
+                                                .margin(25,
+                                                25,
+                                                25,
+                                                25);
+                                                .padding(13,
+                                                15,
+                                                13,
+                                                15);
+                                                background-color: #a1d0ed;
+                                                text-align: center;
+                                                color: #666666;
+                                                .font-size(22);
+                                                .deteleIcon {
+                                                    background: url("/maternal-ipad/functionPage/delete.png") no-repeat 0 0;
+                                                    .width(28);
+                                                    .height(28);
+                                                    position: absolute;
+                                                    .top(-10);
+                                                    .right(-20);
+                                                    .background-size(25,
+                                                    25);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } //  块4
+                        .spouse_box4 {
+                            .padding-top(50);
+                            .layui-form {
+                                .layui-form-select {
+                                    .margin-left(35);
+                                    .margin-bottom(45);
+                                }
+                                .layui-unselect {
+                                    .width(400);
+                                    .height(67);
+                                    .font-size(32);
+                                    color: #666;
+                                    .margin-bottom(15);
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                }
+                            }
+                        } // div {
+                        .spouseSite {
+                            .margin-bottom(35);
+                            .margin-left(220);
+                            .width(908);
+                            .font-size(32);
+                            .height(78);
+                            display: block;
+                            border-width: 1px;
+                            .padding-left(30);
+                            border-style: solid;
+                            color: #666666;
+                            border-color: #999999;
+                        } // }
+                    }
+                }
+            }
+        } // 初诊记录页
+        .newRecord {
+            .padding-bottom(80);
+            .tebBox {
+                ul {
+                    //   .height(102);
+                    .padding-bottom(120);
+                    li {
+                        .font-size(40); // color: #68b7e7;
+                        .margin(30,
+                        0,
+                        25,
+                        45);
+                        .padding(0,
+                        0,
+                        0,
+                        0);
+                    }
+                } // 孕妇信息模块
+                .recordBox {
+                    .font-size(36);
+                    .margin(40,
+                    40,
+                    0,
+                    40);
+                    color: #333333; //  块1
+                    // 块1
+                    .recordBox1 {
+                        .padding-bottom(10);
+                        border-bottom: 1px dashed #999999;
+                        input {
+                            .width(288);
+                            .height(68);
+                            display: inline-block;
+                            .padding-left(30); // .margin-left(30);
+                            border-width: 1px;
+                            border-style: solid;
+                            border-color: #999999;
+                        }
+                        .newAgeOfMenarche,
+                        .newAgeOfMenarcheDay {
+                            .width(108) !important;
+                            text-align: center;
+                            .padding-left(0); // .margin-left(30);
+                        }
+                        .birthBox {
+                            position: relative;
+                            display: inline-block;
+                            .width(288);
+                            .birth {
+                                position: absolute;
+                                .top(5);
+                                .right(0);
+                                display: inline;
+                                .font-size(32);
+                                .margin(10,
+                                25,
+                                25,
+                                25);
+                                &:before {
+                                    content: ' ';
+                                    position: absolute;
+                                    .top(-10);
+                                    .left(-30); // transform: translate(-50%,0);
+                                    .width(2);
+                                    .height(54);
+                                    background: #cccccc;
+                                }
+                                color: #666666;
+                            }
+                        }
+                        .ls30 {
+                            .margin-right(10);
+                        }
+                    } // 块2
+                    .recordBox2 {
+                        .padding-bottom(50);
+                        border-bottom: 1px dashed #999999;
+                        .recordBox2_top {
+                            .padding-top(55);
+                            display: inline-block;
+                            .layui-form-select {
+                                // .margin-left(35);
+                                .margin-bottom(45);
+                            }
+                            .layui-unselect {
+                                .width(158);
+                                .height(65);
+                                .font-size(32);
+                                color: #666666;
+                                border-color: #999999;
+                                background-color: #f6f6f6; // border-top:none;
+                                .border-radius(10,
+                                10,
+                                10,
+                                10);
+                                color: #666;
+                                text-align: center;
+                            }
+                            .pregnancyNum {
+                                .font-size(34);
+                                color: #666666;
+                                text-align: center;
+                                display: inline-block;
+                                .width(160);
+                                .height(68);
+                                display: none; // border-width: 1px;
+                                // border-style: solid;
+                                // border-color: #999999;
+                                // position: absolute;
+                                // z-index: 10;
+                                // opacity: 0;
+                            }
+                        }
+                        .tableShade {
+                            position: absolute;
+                            .top(610);
+                            left: 0;
+                            width: 100%;
+                            .height(120);
+                            z-index: 2;
+                            background-color: #fff;
+                            opacity: 0;
+                        }
+                        .layui-table {
+                            .margin(30,
+                            0,
+                            0,
+                            0);
+                            th {
+                                .font-size(36);
+                                color: #333333;
+                                text-align: center;
+                                .padding(30,
+                                0,
+                                30,
+                                0);
+                                background-color: #f6f6f6;
+                            }
+                            tr {
+                                text-align: center;
+                                .font-size(34);
+                                color: #666;
+                            }
+                            tr:nth-child(2n) {
+                                input {
+                                    background-color: #f6f6f6 !important;
+                                }
+                            }
+                            td {
+                                .height(100);
+                                .padding(0,
+                                0,
+                                0,
+                                0);
+                                .min-height(100); // .line-height(20);
+                                // .font-size(14);
+                                input {
+                                    opacity: 1;
+                                    width: 100%;
+                                    height: 100%;
+                                    border: none !important;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .layui-table tbody tr:nth-child(2n-1):hover {
+                            background: none !important;
+                        }
+                    } // 块3
+                    .recordBox3 {
+                        .padding-bottom(10);
+                        .padding-top(50);
+                        border-bottom: 1px dashed #999999;
+                        .layui-form {
+                            div {
+                                display: inline-block;
+                                input {
+                                    .font-size(32);
+                                    .width(310);
+                                    .height(60);
+                                    display: inline-block;
+                                    .padding-left(30);
+                                }
+                            }
+                            .layui-form-select {
+                                .margin-left(35);
+                                .margin-bottom(45);
+                            }
+                            .layui-unselect {
+                                .width(158);
+                                .height(65);
+                                .font-size(32);
+                                color: #666666;
+                                border-color: #999999;
+                                background-color: #f6f6f6; // border-top:none;
+                                .border-radius(10,
+                                10,
+                                10,
+                                10);
+                                color: #666;
+                            }
+                            .work {
+                                .width(498);
+                                .height(78);
+                                border-width: 1px;
+                                border-style: solid;
+                                color: #666666;
+                                border-color: #999999;
+                                .padding-left(30);
+                                .font-size(30);
+                                .margin-left(30);
+                            }
+                        }
+                        .contactRadioactiveRaysDate {
+                            background-color: #ccc;
+                        }
+                    } // 块4
+                    .recordBox4 {
+                        .padding-bottom(10);
+                        .padding-top(50); // 接触毒物
+                        .layui-form {
+                            .layui-form-radio * {
+                                .font-size(32);
+                            } // 接触毒物
+                            .recordBox4_1 {
+                                background-color: #f6f6f6;
+                                .margin-bottom(20);
+                                .recordBox4_1_left {
+                                    // .width(185);
+                                    .height(185);
+                                    .font-size(36);
+                                    .line-height(185);
+                                    text-align: right;
+                                    .border-right(1);
+                                    border-right-color: #999999;
+                                    border-right-style: solid;
+                                }
+                                .recordBox4_1_right {
+                                    .choose {
+                                        .width(1280);
+                                        .padding(15,
+                                        0,
+                                        15,
+                                        30);
+                                        border-bottom: 1px;
+                                        border-bottom-color: #333333;
+                                        border-bottom-style: solid;
+                                        position: relative;
+                                        .choose_no {
+                                            // .margin-left(30);
+                                        }
+                                        input {
+                                            .font-size(26);
+                                            color: #999999;
+                                            .width(328);
+                                            .height(56);
+                                            border-width: 1px;
+                                            border-color: #999999;
+                                            border-style: solid;
+                                            background-color: #fff;
+                                            .padding-left(30);
+                                        }
+                                        .contactToxicName {
+                                            .width(400);
+                                        }
+                                        .contactToxicDate {
+                                            display: inline-block;
+                                            .width(300);
+                                        }
+                                        .touchBox {
+                                            .width(400);
+                                            .max-height(370);
+                                            overflow: auto;
+                                            background-color: #fff;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #999999;
+                                            display: none;
+                                            position: absolute;
+                                            .top(75);
+                                            .right(507);
+                                            z-index: 10;
+                                            overflow: scroll;
+                                            li {
+                                                .font-size(24);
+                                                margin: 0;
+                                                .padding(20,
+                                                0,
+                                                20,
+                                                30);
+                                                border-bottom: 1px;
+                                                border-bottom-style: solid;
+                                                border-bottom-color: #999;
+                                            }
+                                        }
+                                    }
+                                    .touchdisease {
+                                        // display: none;
+                                        div {
+                                            position: relative;
+                                            display: inline-block;
+                                            .margin(25,
+                                            25,
+                                            25,
+                                            25);
+                                            .padding(13,
+                                            15,
+                                            13,
+                                            15);
+                                            background-color: #a1d0ed;
+                                            text-align: center;
+                                            color: #666666;
+                                            .font-size(22);
+                                            .deteleIcon {
+                                                background: url("/maternal-ipad/functionPage/delete.png") no-repeat 0 0;
+                                                width: 28px;
+                                                height: 28px;
+                                                position: absolute;
+                                                .top(-10);
+                                                .right(-40);
+                                                .background-size(25,
+                                                25);
+                                            }
+                                        }
+                                    }
+                                }
+                            } // .recordBox4_1 {
+                            //     .height(125);
+                            //     .line-height(125);
+                            //     .margin-bottom(20);
+                            //     .padding-left(35);
+                            //     background-color: #f6f6f6;
+                            //     input {
+                            //         .font-size(26);
+                            //         color: #999999;
+                            //         .width(328);
+                            //         .height(60);
+                            //         border-width: 1px;
+                            //         border-color: #999999;
+                            //         border-style: solid;
+                            //         background-color: #fff;
+                            //         .padding-left(30);
+                            //     }
+                            //     .contactToxicName {
+                            //         background-color: #ccc;
+                            //     }
+                            //     span:nth-child(1) {
+                            //         .margin-right(30);
+                            //     }
+                            //     .layui-form-radio {
+                            //         .line-height(28);
+                            //         .margin(0,
+                            //         0,
+                            //         0,
+                            //         0);
+                            //         font-size: 0;
+                            //     }
+                            //     #test5 {
+                            //         display: inline-block;
+                            //         .font-size(26);
+                            //         color: #999999;
+                            //         background-color: #ccc;
+                            //     }
+                            //     .gray {
+                            //         color: #666666;
+                            //     }
+                            // } 
+                            // 病毒感染
+                            .recordBox4_2 {
+                                position: relative;
+                                .padding-left(35);
+                                background-color: #f6f6f6;
+                                .height(125);
+                                .line-height(125);
+                                .margin-bottom(20);
+                                input {
+                                    .font-size(26);
+                                    color: #999999;
+                                    .width(328);
+                                    .height(60);
+                                    border-width: 1px;
+                                    border-color: #999999;
+                                    border-style: solid;
+                                    background-color: #fff;
+                                    .padding-left(30);
+                                }
+                                span:nth-child(1) {
+                                    .margin-right(30);
+                                }
+                                .layui-form-radio {
+                                    .line-height(28);
+                                    .margin(0,
+                                    0,
+                                    0,
+                                    0);
+                                    font-size: 0;
+                                }
+                                .chunk {
+                                    display: inline-block;
+                                    .chunks {
+                                        display: inline;
+                                        font-weight: 100;
+                                        .padding(17,
+                                        25,
+                                        17,
+                                        25);
+                                        color: #666666;
+                                        background-color: #d8e9f3;
+                                        .font-size(28);
+                                    } //  变色
+                                    .active {
+                                        background-color: #68b7e7;
+                                        color: #fff;
+                                    }
+                                }
+                                .shutter {
+                                    .width(800);
+                                    .height(70);
+                                    background-color: red;
+                                    position: absolute;
+                                    .top(30);
+                                    .right(250);
+                                    opacity: 0;
+                                }
+                            } // 家族史
+                            .recordBox4_3 {
+                                background-color: #f6f6f6;
+                                .margin-bottom(20);
+                                .recordBox4_3_left {
+                                    .width(185);
+                                    .height(185);
+                                    .font-size(36);
+                                    .line-height(185);
+                                    text-align: right;
+                                    .border-right(1);
+                                    border-right-color: #999999;
+                                    border-right-style: solid;
+                                }
+                                .recordBox4_3_right {
+                                    .choose {
+                                        .width(1280);
+                                        .padding(15,
+                                        0,
+                                        15,
+                                        30);
+                                        border-bottom: 1px;
+                                        border-bottom-color: #333333;
+                                        border-bottom-style: solid;
+                                        position: relative;
+                                        .choose_no {
+                                            // .margin-left(30);
+                                        }
+                                        .recordInquire {
+                                            .width(500);
+                                            .height(56);
+                                            background-color: #ccc;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #999999;
+                                            .font-size(26);
+                                            color: #cccccc;
+                                            .padding-left(20);
+                                            .margin-left(70);
+                                        }
+                                        .recordhideBox {
+                                            .width(500); //  .height(370);
+                                            .max-height(370);
+                                            overflow: auto;
+                                            background-color: #fff;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #999999;
+                                            display: none;
+                                            position: absolute;
+                                            .top(75);
+                                            .right(420);
+                                            z-index: 10;
+                                            overflow: scroll;
+                                            li {
+                                                .font-size(24);
+                                                margin: 0;
+                                                .padding(20,
+                                                0,
+                                                20,
+                                                30);
+                                                border-bottom: 1px;
+                                                border-bottom-style: solid;
+                                                border-bottom-color: #999;
+                                            }
+                                        }
+                                    }
+                                    .disease {
+                                        // display: none;
+                                        div {
+                                            position: relative;
+                                            display: inline-block;
+                                            .margin(25,
+                                            25,
+                                            25,
+                                            25);
+                                            .padding(13,
+                                            15,
+                                            13,
+                                            15);
+                                            background-color: #a1d0ed;
+                                            text-align: center;
+                                            color: #666666;
+                                            .font-size(22);
+                                            .deteleIcon {
+                                                background: url("/maternal-ipad/functionPage/delete.png") no-repeat 0 0;
+                                                width: 28px;
+                                                height: 28px;
+                                                position: absolute;
+                                                .top(-10);
+                                                .right(-40);
+                                                .background-size(25,
+                                                25);
+                                            }
+                                        }
+                                    }
+                                }
+                            } // 现病史
+                            .recordBox4_4 {
+                                background-color: #f6f6f6;
+                                .margin-bottom(20);
+                                .recordBox4_4_left {
+                                    .width(185);
+                                    .height(185);
+                                    .font-size(36);
+                                    .line-height(185);
+                                    text-align: right;
+                                    .border-right(1);
+                                    border-right-color: #999999;
+                                    border-right-style: solid;
+                                }
+                                .recordBox4_4_right {
+                                    .presentchoose {
+                                        .width(1280);
+                                        .padding(15,
+                                        0,
+                                        15,
+                                        30);
+                                        border-bottom: 1px;
+                                        border-bottom-color: #333333;
+                                        border-bottom-style: solid;
+                                        position: relative;
+                                        .choose_no {
+                                            // .margin-left(30);
+                                        }
+                                        .presentrecordInquire {
+                                            .width(500);
+                                            .height(56);
+                                            background-color: #ccc;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #999999;
+                                            .font-size(26);
+                                            color: #cccccc;
+                                            .padding-left(20);
+                                            .margin-left(70);
+                                        }
+                                        .presentrecordhideBox {
+                                            .width(500); //  .height(370);
+                                            .max-height(370);
+                                            overflow: auto;
+                                            background-color: #fff;
+                                            border-width: 1px;
+                                            border-style: solid;
+                                            border-color: #999999;
+                                            display: none;
+                                            position: absolute;
+                                            .top(75);
+                                            .right(420);
+                                            z-index: 10;
+                                            overflow: scroll;
+                                            li {
+                                                .font-size(24);
+                                                margin: 0;
+                                                .padding(20,
+                                                0,
+                                                20,
+                                                30);
+                                                border-bottom: 1px;
+                                                border-bottom-style: solid;
+                                                border-bottom-color: #999;
+                                            }
+                                        }
+                                    }
+                                    .presentdisease {
+                                        // display: none;
+                                        div {
+                                            position: relative;
+                                            display: inline-block;
+                                            .margin(25,
+                                            25,
+                                            25,
+                                            25);
+                                            .padding(13,
+                                            15,
+                                            13,
+                                            15);
+                                            background-color: #a1d0ed;
+                                            text-align: center;
+                                            color: #666666;
+                                            .font-size(22);
+                                            .deteleIcon {
+                                                background: url("/maternal-ipad/functionPage/delete.png") no-repeat 0 0;
+                                                width: 28px;
+                                                height: 28px;
+                                                position: absolute;
+                                                .top(-10);
+                                                .right(-40);
+                                                .background-size(25,
+                                                25);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } // 体格检查模块
+                .assessBox {
+                    .font-size(36);
+                    .layui-form {
+                        .padding(0,
+                        60,
+                        0,
+                        70);
+                    }
+                    .assessBoxContant {
+                        color: #666666;
+                        .assessBox_tettle {
+                            color: #333333;
+                            .margin(35,
+                            0,
+                            35,
+                            0);
+                        }
+                        input {
+                            text-align: center;
+                            color: #666666;
+                            .height(85);
+                            border-width: 1px;
+                            border-style: solid;
+                            border-color: #cccccc;
+                        }
+                        .layui-form {
+                            // 块1
+                            .assessBox1 {
+                                .margin-left(40);
+                                .padding-bottom(10);
+                                border-bottom: 1px dashed #999999;
+                                .bpBox {
+                                    input {
+                                        .padding-left(0);
+                                        text-align: center;
+                                        .width(198);
+                                    }
+                                    .hyperpiesia {
+                                        .margin-left(20);
+                                    }
+                                    .lowTension {
+                                        .margin-left(0);
+                                    }
+                                    span {
+                                        color: #999999;
+                                    }
+                                }
+                                .height,
+                                .weight {
+                                    .width(160);
+                                    .height(78);
+                                    .margin-left(10);
+                                }
+                                div {
+                                    display: inline-block;
+                                    input {
+                                        display: inline-block;
+                                        .padding-left(30);
+                                    }
+                                }
+                                .layui-unselect {
+                                    .width(158);
+                                    .height(65);
+                                    .font-size(32);
+                                    color: #666666;
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                    background-color: #f6f6f6; // border-top:none;
+                                    color: #666;
+                                }
+                                .work {
+                                    .width(498);
+                                    .height(78);
+                                    border-width: 1px;
+                                    border-style: solid;
+                                    color: #666666;
+                                    border-color: #999999;
+                                    .padding-left(30);
+                                    .font-size(30);
+                                    .margin-left(30);
+                                }
+                            } // 块2
+                            .assessBox2 {
+                                .margin-left(40);
+                                .padding-bottom(10);
+                                border-bottom: 1px dashed #999999;
+                                div {
+                                    display: inline-block;
+                                }
+                                .layui-unselect {
+                                    .width(158);
+                                    .height(65);
+                                    .font-size(32);
+                                    color: #666666;
+                                    border-color: #999999;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                    background-color: #f6f6f6; // border-top:none;
+                                    color: #666;
+                                }
+                            } // 块3
+                            .assessBox3 {
+                                .margin-left(40);
+                                .padding-bottom(10);
+                                border-bottom: 1px dashed #999999;
+                                span {
+                                    float: left;
+                                    .margin-top(20);
+                                }
+                                input {
+                                    float: left;
+                                    .width(138);
+                                    .height(76);
+                                    border-width: 1px;
+                                    border-style: solid;
+                                    border-color: #cccccc;
+                                }
+                                div {
+                                    float: left;
+                                    .layui-unselect {
+                                        .width(158);
+                                        .height(65);
+                                        .font-size(32);
+                                        color: #666666;
+                                        .border-radius(10,
+                                        10,
+                                        10,
+                                        10);
+                                        border-color: #999999;
+                                        background-color: #f6f6f6; // border-top:none;
+                                    }
+                                }
+                            } // 块4
+                            .assessBox4 {
+                                .margin-left(40);
+                                .padding-bottom(10);
+                                border-bottom: 1px dashed #999999;
+                                div {
+                                    display: inline-block;
+                                    input {
+                                        display: inline-block;
+                                        .width(138);
+                                        .height(76);
+                                        border-width: 1px;
+                                        border-style: solid;
+                                        .padding-left(30);
+                                        border-color: #cccccc;
+                                    }
+                                }
+                                .layui-unselect {
+                                    .width(230);
+                                    .height(65);
+                                    .font-size(32);
+                                    color: #666666;
+                                    .border-radius(10,
+                                    10,
+                                    10,
+                                    10);
+                                    background-color: #f6f6f6; // border-top:none;
+                                }
+                            } // 块5
+                            .assessBox5 {
+                                .margin-left(40);
+                                .assessBox5_right {
+                                    position: relative;
+                                    float: right;
+                                    .width(1300);
+                                    border-bottom: 1px solid #ccc !important;
+                                    .padding(10,
+                                    0,
+                                    10,
+                                    0);
+                                    #chuzhi,
+                                    #zhenduan {
+                                        .width(1100);
+                                        border: none !important;
+                                        .border-right(1);
+                                        .padding-left(30);
+                                        border-right: 1px solid #ccc !important;
+                                        text-align: left;
+                                    }
+                                    .template1,
+                                    .template2 {
+                                        position: absolute;
+                                        .top(15);
+                                        .right(0);
+                                        .joinIco {
+                                            background: url("/maternal-ipad/particulars/join.png") no-repeat 0 0;
+                                            .width(31);
+                                            .height(37);
+                                            .background-size(31,
+                                            37);
+                                            position: absolute;
+                                            .top(10);
+                                        }
+                                        span {
+                                            .margin-left(67);
+                                            color: #999999;
+                                            .font-size(24);
+                                        }
+                                    }
+                                }
+                                .fl {
+                                    .margin-top(50);
+                                    color: #333333;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } // 高危评估页
+        .assessment {
+            .padding(20,
+            22,
+            70,
+            22);
+            .assessmentContent {
+                .tilteText {
+                    .font-size(40);
+                    color: #333333;
+                    .line-height(84);
+                    .padding-left(40);
+                }
+                >h2 {
+                    border-bottom: 1px solid #999;
+                }
+                .assessmentBox {
+                    border-left: 1px solid #999999;
+                    border-right: 1px solid #999999;
+                    border-bottom: 1px solid #999999;
+                    display: flex;
+                    .topicBox {
+                        display: flex;
+                        flex: 1;
+                        flex-wrap: wrap;
+                        .padding(30,
+                        0,
+                        30,
+                        30);
+                        >a {
+                            .font-size(32);
+                            color: #666666;
+                            .line-height(60);
+                            .padding-left(50);
+                            .margin-right(30);
+                            background: url("./radio_false.png") no-repeat left center;
+                            .background-size(32,
+                            32);
+                            &.active {
+                                background: url("./radio_true.png") no-repeat left center;
+                                .background-size(32,
+                                32);
+                            }
+                        }
+                    }
+                    .scoreBox {
+                        display: flex;
+                        .width(140);
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-left: 1px solid #999999;
+                        >p {
+                            .font-size(32);
+                            color: #333333;
+                            .line-height(52);
+                        }
+                    }
+                }
+                .navContent {
+                    display: flex;
+                    >a {
+                        display: flex;
+                        flex: 1;
+                        text-align: center;
+                        .font-size(36);
+                        color: #666666;
+                        .height(92);
+                        align-items: center;
+                        justify-content: center;
+                        border-bottom: 1px solid #999999;
+                        &.active {
+                            border: 1px solid #999;
+                            border-bottom: none;
+                            color: #68b7e7;
+                        }
+                    }
+                }
+                .bodyContent {
+                    .item {
+                        display: none;
+                    }
+                    .active {
+                        display: block;
+                    }
+                }
+            }
+        } // 签字确认页
+        .affirm {
+            .padding(45,
+            53,
+            120,
+            120);
+            .affirmBox1 {
+                border-bottom: 1px dashed #999999;
+                div {
+                    display: inline-block;
+                    .padding-bottom(30);
+                }
+                .affirmBox1_left {
+                    text-align: center;
+                    .padding-right(25);
+                    .border-right(1);
+                    border-right-color: #999999;
+                    border-right-style: dashed;
+                    p:nth-child(1) {
+                        .font-size(60);
+                        color: #68b7e7;
+                    }
+                    p:nth-child(2) {
+                        .font-size(32);
+                        color: #666666;
+                    }
+                }
+                .affirmBox1_right {
+                    .padding-left(35);
+                    vertical-align: top;
+                    p:nth-child(1) {
+                        .font-size(36);
+                        color: #333333;
+                        .margin-bottom(30);
+                        display: inline-block;
+                    }
+                    p:nth-child(3) {
+                        .font-size(36);
+                        color: #666666;
+                        span {
+                            .padding-right(33);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    }
+                    #riskItem {
+                        display: inline-block;
+                        color: #fff;
+                        .font-size(30);
+                        .margin-left(38);
+                        .line-height(50);
+                        .padding(0,
+                        10,
+                        0,
+                        10);
+                    }
+                }
+            }
+            .affirmBox2 {
+                border-bottom: 1px dashed #999999;
+                overflow: hidden;
+                .padding-right(40);
+                h3 {
+                    display: block;
+                    .font-size(36);
+                    color: #333333;
+                    .margin(45,
+                    0,
+                    60,
+                    0);
+                    .remark {
+                        .width(1200);
+                        border: none !important;
+                        border-bottom: 1px solid #333 !important;
+                        .padding-left(30);
+                    }
+                }
+                .cf {
+                    // float: left;
+                    .margin(20,
+                    0,
+                    20,
+                    0);
+                    display: flex;
+                    span {
+                        // float: left;
+                        .font-size(32);
+                        color: #666666;
+                        display: inline-block;
+                    }
+                    div {
+                        flex: 1;
+                        border-bottom: 1px solid black;
+                        .width(1100);
+                        .margin-left(30);
+                        .padding-top(40);
+                        .padding-left(30);
+                    }
+                }
+            }
+            .affirmBox3 {
+                .padding-top(40);
+                p:nth-child(1) {
+                    .font-size(30);
+                    color: #68b7e7;
+                    .margin-bottom(30);
+                }
+                p:nth-child(2) {
+                    .font-size(28);
+                    color: #666666;
+                    .margin-bottom(70);
+                }
+                .signLeft {
+                    float: left;
+                    .patientSignature {
+                        .width(500);
+                        .height(270);
+                        background-color: #f6f6f6;
+                        .margin(40,
+                        0,
+                        40,
+                        0);
+                        .background-size(500,
+                        270);
+                        background-repeat: repeat-x;
+                    }
+                }
+                .signRight {
+                    float: right;
+                    .doctorSignature {
+                        .width(500);
+                        .height(270);
+                        background-color: #f6f6f6;
+                        .margin(40,
+                        170,
+                        40,
+                        0);
+                    }
+                }
+                span {
+                    .font-size(40);
+                    color: #666666;
+                }
+            }
+        }
+    }
+    .backBtn {
+        .font-size(40);
+        position: absolute;
+        .bottom(50);
+        .width(280);
+        .height(95);
+        background-color: #86c5ec;
+        color: @fff;
+        .left(20);
+        .bottom(20);
+        text-align: center;
+        .line-height(98);
+    }
+    .nextStep {
+        .font-size(40);
+        position: absolute;
+        .bottom(-50);
+        .width(316);
+        .height(100);
+        background-color: #68b7e7;
+        color: #fff;
+        .right(40);
+        text-align: center;
+        .line-height(98);
+    }
+    .nextStepOne,
+    .nextStepTwo {
+        display: none;
+    }
+}
+
+.shade {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+}
+
+// 检验弹窗
+.verifyAlert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 11;
+    .width(740);
+    .height(400);
+    text-align: center;
+    .padding(75,
+    97,
+    50,
+    97);
+    display: none;
+    p:nth-child(1) {
+        .font-size(40);
+        color: #333333;
+    }
+    p:nth-child(2) {
+        .font-size(32);
+        color: #666666;
+        .padding(30,
+        0,
+        80,
+        0);
+    }
+    div {
+        .width(245);
+        .height(88);
+        text-align: center;
+        .line-height(88);
+        .font-size(36);
+        .border-radius(10,
+        10,
+        10,
+        10);
+    }
+    .verifyAlertLooks {
+        border: 1px solid #cccccc;
+        color: #666666;
+        float: left;
+    }
+    .verifyAlertConfirm {
+        background-color: #68b7e7;
+        color: #fff;
+        float: right;
+    }
+}
+
+// 禁止滑动
+.noscroll {
+    height: 100%;
+    overflow: hidden;
+}
+
+// 颜色
+.bgcF {
+    background-color: #fff !important;
+}
+
+.bgcC {
+    background-color: #ccc !important;
+}
+
+// 导入模板弹框
+.stencilLayer {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    display: none;
+    .width(1520);
+    .height(880);
+    .min-height(880);
+    .box-shadow();
+    .stencilLayer_nav {
+        .padding(20,
+        30,
+        20,
+        30);
+        width: 100%;
+        background-color: #ededed;
+        .stencilLayer_title {
+            float: left;
+            img {
+                .width(32);
+                .height(40);
+            }
+            span {
+                .font-size(32);
+                color: #333333;
+            }
+        }
+        .stencilLayer_clone {
+            float: right; // .width(27);
+            // .height(27);
+            .width(27);
+            .height(27);
+        }
+    }
+    .stencilLayer_contant {
+        border-bottom: 1px dotted #ccc;
+        .height(640);
+        .max-height(640);
+        .padding(40,
+        80,
+        40,
+        80);
+        overflow: scroll;
+        p {
+            .font-size(34);
+            color: #666666;
+            .margin-bottom(30);
+        }
+        a {
+            display: block;
+            .font-size(32);
+            color: #666666;
+            .line-height(60);
+            .padding-left(50);
+            .margin-right(30);
+            background: url("./radio_false.png") no-repeat left center;
+            .background-size(32,
+            32);
+            &.active {
+                background: url("./radio_true.png") no-repeat left center;
+                .background-size(32,
+                32);
+            }
+        }
+    }
+    .stencilLayer_footer {
+        text-align: right;
+        .height(143);
+        div {
+            .width(200);
+            .height(65);
+            text-align: center;
+            .line-height(65);
+            .font-size(28);
+            display: inline-block;
+            .margin-top(40);
+        }
+        .gobackBtn {
+            color: #666666;
+            background-color: #ccc;
+            .margin-right(40);
+        }
+        .importTemplate {
+            color: #fff;
+            background-color: #68b7e7;
+            .margin-right(45);
+        }
+    }
+}

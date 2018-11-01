@@ -1,0 +1,916 @@
+@import "../css/reset.css";
+@import "../css/root.less";
+body {
+    background-color: #e8e8e8;
+    font-weight: 100;
+    position: relative;
+    .management {
+        // position: relative;
+        .top(57);
+        .left(90);
+        .font-size(48);
+        color: @666;
+        position: fixed;
+        z-index: 10;
+        .top(57);
+        &:before {
+            content: ' ';
+            position: absolute;
+            .top(13);
+            .left(-18); // transform: translate(-50%,0);
+            .width(8);
+            .height(48);
+            background: #68b7e7;
+        }
+    }
+}
+
+span {
+    .font-size(32);
+    color: #909090;
+}
+
+i {
+    .font-size(32);
+    color: #333333;
+}
+
+.mgr20 {
+    .margin-right(20) !important;
+}
+
+.mgr25 {
+    .margin-right(25);
+}
+
+.mgr30 {
+    .margin-right(30);
+}
+
+.mgr40 {
+    .margin-right(40);
+}
+
+.mgr45 {
+    .margin-right(45);
+}
+
+.mgr50 {
+    .margin-right(50);
+}
+
+.mgr55 {
+    .margin-right(55);
+}
+
+.mgr80 {
+    .margin-right(80);
+}
+
+.mgr90 {
+    .margin-right(90);
+}
+
+.mgb30 {
+    .margin-bottom(30);
+}
+
+.marginL20 {
+    .margin-left(20);
+}
+
+.mgl5 {
+    .margin-left(5);
+}
+
+.mgl10 {
+    .margin-left(10);
+}
+
+.mgl15 {
+    .margin-left(15);
+}
+
+// .mgl20 {
+//     position: relative;
+//     .margin-left(10);
+//     .letter-spacing(30);
+//     display: inline-block;
+// }
+.mgl25 {
+    .margin-left(25);
+}
+
+.mgl30 {
+    .margin-left(30);
+}
+
+.mgl40 {
+    .margin-left(40);
+}
+
+.mgl48 {
+    .margin-left(48);
+}
+
+.mgl86 {
+    .margin-left(86);
+}
+
+.mgb33 {
+    .margin-bottom(33);
+}
+
+.mgb60 {
+    .margin-bottom(60);
+}
+
+.mgb150 {
+    .margin-bottom(150) !important;
+}
+
+.ls30 {
+    .letter-spacing(30);
+}
+
+.ls15 {
+    .letter-spacing(15);
+}
+
+.ls20 {
+    .letter-spacing(10);
+}
+
+.w134 {
+    .width(134);
+}
+
+.w200 {
+    .width(200);
+}
+
+.w238 {
+    .width(238);
+}
+
+.w140 {
+    .width(140);
+}
+
+.w194 {
+    .width(194);
+}
+
+.w133 {
+    .width(133);
+}
+
+.w309 {
+    .width(309) !important;
+}
+
+.w150 {
+    .width(150) !important;
+}
+
+.w110 {
+    .width(110) !important;
+}
+
+.w115 {
+    .width(115) !important;
+}
+
+.w175 {
+    .width(175) !important;
+}
+
+.fl {
+    float: left; // .margin-bottom(28);
+}
+
+.fr {
+    float: right;
+}
+
+.c999 {
+    color: #999999;
+}
+
+#mgr0 {
+    .margin-right(0);
+    .padding-right(15);
+}
+
+.redFont {
+    .letter-spacing(0);
+    .font-size(28);
+    color: #ff2002;
+    position: absolute;
+    .bottom(0);
+    .left(0);
+    .margin-top(10);
+    display: none;
+}
+
+.errorIon {
+    .width(32);
+    .height(32);
+    position: absolute;
+    .top(20);
+    .right(17);
+    display: none;
+}
+
+#w245 {
+    .width(245);
+}
+
+.layui-tab-title .layui-this:after {
+    border-bottom: 2px solid #68b7e7;
+    .height(95); // .top(7);
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #68b7e7;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #68b7e7;
+}
+
+.layui-tab-title li {
+    .line-height(40);
+}
+
+.layui-input-block {
+    .margin-left(0);
+}
+
+.layui-form-select {
+    display: inline-block !important;
+    border: none;
+}
+
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color: #f6f6f6 !important;
+}
+
+.layui-form-select dl dd.layui-this {
+    background-color: #68b7e7;
+    color: #fff;
+}
+
+.layui-form-radio>i:hover,
+.layui-form-radioed>i {
+    // margin-right:0;
+    // .font-size(22);
+    color: #68b7e7;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    .margin(155, 40, 0, 40);
+    .padding-bottom(110);
+    .leftBox {
+        .box-shadow();
+        .height(1260);
+        position: relative;
+        float: left;
+        background-color: #fff;
+        .width(325);
+        position: fixed;
+        .top(155);
+        .leftBox_top {
+            text-align: center;
+            .padding-top(40);
+            .width(325);
+            .padding-bottom(33);
+            .border-bottom(4);
+            border-bottom-color: #ccc;
+            border-bottom-style: solid;
+            .headIcon {
+                display: inline-block;
+                .width(173);
+                .height(173);
+                .border-radius(100, 100, 100, 100);
+                background-color: #ededed;
+                border-width: 1px;
+                ;
+                border-style: solid;
+                border-color: #7dc1ea;
+                .margin(0, 0, 20, 0);
+                background-image: url(/maternal-ipad/center/woman.png);
+                background-repeat: none;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            p {
+                .margin(0, 0, 25, 0);
+            }
+            .name {
+                .font-size(40);
+                color: #333333;
+                .margin-right(30);
+            }
+            .age {
+                .font-size(36);
+                color: #666666;
+            }
+            p:nth-child(3) {
+                color: #b3b3b3;
+                .font-size(28);
+                color: #333333;
+            }
+            .preview {
+                display: inline-block;
+                .width(154);
+                .height(47);
+                color: #fff;
+                .font-size(26);
+                font-weight: bold;
+                font-weight: 100;
+                vertical-align: middle;
+                text-align: center;
+                .line-height(47);
+            }
+        }
+        ul {
+            li {
+                position: relative;
+                .newsIcon {
+                    background: url('/maternal-ipad/center/icon1.1.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .newsIcon2 {
+                    background: url('/maternal-ipad/center/icon1.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .recordIcon {
+                    background: url('/maternal-ipad/center/icon2.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .recordIcon2 {
+                    background: url('/maternal-ipad/center/icon2.2.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .assessIcon {
+                    background: url('/maternal-ipad/center/icon3.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .assessIcon2 {
+                    background: url('/maternal-ipad/center/icon3.3.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .affirmIcon {
+                    background: url('/maternal-ipad/center/icon4.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .affirmIcon2 {
+                    background: url('/maternal-ipad/center/icon4.4.png') no-repeat 0 0;
+                    .width(50);
+                    .height(60);
+                    // .background-size(50,
+                    // 60);
+                    .top(33);
+                    .left(40);
+                    position: absolute;
+                }
+                .icon2 {
+                    display: none;
+                }
+                position: relative;
+                .height(120);
+                .width(325);
+                .border-bottom(4);
+                border-bottom-color: #ccc;
+                border-bottom-style: solid;
+                text-align: center;
+                .line-height(120);
+                span {
+                    .margin-left(30);
+                    .font-size(36);
+                    color: #666666;
+                }
+                .active {
+                    color: #68b7e7;
+                }
+                .Icon1 {
+                    display: none;
+                }
+            }
+        }
+        .iocn {
+            .width(28);
+            .height(33);
+            .border-width(15);
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: white;
+            position: absolute;
+            .top(430);
+            .right(-30);
+            transition: 0.5s all;
+        }
+    }
+    .rightBox {
+        .box-shadow();
+        background-color: #fff;
+        float: right;
+        .content {
+            background-color: #fff;
+            .width(1610);
+            display: none;
+        } // 孕妇信息页
+        .womenInformation {
+            .padding(0,
+            0,
+            138,
+            58);
+            .wireTettle {
+                span {
+                    position: absolute;
+                    .font-size(36);
+                    color: #000000;
+                    display: inline-block;
+                    .margin-top(48);
+                    .padding-right(20);
+                    background-color: #fff;
+                    z-index: 2;
+                    font-weight: bold;
+                }
+                .wire {
+                    .top(50);
+                    .left(0);
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    .height(2);
+                    background-color: #b2b2b2;
+                }
+            }
+            .tebBox {
+                .layui-tab-content {
+                    .margin-top(80);
+                    .padding(0,
+                    0,
+                    0,
+                    0); // 孕妇基本信息
+                    .essential {
+                        .essential_box1 {
+                            .padding-bottom(30);
+                            border-bottom: 1px dashed #999999;
+                            div {
+                                .height(82);
+                                .line-height(82);
+                                display: inline-block;
+                                width: 47%;
+                                i {
+                                    font-style: normal;
+                                }
+                            }
+                        }
+                        .essential_box2 {
+                            .padding-bottom(30);
+                            .padding-top(30);
+                            border-bottom: 1px dashed #999999;
+                            div {
+                                width: 47%;
+                                display: inline-block;
+                                .height(82);
+                                .line-height(82);
+                                i {
+                                    font-style: normal;
+                                }
+                            }
+                        }
+                        .essential_box3 {
+                            .padding-top(30);
+                            .padding-bottom(30);
+                            border-bottom: 1px dashed #999999;
+                            div {
+                                .height(82);
+                                .line-height(82);
+                                i {
+                                    font-style: normal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } // 配偶信息记录页
+        .newRecord {
+            .padding(0,
+            0,
+            115,
+            58);
+            .wireTettle {
+                span {
+                    position: absolute;
+                    .font-size(36);
+                    color: #000000;
+                    display: inline-block;
+                    .margin-top(48);
+                    .padding-right(20);
+                    background-color: #fff;
+                    z-index: 2;
+                    font-weight: bold;
+                }
+                .wire {
+                    .top(50);
+                    .left(0);
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    .height(2);
+                    background-color: #b2b2b2;
+                }
+            }
+            .layui-tab-content {
+                .margin-top(80);
+                .padding(0,
+                0,
+                0,
+                0);
+                .spouse {
+                    .spouse_box1 {
+                        .padding-bottom(30);
+                        border-bottom: 1px dashed #999999;
+                        div {
+                            .height(82);
+                            .line-height(82);
+                            display: inline-block;
+                            width: 47%;
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    } //  块2
+                    .spouse_box2 {
+                        .padding-bottom(30);
+                        .padding-top(30);
+                        border-bottom: 1px dashed #999999;
+                        div {
+                            width: 47%;
+                            display: inline-block;
+                            .height(82);
+                            .line-height(82);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    } // 块3
+                    .spouse_box3 {
+                        .padding(30,
+                        0,
+                        30,
+                        0);
+                        border-bottom: 1px dashed #999999;
+                        div {
+                            width: 47%;
+                            display: inline-block;
+                            .height(82);
+                            .line-height(82);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    } //  块4
+                    .spouse_box4 {
+                        .padding-top(30);
+                        div {
+                            .height(82);
+                            .line-height(82);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } // 孕产信息预览页
+    .assessment {
+        .wireTettle {
+            span {
+                position: absolute;
+                .font-size(36);
+                color: #000000;
+                display: inline-block;
+                .padding-left(58);
+                .margin-top(48);
+                .padding-right(20);
+                background-color: #fff;
+                z-index: 2;
+                font-weight: bold;
+            }
+            .wire {
+                .top(50);
+                .left(0);
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                .height(2);
+                background-color: #b2b2b2;
+            }
+        }
+        .recordBox {
+            .margin(80,
+            40,
+            0,
+            56);
+            .padding-bottom(100); // 块1
+            .recordBox1 {
+                .padding-bottom(30);
+                border-bottom: 1px dashed #999999;
+                div {
+                    width: 47%;
+                    display: inline-block;
+                    .height(82);
+                    .line-height(82);
+                    i {
+                        font-style: normal;
+                    }
+                }
+            } // 块2
+            .recordBox2 {
+                .padding-bottom(30);
+                border-bottom: 1px dashed #999999;
+                .recordBox2_top {
+                    .padding-top(20);
+                    div {
+                        width: 47%;
+                        display: inline-block;
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                }
+                .layui-table {
+                    th {
+                        .font-size(36);
+                        color: #333333;
+                        text-align: center;
+                        .padding(30,
+                        0,
+                        30,
+                        0);
+                        background-color: #f6f6f6;
+                    }
+                    tr {
+                        text-align: center;
+                        .font-size(34);
+                        color: #666;
+                    }
+                    tr:nth-child(2n) {
+                        input {
+                            background-color: #f6f6f6 !important;
+                        }
+                    }
+                    td {
+                        .height(100);
+                        .padding(0,
+                        0,
+                        0,
+                        0);
+                        .min-height(100); // .line-height(20);
+                        // .font-size(14);
+                        input {
+                            opacity: 1;
+                            width: 100%;
+                            height: 100%;
+                            border: none !important;
+                            text-align: center;
+                            color: #666;
+                        }
+                    }
+                }
+                .layui-table tbody tr:nth-child(2n-1):hover {
+                    background: none !important;
+                }
+            } // 块3
+            .recordBox3 {
+                .padding-bottom(30);
+                .padding-top(50);
+                border-bottom: 1px dashed #999999;
+                div {
+                    width: 32%;
+                    display: inline-block;
+                    .height(82);
+                    .line-height(82);
+                    i {
+                        font-style: normal;
+                    }
+                }
+            } // 块4
+            .recordBox4 {
+                border-bottom: 1px dashed #999999;
+                .padding-bottom(30);
+                .padding-top(50); // 接触毒物
+                div {
+                    .height(82);
+                    .line-height(82);
+                    i {
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    } // 体格检查
+    .affirm {
+        .padding(0,
+        0,
+        120,
+        50); // .padding(50,75,120,50); // 体格检查模块
+        .wireTettle {
+            position: relative;
+            span {
+                position: absolute;
+                .font-size(36);
+                color: #000000;
+                display: inline-block; // .margin-top(48);
+                .top(50);
+                .padding-right(20);
+                background-color: #fff;
+                z-index: 2;
+                font-weight: bold;
+            }
+            .wire {
+                .top(50);
+                .left(0);
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                .height(2);
+                background-color: #b2b2b2;
+            }
+        }
+        .assessBox {
+            .margin-top(120);
+            .font-size(36);
+            .assessBoxContant {
+                color: #666666;
+                .assessBox_tettle {
+                    color: #333333; // .margin(-135,0, 35, 0);
+                    position: absolute;
+                    .top(-30);
+                    .padding-right(30);
+                    display: inline-block;
+                    background-color: #fff;
+                    z-index: 2;
+                } // 块1
+                .assessBox1 {
+                    .margin-left(80);
+                    .padding-bottom(50);
+                    .padding-top(40);
+                    border-top: 1px dashed #999999;
+                    border-bottom: 1px dashed #999999;
+                    div {
+                        width: 32%;
+                        display: inline-block;
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                } // 块2
+                .assessBox2 {
+                    .margin-left(80);
+                    .padding-bottom(50);
+                    .padding-top(40);
+                    border-bottom: 1px dashed #999999;
+                    div {
+                        width: 32%;
+                        display: inline-block;
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                } // 块3
+                .assessBox3 {
+                    .padding-top(40);
+                    .margin-left(80);
+                    .padding-bottom(50);
+                    border-bottom: 1px dashed #999999;
+                    div {
+                        width: 32%;
+                        display: inline-block;
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                } // 块4
+                .assessBox4 {
+                    .padding-top(40);
+                    .margin-left(80);
+                    .padding-bottom(50);
+                    border-bottom: 1px dashed #999999;
+                    div {
+                        width: 32%;
+                        display: inline-block;
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                } // 块5
+                .assessBox5 {
+                    .margin-left(80);
+                    .margin-top(40);
+                    .padding-bottom(70);
+                    border-bottom: 1px dashed #999999;
+                    div {
+                        .height(82);
+                        .line-height(82);
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.backBtn {
+    .font-size(40);
+    position: absolute;
+    .bottom(50);
+    .width(314);
+    .height(98);
+    border: .038rem/* 1/16 */
+    solid #999;
+    background-color: @ccc;
+    color: @666;
+    .left(420);
+}
+
+.nextStep {
+    .font-size(40);
+    position: absolute;
+    .bottom(50);
+    .width(316);
+    .height(100);
+    background-color: #68b7e7;
+    color: #fff;
+    .right(40);
+    text-align: center;
+    .line-height(100);
+}

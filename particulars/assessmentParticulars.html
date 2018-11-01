@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>高危评估详情页</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function(doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function() {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/particulars/assessmentParticulars.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/echarts.min.js"></script>
+    <script src="/maternal-ipad/particulars/assessmentParticulars.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="leftBox">
+            <div class="headIcon">
+                <a href="/maternal-ipad/center/centerFunctionPage.html">
+                    <div class="preview">预&nbsp;览</div>
+                </a>
+            </div>
+            <p>
+                <span class="name"> </span>
+                <span class="age"> </span>
+            </p>
+            <div class="BMLValue">BMI值</div>
+            <!-- <div class="gestationIcon">妊娠图</div> -->
+        
+        </div>
+        <div class="rightBox clearfix">
+            <form action="" class="clearfix">
+                <div class="row-left">
+                    <label>档&nbsp;&nbsp;案&nbsp;&nbsp;号：</label>
+                    <input type="text" class="checkNumber" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>身份证号：</label>
+                    <input type="text" class="checkIdCard" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>建档时间：</label>
+                    <input type="text" class="filingDate" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>联系方式：</label>
+                    <input type="text" class="checkTelephone" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>出生年月：</label>
+                    <input type="text" class="checkBirthdayDate" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>孕前体重：</label>
+                    <input type="text" class="checkLastWeight" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>孕&nbsp;&nbsp;产&nbsp;&nbsp;史：</label>
+                    <input type="text" class="parturitionDetailHistory" readonly="readonly">
+                </div>
+                <div class="row-left blood">
+                    <label>&nbsp;&nbsp;血&nbsp;&nbsp;型：</label>
+                    <input type="text" class="healthAssayBloodType w450" readonly="readonly">
+                </div>
+                <div class="row-left factor">
+                    <label>高危因素：</label>
+                    <input type="text" class="highRiskDetails" readonly="readonly">
+                </div>
+                <br/>
+                <div class="row-left  familyHistory">
+                    <label>家&nbsp;&nbsp;族&nbsp;&nbsp;史：</label>
+                    <input type="text" class="parturitionDetailFamilyHistory" readonly="readonly">
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="assessBox">
+            <div class="titleBox">
+                <p><span class="createDate"></span>|<span class="weeksDay"></span>|<span class="indexSeveral">第<i class="checkNumber"></i>次评估</span>|<span class="countNum"></span>|<span class="riskItem"></span></p>
+            </div>
+            <div class="content">
+                <h2>评估信息</h2>
+                <p><span>绿色(低风险) :</span><span class="text greenText"></span></p>
+                <p><span>黄色(一般风险) :</span><span class="text yellowText"></span></p>
+                <p><span>橙色(较高风险) :</span><span class="text orangeText"></span></p>
+                <p><span>红色(高风险) :</span><span class="text redText"></span></p>
+                <p><span>紫色(传染病) :</span><span class="text purpleText"></span></p>
+            </div>
+            <div class="signatureBox">
+                <div class="signatureItem">
+                    <p>患者签字</p>
+                    <img class="patientImg signatureImg" src="" alt="">
+                </div>
+                <div class="signatureItem">
+                    <p>医生签字</p>
+                    <img class="doctorImg signatureImg" src="" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="finish">完成</div>
+    </main>
+    <!-- 大图展示 start-->
+    <div class="bigImgContent clearfix">
+        <img src="" alt="">
+        <a href="javascript:;">关闭</a>
+    </div>
+    <!-- 大图展示 end-->
+<!-- BMI弹框 -->
+<div class="BMIlayer">
+    <p class="popoutTopp clearfix"><span>BMI值</span> <img src="/maternal-ipad/images/clone.png" alt=关闭按钮 class="bmiCloneBtn">        </p>
+    <div class="BMIlayer_main">
+        <div class="BMIlayer_main_top">
+            <h3>BMI孕期体重管理曲线图</h3>
+            <p>孕前BMI:<span>18.5</span>-<span>24.9</span>kg/m</p>
+            <p>体重<span>正常</span>，建议孕期体重增长标准:11.5~16kg</p>
+        </div>
+        <div class="BMIlayer_main_bottom clearfix">
+            <p class="lengthways">体重增长（kg)</p>
+            <div id="chartmain"></div>
+            <p class="lengtweeks">孕周（周）</p>
+        </div>
+    </div>
+</div>
+<!-- body遮罩 -->
+<div class="shadow"></div>
+</body>
+
+</html>

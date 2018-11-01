@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>新建档案</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+    />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/functionPage/functionPage.less" />
+    <link rel="stylesheet" href="/maternal-ipad/library/iosSelect/iosSelect.css">
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/library/iosSelect/iosSelect.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/nationality.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/areaData.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/functionPage/functionPage.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/search.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <span class="management">新建档案</span>
+    <div class="container clearfix">
+        <div class="leftBox">
+            <ul>
+                <li class="womenInformationLi">
+                    <i class="newsIcon2"></i>
+                    <i class="newsIcon icon2" style="display:block;"></i>
+
+                    <span class="active ">孕妇信息</span>
+                </li>
+                <li class="newRecordLi">
+                    <i class="recordIcon"></i>
+                    <i class="recordIcon2 icon2"></i>
+                    <span>初诊记录</span>
+                </li>
+                <li class=" assessmentLi">
+                    <i class="assessIcon"></i>
+                    <i class="assessIcon2 icon2"></i>
+                    <span>高危评估</span>
+                </li>
+                <li class="affirmLi">
+                    <i class="affirmIcon"></i>
+                    <i class="affirmIcon2 icon2"></i>
+                    <span>签字确认</span>
+                </li>
+            </ul>
+            <div class="iocn"></div>
+<!-- <input type="text" name="" id=""> -->
+            <div class="backBtn">返 回</div>
+        </div>
+        <!-- 右边模块 -->
+        <div class="rightBox">
+            <!-- 孕妇信息 -->
+            <div class="content womenInformation" id="content"  style="display: block;">
+                <div class="layui-tab layui-tab-brief tebBox" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this womenInformationLi1" womenIdentifying = '0'>孕妇基本信息</li>
+                        <li class="womenInformationLi2" spouseIdentifying = '0'>配偶一般信息</li>
+                    </ul>
+                    <div class="layui-tab-content  clearfix">
+                        <!-- 孕妇基本信息 -->
+                        <div class="layui-tab-item layui-show essential">
+                            <!-- 第一块 -->
+                            <div class="essential_box1 clearfix">
+                                <form action="" class="layui-form clearfix">
+                                    <div class="fl essential_Fl">
+                                        <span>孕妇姓名</span>
+                                        <div class="essential_box1Div">
+                                            <input type="text" class="pregnantName" placeholder="请输入姓名">
+                                            <p class="redFont">姓名错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span id="mgr0" class="mgr24">就诊卡号</span>
+                                        <div class="essential_box1Div">
+                                            <input type="number" class=" pregnantFN" placeholder="请输入就诊卡号">
+                                            <p class="redFont">就诊卡号格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>证件类型</span>
+                                        <div class="essential_box1Div">
+                                            <select class="idCardType">
+                                                <option value="0">身份证</option>
+                                                <!-- <option value="1">军官证</option> -->
+                                                <!-- <option value="2">护照</option> -->
+                                                <!-- <option value="3">港澳通行证</option> -->
+                                            </select>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>身份证号</span>
+                                        <div class="essential_box1Div">
+                                            <input type="tel" class="pregnantIdCard" placeholder="请输入身份证号码">
+                                            <p class="redFont">身份证号格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span class="ls20" id="mgr0">手机号</span>
+                                        <div class="essential_box1Div">
+                                            <input type="number" class="pregnantPhone" placeholder="请输入手机号">
+                                            <p class="redFont">手机号号格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+
+                                    <div class="fl essential_Fl">
+                                        <span>出生年月</span>
+                                        <div class="essential_box1Div">
+                                            <div class="birthBox">
+                                                <input type="text" class="layui-input pregnantDateBirth" placeholder="" id="test1" readonly="readonly">
+                                                <p class="birth">
+                                                    <span class="birth_age"></span>
+                                                    <span class="birth_sex"></span>
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>结婚年龄</span>
+                                        <div class="essential_box1Div">
+                                            <input type="number" class="pregnantMarriageAge" placeholder="请输入结婚年龄" >
+                                            <span class="sui">岁</span>
+                                            <p class="redFont">请输入正确年龄</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>孕前体重</span>
+                                        <div class="essential_box1Div">
+                                            <input type="number" class="pregnantWeight" placeholder="请输入孕前体重" >
+                                            <span class="kg">kg</span>
+                                            <p class="redFont">请输入正确孕前体重</p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 第二块 -->
+                            <div class="essential_box2">
+                                <form action="" class="layui-form">
+                                    <span>结婚状况</span>
+                                    <div class="mgr80 w200">
+                                        <select class="marryType">
+                                            <option value="0" selected="selected">初婚</option>
+                                            <option value="1">再婚</option>
+                                            <option value="2">其他</option>
+                                        </select>
+
+                                    </div>
+
+                                    <span class="">婚&nbsp;&nbsp;检</span>
+                                    <div class="mgr50 w200">
+                                        <select class="marryCheck">
+                                            <option value="0">没有</option>
+                                            <option value="1" selected="selected">有</option>
+                                            <option></option>
+                                            <option></option>
+                                        </select>
+                                    </div>
+
+                                    <span>近半年避孕方法</span>
+                                    <div class='w309'>
+                                        <select class="contraception">
+                                            <option value="0">未避孕</option>
+                                            <option value="1">口服避孕药</option>
+                                            <option value="2">避孕套</option>
+                                            <option value="3">避孕膜</option>
+                                            <option value="4" >其他</option>
+                                        </select>
+                                    </div>
+
+                                    <br/>
+                                    <span>文化程度</span>
+                                    <div class="mgr80 w309">
+                                        <select class="education">
+                                            <option value="0">硕士以上</option>
+                                            <option value="1" selected="selected">本科</option>
+                                            <option value="2">大专</option>
+                                            <option value="3">中专及高中</option>
+                                            <option value="4">初中</option>
+                                            <option value="5">文盲</option>
+                                        </select>
+                                    </div>
+
+                                    <span class="">民&nbsp;&nbsp;族</span>
+                                    <div class="mgr50 w309">
+                                        <select class="nation">
+                                            <!-- <option>请选择</option>
+                                            <option>汉族</option>
+                                            <option>其他</option>
+                                            <option></option>
+                                            <option></option> -->
+                                        </select>
+                                    </div>
+
+                                    <br/>
+                                    <span class="mgl20">职业</span>
+                                    <div class="mgr80 w309">
+                                        <select class="job">
+                                            <option value="0" selected="selected">无</option>
+                                            <option value="1">农、牧、渔</option>
+                                            <option value="2">干部、职员</option>
+                                            <option value="3">医院、科技</option>
+                                            <option value="4">工人</option>
+                                            <option value="5">个体</option>
+                                            <option value="6">家务</option>
+                                        </select>
+                                    </div>
+
+                                    <span>工作单位名称</span>
+                                    <input type="text" class="work" placeholder="请输入工作单位">
+                                </form>
+                            </div>
+                            <!-- 第三块 -->
+                            <div class="essential_box3">
+                                <!-- <form action="" class="layui-form"> -->
+                                    <div class="essential_box3_top">
+                                        <div class="selItem">
+                                            <span>户口所在地</span>
+                                            <input class="areaInput mgl21" type="text" placeholder="请选择">
+                                            <a class="areaSelect" href="javascript:;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="essential_box3_top">
+
+                                        <div class="selItem">
+                                            <span class="">现&nbsp;住&nbsp;地&nbsp;址</span>
+                                            <input class="areaInput2 mgl39" type="text" placeholder="请选择">
+                                            <a class="residenceAddress" href="javascript:;"></a>
+                                        </div>
+                                        <input type="text" placeholder="请输入详细地址" class="presentAddress mgl226">
+                                    </div>
+                                <!-- </form> -->
+                            </div>
+                        </div>
+
+                        <!-- 配偶一般信息 -->
+                        <div class="layui-tab-item spouse">
+                            <!-- 第一块 -->
+                            <div class="spouse_box1 clearfix">
+                                <form action="" class="layui-form clearfix">
+                                    <div class="fl essential_Fl">
+                                        <span>配偶姓名</span>
+                                        <div class="box1Div">
+                                            <input type="text" class="spouseName" placeholder="请输入姓名">
+                                            <p class="redFont">姓名格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span class="ls20" id="mgr0">手机号</span>
+                                        <div class="box1Div">
+                                            <input type="number" class="spousePhone" placeholder="请输入手机号">
+                                            <p class="redFont">手机号格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>证件类型</span>
+                                        <div class="box1Div">
+                                            <select class="spouseIdCardType">
+                                                <option value="0" selected="selected">身份证</option>
+                                                <!-- <option value="1">护照</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>身份证号</span>
+                                        <div class="box1Div">
+                                            <input type="tel" class="spouseIdCard" placeholder="请输入身份证号码">
+                                            <p class="redFont">身份证号格式错误</p>
+                                            <img src="/maternal-ipad/functionPage/error.png" alt="" class="errorIon">
+                                        </div>
+                                    </div>
+
+                                    <div class="fl essential_Fl">
+                                        <span>结婚年龄</span>
+                                        <div class="box1Div">
+                                            <input type="number" class="spouseMarriageAge" placeholder="请输入结婚年龄">
+                                            <span class="sui">岁</span>
+                                            <p class="redFont">请输入正确年龄</p>
+                                        </div>
+                                    </div>
+                                    <div class="fl essential_Fl">
+                                        <span>
+                                            配偶年龄</span>
+                                        <div class="box1Div">
+                                            <input type="number" class="spouseAge" placeholder="请输入结婚年龄">
+                                            <span class="sui">岁</span>
+                                            <p class="redFont">请输入正确年龄</p>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <!-- 第二块 -->
+                            <div class="spouse_box2 clearfix">
+                                <form action="" class="layui-form clearfix">
+                                    <div class="fl ">
+                                        <span>结婚状况</span>
+                                        <div class="mgr80 w200">
+                                            <select class="spouseMarryType">
+                                                <option value="0" selected="selected">初婚</option>
+                                                <option value="1">再婚</option>
+                                                <option value="2">其他</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span class="">婚&nbsp;&nbsp;检</span>
+                                        <div class="mgr80 w200">
+                                            <select class="spouseMarryCheck">
+                                                <option value="0" selected="selected">没有</option>
+                                                <option value="1">有</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>健康状态</span>
+                                        <div class="mgr80 w200">
+                                            <select class="healthType">
+                                                <option value="0">健康</option>
+                                                <option value="1">一般</option>
+                                                <option value="2">较弱</option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl ">
+                                        <span>文化程度</span>
+                                        <div class="mgr80 w309">
+                                            <select class="spouseEducation">
+                                                <option value="0">硕士以上</option>
+                                                <option value="1" selected="selected">本科</option>
+                                                <option value="2">大专</option>
+                                                <option value="3">中专及高中</option>
+                                                <option value="4">初中</option>
+                                                <option value="5">文盲</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span class="">职&nbsp;&nbsp;业</span>
+                                        <div class="mgr90 w309">
+                                            <select class="spouseJob">
+                                                <option value="0" selected="selected">无</option>
+                                                <option value="1">农、牧、渔</option>
+                                                <option value="2">干部、职员</option>
+                                                <option value="3">医院、科技</option>
+                                                <option value="4">工人</option>
+                                                <option value="5">个体</option>
+                                                <option value="6">家务</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="fl">
+                                        <span class="ls30">民族</span>
+                                        <div class="mgr80">
+                                            <select>
+                                                <option>请选择</option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                </form>
+
+                            </div>
+                            <!-- 第三块 -->
+                            <div class="spouse_box3">
+                                <form class="layui-form" action="">
+                                    <div class="spouse_box3_top ">
+                                        <span class='ls30'>吸烟</span>
+                                        <input type="radio" name="smoking" value="0" title="无" checked lay-filter="smoking">
+                                        <input type="radio" name="smoking" value="1" title="有" lay-filter="smoking">
+                                        <input type="number" class="cigaretteNUm">
+                                        <span class="mgl25">支/日</span>
+                                        <span class="mgl86 mgr55">饮酒</span>
+                                        <input type="radio" name="drink" value="1" title="偶尔">
+                                        <input type="radio" name="drink" value="2" title="经常">
+                                        <input type="radio" name="drink" value="0" title="否" checked>
+                                    </div>
+                                    <div class="spouse_box3_bottom clearfix">
+                                        <div class="spouse_box3_bottom_left fl">家族史</div>
+                                        <div class="spouse_box3_bottom_right fl">
+                                            <div class="choose">
+                                                <input type="radio" name="history1" lay-filter="history1" value="否" title="无" checked class="choose_no">
+                                                <input type="radio" name="history1" lay-filter="history1" value="是" title="有" class="choose_yes">
+                                                <input type="email" class="inquire" placeholder="请输入拼音首字母" onKeyUp="value=value.replace(/[\W]/g,'')">
+                                                <!-- <input type="text" class="inquire" placeholder="请输入拼音首字母" style="ime-mode:disabled"> -->
+                                                    <ul class="hideBox">
+                                                        <!-- <li>糖尿病1</li> -->
+                                                    </ul>
+                                            </div>
+                                            <div class="disease">
+                                                <!-- <div>
+                                                    <span class="patientHistory">高血压</span>
+                                                    <i class="deteleIcon"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="patientHistory">糖尿病</span>
+                                                    <i class="deteleIcon"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="patientHistory">糖尿病</span>
+                                                    <i class="deteleIcon"></i>
+                                                </div>
+                                                <div>
+                                                    <span class="patientHistory">糖尿病</span>
+                                                    <i class="deteleIcon"></i>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 第四块 -->
+                            <div class="spouse_box4">
+                                <!-- <form class="layui-form clearfix" action=""> -->
+                                    <div class="selItem">
+                                        <span class="">现&nbsp;住&nbsp;地&nbsp;址</span>
+                                        <input class="areaInput3" type="text" placeholder="请选择">
+                                        <a class="spouseResidenceAddress" href="javascript:;"></a>
+                                    </div>
+                                    <input type="text" placeholder="请输入详细地址" class="spouseSite mgl222">
+                                <!-- </form> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nextStep nextStep1">下一步</div>
+                <div class="nextStep  nextStepOne">下一步</div>
+
+
+            </div>
+            <!-- 初诊记录 -->
+            <div class="content newRecord">
+                <div class="layui-tab layui-tab-brief tebBox" lay-filter="docDemoTabBrief">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this newRecordLi1" pregnancyIdentifying = '0'>孕产信息</li>
+                        <li class="newRecordLi2" physiqueIdentifying = '0'>体格检查</li>
+                    </ul>
+                    <div class="layui-tab-content  clearfix">
+                        <!-- 孕产信息模块 -->
+                        <div class="layui-tab-item layui-show recordBox">
+                            <!-- 第一块 -->
+                            <div class="recordBox1 clearfix">
+                                <div class="fl mgr30 mgb33">
+                                    <span>初诊日期</span>
+                                    <input type="text" class="layui-input mgl30 firstCheckDate" placeholder="" id="test2" readonly="readonly" disabled= "disabled">
+                                </div>
+                                <div class="fl mgr30 mgb33">
+                                    <span>末次月经</span>
+                                    <input type="tel" class="layui-input mgl30 lastMenstruation" placeholder="" id="test3" readonly="readonly">
+                                </div>
+                                <div class="fl mgr30 mgb33">
+                                    <span>预产期</span>
+                                    <input type="text" class="mgl30 dueDate" placeholder="自动计算" readonly='readonly'>
+                                </div>
+                                <div class="fl mgr30 mgb33">
+                                    <span class="ls30">孕周</span>
+                                    <input type="text" class="mgl30 mgr20 newAgeOfMenarche" placeholder="孕周"> +
+                                    <input type="text" class="mgl30 mgr20 newAgeOfMenarcheDay" placeholder="孕天">
+                                </div>
+                                <div class="fl mgr30 mgb33">
+                                    <span>月经史</span>
+                                    <div class="birthBox mgl48">
+                                        <input type="number" class="menstrualHistoryAge" placeholder="初潮">
+                                        <p class="birth">岁</p>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="birthBox">
+                                        <input type="number" placeholder="周期" class="menstrualHistoryDay">
+                                        <p class="birth">天</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 第二块 -->
+                            <div class="recordBox2 clearfix">
+                                <div class="recordBox2_top">
+                                    <form action="" class="layui-form clearfix">
+                                    <span>怀孕次数</span>
+                                    <select class="pregnancyNum" lay-filter="pregnancyNum">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    </select>
+                                    <span>次</span>
+                                </form>
+                                </div>
+                                <div class="tableShade"></div>
+                                <div class="recordBox2_bottom">
+                                    <table class="layui-table dynamicTable" lay-even>
+                                        <thead>
+                                            <tr>
+                                                <th class="w120">胎次</th>
+                                                <th class="w120">孕周</th>
+                                                <!-- <th class="w120">孕天</th> -->
+                                                <th class="w200">年-月-日</th>
+                                                <th class="w140">年龄</th>
+                                                <th class="w170">分娩方式</th>
+                                                <th class="w133">性别</th>
+                                                <th class="w170">健否</th>
+                                                <th class="w280">备注</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="kang"> </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- 第三块 -->
+                            <div class="recordBox3">
+                                <form action="" class="layui-form clearfix">
+                                    <div class="fl">
+                                        <span>孕期用药</span>
+                                        <div class="mgr80">
+                                            <select class="parturitionFrontPharmacy">
+                                                <option value="0">否</option>
+                                                <option value="1">有</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>尿酮体</span>
+                                        <div class="mgr80">
+                                            <select class="ketosis">
+                                                <option value="0">否</option>
+                                                <option value="1">有</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>早孕反应程度</span>
+                                        <div class="mgr80">
+                                            <select class="morningSickness">
+                                                <option value="3">无</option>
+                                                <option value="0">轻</option>
+                                                <option value="1">中</option>
+                                                <option value="2">重</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>宠物接触</span>
+                                        <div class="mgr80">
+                                            <select class="animalContact">
+                                                <option value="0">否</option>
+                                                <option value="1">有</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>接触放射性</span>
+                                        <div class="mgr90">
+                                            <select class="contactRadioactiveRays" lay-filter="contactRadioactiveRays">
+                                                <option value="0">否</option>
+                                                <option value="1">有</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="fl">
+                                        <span>时间</span>
+                                        <input type="text" class="layui-input mgl30 contactRadioactiveRaysDate" placeholder="" id="test4" disabled="disabled"readonly="readonly" onfocus="this.blur();">
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 第四块 -->
+                            <div class="recordBox4">
+                                <form action="" class="layui-form clearfix">
+                                    <div class="recordBox4_1 clearfix">
+                                        <div class="recordBox4_1_left fl ls15">接触毒物</div>
+                                        <div class="recordBox4_1_right fl">
+                                            <div class="choose">
+                                                <input type="radio" name="contact" lay-filter="contact" value="0" title="无" checked class="choose_no">
+                                                <input type="radio" name="contact" lay-filter="contact" value="1" title="有" class="choose_yes">
+                                                <span class="gray">名称</span>
+                                                <input type="email" placeholder="请输入毒药名称" class="contactToxicName bgcC">
+                                                <span class="gray mgl40">时间</span>
+                                                <input type="text" class="layui-input contactToxicDate bgcC" placeholder="" id="test5" onfocus="this.blur();">
+                                                <ul class="touchBox">
+                                                    <!-- <li>糖尿病1</li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="touchdisease">
+                                                <!-- <div class="recordPatientHistory">高血压
+                                                                                        <i class="deteleIcon"></i>
+                                                                                    </div>
+                                                                                    <div class="recordPatientHistory">糖尿病
+                                                                                        <i class="deteleIcon"></i>
+                                                                                    </div> -->
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                    <!-- <div class="recordBox4_1">
+                                        <span>接触毒物</span>
+                                        <input type="radio" name="contact" lay-filter="contact" value="0" title="无" checked>
+                                        <input type="radio" name="contact" lay-filter="contact" value="1" title="有" >
+                                        <span class="gray mgl48">名称</span>
+                                        <input type="text" placeholder="请输入毒药名称" class="contactToxicName bgcC">
+                                        <span class="gray mgl40">时间</span>
+                                        <input type="text" class="layui-input contactToxicDate bgcC" placeholder="" id="test5" onfocus="this.blur();">
+                                    </div> -->
+                                    <div class="recordBox4_2">
+                                        <span>病毒感染</span>
+                                        <input type="radio" name="virus" lay-filter="virus" value="0" title="无" checked>
+                                        <input type="radio" name="virus" lay-filter="virus" value="1" title="有">
+                                        <div class="chunk mgl48">
+
+                                            <b class="chunks" value="流感">流感</b>
+                                            <b class="chunks" value="风疹">风疹</b>
+                                            <b class="chunks" value="疱疹">疱疹</b>
+                                            <b class="chunks" value="肝炎">肝炎</b>
+                                            <b class="chunks" value="腮腺炎">腮腺炎</b>
+                                            <b class="chunks" value="其他">其他</b>
+                                            <!-- <div class="shutter"> </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="recordBox4_3 clearfix">
+                                        <div class="recordBox4_3_left fl ls15">家族史</div>
+                                        <div class="recordBox4_3_right fl">
+                                            <div class="choose">
+                                                <input type="radio" name="history2" lay-filter="history2" value="否" title="无" checked class="choose_no">
+                                                <input type="radio" name="history2" lay-filter="history2" value="是" title="有" class="choose_yes">
+                                                <input type="email" class="recordInquire bgcC" placeholder="请输入拼音首字母" autocapitalize="on"/>
+                                                    <ul class="recordhideBox">
+                                                        <!-- <li>糖尿病1</li> -->
+                                                    </ul>
+                                            </div>
+                                            <div class="disease">
+                                                <!-- <div class="recordPatientHistory">高血压
+                                                    <i class="deteleIcon"></i>
+                                                </div>
+                                                <div class="recordPatientHistory">糖尿病
+                                                    <i class="deteleIcon"></i>
+                                                </div> -->
+                                            </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="recordBox4_4 clearfix">
+                                        <div class="recordBox4_4_left fl ls15">现病史</div>
+                                        <div class="recordBox4_4_right fl">
+                                            <div class="presentchoose">
+                                                <input type="radio" name="presentIllness" lay-filter="presentIllness" value="否" title="无" checked class="choose_no">
+                                                <input type="radio" name="presentIllness" lay-filter="presentIllness" value="是" title="有" class="choose_yes">
+                                                <input type="email" class="presentrecordInquire bgcC" placeholder="请输入拼音首字母">
+                                                <ul class="presentrecordhideBox">
+                                                    <!-- <li>糖尿病1</li> -->
+                                                </ul>
+                                            </div>
+                                            <div class="presentdisease">
+                                                <!-- <div class="recordPatientHistory">高血压
+                                                                                        <i class="deteleIcon"></i>
+                                                                                    </div>
+                                                                                    <div class="recordPatientHistory">糖尿病
+                                                                                        <i class="deteleIcon"></i>
+                                                                                    </div> -->
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                    <!-- <div class="recordBox4_4">
+                                        <span class="ls15">现病史</span>
+                                        <input type="text" placeholder="请输入现有病史" class="existing nowHistory">
+                                    </div> -->
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 体格检查模块 -->
+                        <div class="layui-tab-item assessBox">
+                            <div class="assessBoxContant clearfix">
+                                <form action="" class="layui-form clearfix">
+                                    <p class="assessBox_tettle">一般检查</p>
+                                    <!-- 第一块 -->
+                                    <div class="assessBox1">
+                                        <div class="bpBox  mgr40 mgb30">血压
+                                            <input type="number" placeholder="高压" class="hyperpiesia"> ~
+                                            <input type="number" placeholder="低压" class="lowTension ">
+                                            <span class="c999">mmHg</span>
+                                        </div>
+                                        <div class="mgr40 mgb30">
+                                            <span>身高</span>
+                                            <input type="number" class="height">
+                                            <span class="c999">cm</span>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>体重</span>
+                                            <input type="number" class="weight">
+                                            <span class="c999">kg</span>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>心率</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseHeartRate">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">异常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>肺</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseLung">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">异常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>肝</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseAbdomenLiver">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">异常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>脾</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseAbdomenSpleen">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">异常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>脊柱</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseSpinalLimbsDeformity">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">畸形</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>乳房</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseBreasts">
+                                                    <option value="0">丰满</option>
+                                                    <option value="1">扁平</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>乳头</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseNipple">
+                                                    <option value="0">凸</option>
+                                                    <option value="1">凹</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>四肢水肿</span>
+                                            <div class="dib mgr30 marginL20">
+                                                <select class="baseSpinalLimbsEdema">
+                                                    <option value="0">无</option>
+                                                    <option value="1">轻</option>
+                                                    <option value="2">中</option>
+                                                    <option value="3">重</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <p class="assessBox_tettle">妇科检查</p>
+                                    <!-- 第二块 -->
+                                    <div class="assessBox2">
+                                        <div class="mgb30">
+                                            <span>外阴</span>
+                                            <div class="dib mgr30 ">
+                                                <select class="obstetricsVulva">
+                                                    <option value="0">正常</option>
+                                                    <option value="1">异常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>阴道</span>
+                                            <div class="dib mgr30 ">
+                                                <select class="obstetricsVagina">
+                                                    <option value="0">通畅</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>宫颈</span>
+                                            <div class="dib mgr30 ">
+                                                <select class="obstetricsCervix">
+                                                    <option value="0">正常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>宫体</span>
+                                            <div class="dib mgr30 ">
+                                                <select class="obstetricsCorpus">
+                                                    <option value="0">正常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>附件</span>
+                                            <div class="dib mgr30 ">
+                                                <select class="obstetricsPairsAttachment">
+                                                    <option value="0">正常</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="assessBox_tettle">化验检查</p>
+                                    <!-- 第三块 -->
+                                    <div class="assessBox3 clearfix">
+                                        <span>尿蛋白</span>
+                                        <input type="number" class="mgl30 mgr25 assayUrineProtein">
+                                        <span>血红蛋白</span>
+                                        <input type="number" class="mgl30 mgr25 assayHemoglobin">
+                                        <span>血小板</span>
+                                        <input type="number" class="mgl30 mgr25 assayBloodPlatelet">
+                                        <span>血型</span>
+                                        <div class="mgl30">
+                                            <select class="assayBloodType">
+                                                <option value="0">O</option>
+                                                <option value="1">A</option>
+                                                <option value="2">B</option>
+                                                <option value="3">AB</option>
+                                                <option value="4">RH</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <p class="assessBox_tettle">化验检查</p>
+                                    <!-- 第四块 -->
+                                    <div class="assessBox4">
+                                        <div class="mgr25 mgb30">
+                                            <span>宫高</span>
+                                            <input type="number" class="mgl10 obstetricsHeight">
+                                            <span class="c999">cm</span>
+                                        </div>
+                                        <div class="mgr25 mgb30">
+                                            <span>腹围</span>
+                                            <input type="number" class="mgl10 obstetricsAbdominalGirth">
+                                            <span class="c999">cm</span>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>先露</span>
+                                            <div class="dib mgr25 mgl10">
+                                                <select class="obstetricsFirstDew">
+                                                    <option value="0">未填写</option>
+                                                    <option value="1">先头露</option>
+                                                    <option value="2">臀先露</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgb30">
+                                            <span>胎方位</span>
+                                            <div class="dib mgr25 mgl10">
+                                                <select class="obstetricsPlacental">
+                                                    <option value="0">未填写</option>
+                                                    <option value="1">枕左前位</option>
+                                                    <option value="2">枕右横位</option>
+                                                    <option value="3">枕右前位</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mgr25 mgb30">
+                                            <span>胎心率</span>
+                                            <input type="number" class="mgl10 obstetricsFetalHeart">
+                                            <span class="c999">次/分</span>
+                                        </div>
+                                        <div class="mgr25 mgb30">
+                                            <span>盆骨出口横径</span>
+                                            <input type="number" class="mgl10 obstetricsTransversePelvicDiameter">
+                                            <span class="c999">cm</span>
+                                        </div>
+                                    </div>
+                                    <!-- 第五块 -->
+                                    <div class="assessBox5 clearfix">
+                                        <span class="fl">诊断</span>
+                                        <div class="assessBox5_right">
+                                            <input type="text" id="zhenduan" class="primaryDiagnosis">
+                                            <p class="template1">
+                                                <i class="joinIco"></i>
+                                                <span>导入模板</span>
+                                            </p>
+                                        </div>
+
+                                        <span class="fl">处置</span>
+
+                                        <div class="assessBox5_right">
+                                            <input type="text" id="chuzhi" class="disposal">
+                                            <p class="template2">
+                                                <i class="joinIco"></i>
+                                                <span>导入模板</span>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="backBtn backBtn1">返回</div> -->
+                <div class="nextStep nextStep2">下一步</div>
+                <div class="nextStep nextStepTwo">下一步</div>
+            </div>
+            <!-- 高危评估 -->
+            <div class="content assessment">
+                <div class="assessmentContent">
+                    <h2 class="tilteText" basicIdentifying = '0'>基本情况</h2>
+                    <div class="assessmentBox">
+                        <div class="topicBox">
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        </div>
+                        <div class="scoreBox">
+                            <p>5分</p>
+                            <p>黄色</p>
+                        </div>
+                    </div>
+                    <div class="assessmentBox">
+                        <div class="topicBox">
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        </div>
+                        <div class="scoreBox">
+                            <p>5分</p>
+                            <p>黄色</p>
+                        </div>
+                    </div>
+                    <h3 class="tilteText">孕产期合并发症</h3>
+                    <div class="navContent">
+                        <a class="active" href="javascript:;">心血管</a>
+                        <a href="javascript:;">心血管</a>
+                        <a href="javascript:;">心血管</a>
+                        <a href="javascript:;">心血管</a>
+                    </div>
+                    <div class="bodyContent">
+                        <div class="item active"></div>
+                    </div>
+                    <h2 class="tilteText">孕期并发症</h2>
+                    <div class="assessmentBox">
+                        <div class="topicBox">
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        </div>
+                        <div class="scoreBox">
+                            <p>5分</p>
+                            <p>黄色</p>
+                        </div>
+                    </div>
+                    <div class="assessmentBox">
+                        <div class="topicBox">
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        </div>
+                        <div class="scoreBox">
+                            <p>5分</p>
+                            <p>黄色</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nextStep nextStep3">下一步</div>
+            </div>
+            <!-- 签字确认 -->
+            <div class="content affirm">
+                <div class="affirmBox1">
+                    <div class="affirmBox1_left">
+                        <p class="totalPoints">0分</p>
+                        <p>初次筛查与评分</p>
+                    </div>
+                    <div class="affirmBox1_right">
+                        <p>评估信息</p>
+                    <span id="riskItem">一半严重</span>
+                        <p>
+                            <span>绿色(
+                                <i>0</i>
+                                )项</span>
+                            <span>黄色(
+                                <i class="fiveLength">0</i>
+                                )项</span>
+                            <span>橙色(
+                                <i class="tenLength">0</i>
+                                )项</span>
+                            <span>红色(
+                                <i class="twentyLength">0</i>
+                                )项</span>
+                            <span>紫色(
+                                <i class="purpleLength">0</i>
+                                )项</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="affirmBox2">
+                    <h3>评估详情</h3>
+                        <div class="cf clearfix">
+                                <span>绿色(低风险):</span>
+                                <div class="greenDiv"></div>
+                        </div>
+                        <div class="cf clearfix">
+                            <span>黄色(一般风险):</span>
+                            <div class="yellowDiv"></div>
+                        </div>
+                            <div class="cf clearfix">
+                                <span>橙色(较高风险):</span>
+                                <div class="orangeDiv"></div>
+                            </div>
+                        <div class="cf clearfix">
+                            <span>红色(高风险):</span>
+                        <div class="redDiv"></div>
+                        </div>
+                   
+                        <div class="cf clearfix">
+                            <span>紫色(传染病):</span>
+                            <div class="purpleDiv"></div>
+                        </div>
+                    <h3>
+                        <span>备注信息</span>
+                        <input type="text" class="remark">
+                    </h3>
+                </div>
+                <div class="affirmBox3">
+                    <p>注意</p>
+                    <p>孕妇建档信息的真实准确关系到孕妇个人利益，请认真填写，如因信息错误引发的问题，医院将不承担责任；</p>
+                    <div class="sign clearfix">
+                        <div class="signLeft">
+                            <span>孕妇签字处</span>
+                            <div class="patientSignature"></div>
+                        </div>
+                        <div class="signRight">
+                            <span>医生签字处</span>
+                            <div class="doctorSignature"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="javascript:;"> -->
+                    <div class="nextStep accomplish">完成</div>
+                <!-- </a> -->
+
+
+            </div>
+            <!-- 遮罩 -->
+            <div class="shade"></div>
+        </div>
+    </div>
+    <!-- 确认签字患者弹框 -->
+    <div class="patientPopout">
+        <p class="popoutTop">
+            <img src="/maternal-ipad/particulars/specimen.png" alt="" class="specimen">
+            <span>签字确认</span>
+            <img src="/maternal-ipad/particulars/clone.png" alt="" class="clone">
+        </p>
+        <div class="board">
+            <a href="javascript:;" class="again patientAgain">重新签名</a>
+        </div>
+        <div class="callBack">返回</div>
+        <div class="yesBtn">确认</div>
+    </div>
+
+    <!-- 确认医生签字弹框 -->
+    <div class="doctorPopout">
+        <p class="popoutTop">
+            <img src="/maternal-ipad/particulars/specimen.png" alt="" class="specimen">
+            <span>签字确认</span>
+            <img src="/maternal-ipad/particulars/clone.png" alt="" class="clone">
+        </p>
+        <div class="doctorBoard">
+            <a href="javascript:;" class="again doctorAgain">重新签名</a>
+        </div>
+        <div class="callBack">返回</div>
+        <div class="doctorYesBtn">确认</div>
+    </div>
+    <!-- 校验弹窗 -->
+    <div class="verifyAlert clearfix">
+        <p>请仔细检查所填信息并完善</p>
+        <p class="reminder">请输入孕周时间</p>
+        <div class="verifyAlertLooks">再看一下</div>
+        <div class="verifyAlertConfirm">确定</div>
+    </div>
+<!-- body遮罩 -->
+<div class="shadow"></div>
+    <!-- 导入模板弹框 -->
+    <div class="stencilLayer">
+        <div class="stencilLayer_nav clearfix">
+            <div class="stencilLayer_title">
+                <img src="/maternal-ipad/added/text.png" alt="创建模板">
+                <span>创建模板</span>
+            </div>
+            <img src="/maternal-ipad//added/clone.png" alt="" class="stencilLayer_clone">
+        </div>
+        <div class="stencilLayer_contant">
+            <p class="templateFont">自觉不适</p>
+            <div class="stencilLayer_select"> </div>
+        </div>
+        <div class="stencilLayer_footer">
+            <div class="gobackBtn">返回</div>
+            <div class="importTemplate">导入模板</div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

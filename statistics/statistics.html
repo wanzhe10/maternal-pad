@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>统计页</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/statistics/statistics.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/nationality.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/statistics/statistics.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="header_left">
+            <span>开始时间：</span>
+            <div class="headerDate">
+                <i class="starDate"></i>
+                <i class="endDate"></i>
+                <input type="text" class="layui-input" id="test6" placeholder="" readonly='readonly'>至<input type="text"
+                    class="layui-input" id="test7" placeholder="" readonly='readonly'>
+            </div>
+            <div class="thisWeek">本周</div>
+            <div class="thisMouth">本月</div>
+            <div class="thisYear">本季</div>
+
+            <form action="" class="layui-form">
+                <span>孕周范围：</span>
+                <div class="w135">
+                    <select class="weekBegin" lay-filter="age" name="age" lay-verify="type">
+                        <option value="" selected="selected">不限</option>
+                    </select>
+                </div>
+                -
+                <div class="w135">
+                    <select class="weekEnd">
+                        <option value="" selected="selected">不限</option>
+                    </select>
+                </div>
+                <span class="ml20">孕妇年龄范围：</span>
+                <div class="w135">
+                    <select class="ageBegin">
+                        <option value="" selected="selected">不限</option>
+                    </select>
+                </div>
+                -
+                <div class="w135">
+                    <select class="ageEnd">
+                        <option value="" selected="selected">不限</option>
+                    </select>
+                 </div>
+                <span class="ml20">高危评估标识：</span>
+                <div class="w200">
+                    <select class="spouseMarryType">
+                        <option value="0" selected="selected"><i></i>初婚</option>
+                        <option value="1">再婚</option>
+                        <option value="2">其他</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="header_right">
+            <div class="inquireBtn active">查询</div>
+        </div>
+    </header>
+    <main class="clearfix">
+        <div class="main_left">
+            <div class="headline"><img src="/maternal-ipad/statistics/statistics1.png" alt="高危孕产妇管理"><span>高危孕产妇管理</span></div>
+            <ul class="navUl">
+                <li class="fiveRate">>5次产检率</li>
+                <li class="antenatal">产前筛查率</li>
+                <li class="heighRisk">高危孕产妇管理</li>
+                <!-- <li class="anemia">高危中度贫血率</li> -->
+                <li class="morbidity">妊娠期高血压疾病发生率</li>
+            </ul>
+            <h3 class="bedNum">预分娩床位数量统计</h3>
+            <div class="backIndex">返回首页</div>
+        </div>
+        <div class="main_right">
+            <!--   首页显示开始 -->
+            <div class="dataIndex">
+                <div class="documented clearfix">
+                    <div class="documented_left">
+                        <i></i>
+                        <p>已建档数据统计</p>
+                    </div>
+                    <div class="documented_right clearfix">
+                        <div>
+                            <p>13周-27周</p>
+                            <span class="documentedNum1">3634</span><span>人</span>
+                        </div>
+                        <div>
+                            <p>28周-35周</p>
+                            <span class="documentedNum2">3634</span><span>人</span>
+                        </div>
+                        <div>
+                            <p>36周-分娩前</p>
+                            <span class="documentedNum3">3634</span><span>人</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="taday">
+                    <div class="documented_left">
+                        <i></i>
+                        <p>今日复检统计</p>
+                    </div>
+                    <div class="documented_right clearfix">
+                        <div>
+                            <p>预约人数</p>
+                            <span class="documentedNum1">365</span><span>人</span>
+                        </div>
+                        <div>
+                            <p>应到复检</p>
+                            <span class="documentedNum2">345</span><span>人</span>
+                        </div>
+                        <div>
+                            <p>未到复检</p>
+                            <span class="documentedNum3">345</span><span>人</span>
+                        </div>
+                        <div>
+                            <p>复检超时</p>
+                            <span class="documentedNum3">365</span><span>人</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 首页显示结束  -->
+            <!--详情页 echarts图 和表格 star -->
+            <div class="particulars">
+                <div class="eachartsBox">
+                    <div id="chartmain"></div>
+                </div>
+                <div class="tableBox">
+                    <table class="layui-table">
+                        <thead>
+                            <tr>
+                                <th class="w190">姓名</th>
+                                <th class="w190">孕周</th>
+                                <th class="w310">孕产期</th>
+                                <th class="w135">年龄</th>
+                                <th class="w240">评分等级</th>
+                                <th class="w193">时间</th>
+                                <th class="w200">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="recordBody">
+                            <!-- <tr>
+                                <td class="username">王越越</td>
+                                <td class="idCard">16-22</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: red;"></i>红色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="username">王小红</td>
+                                <td class="idCard">11-21</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: yellow;"></i>黄色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="username">李明红</td>
+                                <td class="idCard">13-23</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: green;"></i>绿色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="username">李敏</td>
+                                <td class="idCard">21-30</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: purple;"></i>紫色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="username">李敏</td>
+                                <td class="idCard">21-30</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: purple;"></i>紫色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr><tr>
+                                <td class="username">李敏</td>
+                                <td class="idCard">21-30</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: purple;"></i>紫色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr><tr>
+                                <td class="username">李敏</td>
+                                <td class="idCard">21-30</td>
+                                <td class="age">2017-06-12</td>
+                                <td class="gestational">32</td>
+                                <td class="pregnant"><i style=" background-color: purple;"></i>紫色</td>
+                                <td class="blood">2018-08-21</td>
+                                <td class="operation">
+                                    <a href="javascript:;" class="look">查看</a>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <div class="paging clearfix">
+                        <div class="paging_left">
+                            <form action="" class="layui-form">
+                                <span>每页</span>
+                                <div>
+                                    <select class="pageNum" lay-filter="pageNum">
+                                        <option value="4" selected="selected">4</option>
+                                        <option value="6">6</option>
+                                        <option value="8">8</option>
+                                        <option value="12">12</option>
+                                        <option value="14">14</option>
+                                        <option value="16">16</option>
+                                        <option value="18">18</option>
+                                        <option value="20">20</option>
+                                    </select>
+                                </div>
+                                <span>人</span>
+                                <span class="mgl10">总共<span class="personNum"></span>人</span>
+                            </form>
+                        </div>
+                        <div class="paging_right" id="test1"></div>
+                    </div>
+                </div>
+            </div>
+            <!--详情页 echarts图 和表格  end-->
+
+        </div>
+    </main>
+
+</body>
+
+</html>

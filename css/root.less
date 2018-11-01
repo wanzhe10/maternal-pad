@@ -1,0 +1,311 @@
+@fontColor: #1A8FD3;
+@inputColor: #101010;
+@mainWidth: 1200px;
+@666: #666666;
+@f7f7f7: #f7f7f7;
+@blue: #2b73cc;
+@c6c6c6: #c6c6c6;
+@f9f9f9: #f9f9f9;
+@558fd6: #558fd6;
+@fff: #ffffff;
+@green: #095fac;
+@73a3dd: #73a3dd;
+@eaeaea: #eaeaea;
+@333: #333333;
+@ccc: #cccccc;
+@bfbfbf: #bfbfbf;
+@e8e8e8: #e8e8e8;
+@437fd0: #437fd0;
+@ebebeb: #ebebeb;
+@level0: green;
+@level1: yellow;
+@level2: orange;
+@level3: red;
+@level4: purple;
+.level0 {
+    background: @level0;
+}
+
+.level1 {
+    background: @level1;
+    color:#999 !important;
+}
+
+.level2 {
+    background: @level2;
+}
+
+.level3 {
+    background: @level3;
+}
+
+.level4 {
+    background: @level4;
+}
+
+@fold: 40rem;
+.width (@num) {
+    width: @num/@fold;
+}
+
+.max-width (@num) {
+    max-width: @num/@fold;
+}
+
+.min-width (@num) {
+    min-width: @num/@fold;
+}
+
+.height (@num) {
+    height: @num/@fold;
+}
+
+.min-height(@num) {
+    min-height: @num/@fold;
+}
+
+.max-height(@num) {
+    max-height: @num/@fold;
+}
+
+.font-size (@num) {
+    font-size: @num/@fold;
+}
+
+.letter-spacing(@num) {
+    letter-spacing: @num/@fold;
+}
+
+.line-height (@num) {
+    line-height: @num/@fold;
+}
+
+.text-indent(@num) {
+    text-indent: @num/@fold;
+}
+
+.background-size(@w, @h) {
+    background-size: @w/@fold @h/@fold;
+}
+
+.padding (@t, @r, @b, @l) {
+    padding: @t/@fold @r/@fold @b/@fold @l/@fold;
+}
+
+.margin (@t, @r, @b, @l) {
+    margin: @t/@fold @r/@fold @b/@fold @l/@fold;
+}
+
+.margin-top(@num: 0) {
+    margin-top: @num/@fold;
+}
+
+.margin-right(@num: 0) {
+    margin-right: @num/@fold;
+}
+
+.margin-left(@num: 0) {
+    margin-left: @num/@fold;
+}
+
+.margin-bottom(@num: 0) {
+    margin-bottom: @num/@fold;
+}
+
+.padding-top(@num: 0) {
+    padding-top: @num/@fold;
+}
+
+.padding-right(@num: 0) {
+    padding-right: @num/@fold;
+}
+
+.padding-left(@num: 0) {
+    padding-left: @num/@fold;
+}
+
+.padding-bottom(@num: 0) {
+    padding-bottom: @num/@fold;
+}
+
+.left(@num) {
+    left: @num/@fold;
+}
+
+.right(@num) {
+    right: @num/@fold;
+}
+
+.bottom(@num) {
+    bottom: @num/@fold;
+}
+
+.top(@num) {
+    top: @num/@fold;
+}
+
+.box-shadow (@x: 0, @y: 0, @size: 12px, @spread: 4px, @color: rgba(51, 51, 51, 0.08)) {
+    -webkit-box-shadow: @x @y @size @spread @color;
+    -ms-box-shadow: @x @y @size @spread @color;
+    -moz-box-shadow: @x @y @size @spread @color;
+    -o-box-shadow: @x @y @size @spread @color;
+    box-shadow: @x @y @size @spread @color;
+}
+
+.border-width(@num) {
+    border-width: @num/@fold;
+}
+
+.border-right(@num) {
+    border-right: @num/@fold;
+}
+
+.border-bottom(@num) {
+    border-bottom: @num/@fold;
+}
+
+.border-radius (@t: 15, @r: 15, @b: 15, @l: 15) {
+    -webkit-border-radisu: @t/@fold @r/@fold @b/@fold @l/@fold;
+    -ms-border-radisu: @t/@fold @r/@fold @b/@fold @l/@fold;
+    -moz-border-radisu: @t/@fold @r/@fold @b/@fold @l/@fold;
+    -o-border-radisu: @t/@fold @r/@fold @b/@fold @l/@fold;
+    border-radius: @t/@fold @r/@fold @b/@fold @l/@fold;
+}
+
+// 日历控件样式修改---star
+.laydate-theme-molv .layui-laydate-main {
+    .width(1500) !important;
+    .height(1000); // width: 700px !important;
+}
+
+.layui-laydate-content td,
+.layui-laydate-content th {
+    text-align: center;
+    .width(190) !important;
+    .height(120) !important;
+    .padding(5, 5, 5, 5);
+}
+
+.laydate-set-ym span,
+.layui-laydate-header i {
+    .padding(10, 10, 10, 10) !important;
+    .font-size(40) !important;
+}
+
+.layui-laydate-header i {
+    .font-size(50) !important;
+}
+
+.layui-laydate-footer {
+    position: relative;
+    .height(110) !important;
+    .line-height(110) !important;
+    .padding(20, 40, 20, 40) !important;
+}
+
+.laydate-footer-btns span {
+    .height(80) !important;
+    .line-height(80) !important;
+    .border-radius();
+    margin: 0 0 0 -1px;
+    .margin(0, 10, 0, 10) !important;
+    .font-size(80);
+    .padding(0, 20, 0, 20) !important;
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.laydate-theme-molv {
+    top: 15% !important;
+    left: 15% !important;
+}
+
+// 日历控件样式修改---end
+// 签字弹框
+// 弹框
+.doctorPopout,
+.patientPopout {
+    display: none;
+    .width(1820);
+    .height(1296);
+    background-color: #f6f6f6;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    transform: translate(-50%, -50%);
+    .popoutTop {
+        .margin(0, 0, 37, 40);
+        .padding-top(25);
+        position: relative;
+        span {
+            .font-size(36);
+            color: #333333;
+            .margin-left(15);
+        }
+        .specimen {
+            .width(38);
+            .height(38);
+        }
+        .clone {
+            float: right;
+            .width(34);
+            .height(34);
+            .margin-right(43);
+        }
+    }
+    .board,
+    .doctorBoard {
+        position: relative;
+        .width(1730);
+        .height(972);
+        border-width: 1px;
+        border-style: solid;
+        border-color: #999999;
+        background-color: #fff;
+        margin: 0 auto;
+        .again {
+            position: absolute;
+            .right(55);
+            .bottom(40);
+            color: #68b7e7;
+            .font-size(34);
+        }
+    }
+    .callBack {
+        color: #666666;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #cccccc;
+        font-weight: 100;
+        .margin-left(47);
+        .width(240);
+        .height(86);
+        text-align: center;
+        .font-size(34);
+        .margin-top(50);
+        display: inline-block;
+        .line-height(86);
+    }
+    .doctorYesBtn,
+    .yesBtn {
+        background-color: #68b7e7;
+        color: #fff;
+        font-weight: 100;
+        .margin-left(1240);
+        .width(240);
+        .height(86);
+        text-align: center;
+        .font-size(34);
+        .margin-top(45);
+        display: inline-block;
+        .line-height(86);
+    }
+}
+// 签字弹框结束
+.borderColor {
+    border-color: red !important;
+}

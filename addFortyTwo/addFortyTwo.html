@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>新增产后42天检查记录新增</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/addFortyTwo/addFortyTwo.less" />
+    <link rel="stylesheet" href="/maternal-ipad/library/iosSelect/iosSelect.css">
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/addFortyTwo/addFortyTwo.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/library/iosSelect/iosSelect.js"></script>
+    <script src="/maternal-ipad/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="wire"></div>
+        <span>新增产后42天检查记录</span>
+    </header>
+    <main>
+        <div class="clearfix main_top">
+            <div class="layui-inline choiceTime">
+                检查日期
+                <input type="text" class="checkDate" id="test1" readonly="readonly" disabled='disabled'>
+            </div>
+            <div class="degreeBox">产后天数
+                <input type="number" class="degree">
+                <span>天</span>
+            </div>
+        </div>
+        <div class="ordinaryBox">
+            <p>一般检查</p>
+            <div class="wire"></div>
+        </div>
+        <div class="bpBox">
+            <span>血压</span>
+            <input type="number" placeholder="高压" class="hyperpiesia"> ~
+            <input type="number" placeholder="低压" class="lowTension ">
+            <span>mmHg</span>
+            <span class="mgl60">体重</span>
+            <input type="number" class="weight">
+            <span>kg</span>
+        </div>
+        <div class="main_auto">
+            <form action="" class="layui-form clearfix">
+                <span>乳汁</span>
+                <div class="mgr80 mgl30">
+                    <select class="milk">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                       
+                    </select>
+                </div>
+                <span class="">乳房</span>
+                <div class="mgr80 mgl30">
+                    <select class="breast">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span>乳头</span>
+                <div class='mgr80 mgl30'>
+                    <select class="papilla">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="ordinaryBox">
+            <p>妇科检查</p>
+            <div class="wire"></div>
+        </div>
+        <div class="main_auto">
+            <form action="" class="layui-form clearfix">
+                <span>外阴</span>
+                <div class="mgr80 mgl30">
+                    <select class="vulva">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span class="">阴道</span>
+                <div class="mgr80 mgl30">
+                    <select class="vagina">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span>宫颈</span>
+                <div class='mgr80 mgl30'>
+                    <select class="cervix">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span>子宫</span>
+                <div class="mgr240 mgl30">
+                    <select class="uterus">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span class="">恶露</span>
+                <div class="mgr80 mgl30">
+                    <select class="lochia">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span>双侧附件</span>
+                <div class='mgr80 mgl30'>
+                    <select class="BSO">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="ordinaryBox">
+            <p>婴儿情况</p>
+            <div class="wire"></div>
+        </div>
+        <div class="bpBox">
+
+            <span class="">体重</span>
+            <input type="number" class="babyweight">
+            <span>kg</span>
+            <span class="mgl60">身长</span>
+            <input type="number" class="babyheight">
+            <span>cm</span>
+        </div>
+        <div class="main_auto">
+            <form action="" class="layui-form clearfix">
+                <span>胸部</span>
+                <div class="mgr80 mgl30">
+                    <select class="chest">
+                    <option value="0">未见异常</option>
+                    <option value="1">异常</option>
+                    </select>
+                </div>
+                <span class="">心</span>
+                <div class="mgr80 mgl30">
+                    <select class="heart">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+                <span>肺</span>
+                <div class='mgr80 mgl30'>
+                    <select class="lung">
+                        <option value="0">未见异常</option>
+                        <option value="1">异常</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="ordinaryBox">
+            <p>喂养方式</p>
+            <div class="wire"></div>
+        </div>
+        <div class="ChoiceBox">
+            <div class="breastMilk Choice mgr50">母乳</div>
+            <div class="mixture Choice mgr50">混合</div>
+            <div class="artificial Choice w190">人工喂养</div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="main_bottom">
+            <div class="mb78">
+                <span>新生儿评估</span>
+                <div class="discomfortBox">
+                    <input type="text" class="malaise">
+                    <div class="importDatabase1">
+                        <i class="joinIco"></i>
+                        <span>导入模板</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb45">
+                <span>指导与处理</span>
+                <div class="handlingBox">
+                    <input type="text" class="guideTheProcessing">
+                    <div class="importDatabase2">
+                        <i class="joinIco"></i>
+                        <span>导入模板</span>
+                    </div>
+                </div>
+            </div>
+            <div class="operationDoctor">
+                <span>医生签字 : </span>
+                <div class="doctorSignature"></div>
+            </div>
+        </div>
+        <div class="accomplish">完成</div>
+        <div class="abandon">放弃本次编辑</div>
+    </footer>
+<!-- 遮罩层 -->
+    <div class="shade"></div>
+    <!-- 确认医生签字弹框 -->
+    <div class="doctorPopout">
+        <p class="popoutTop">
+            <img src="/maternal-ipad/particulars/specimen.png" alt="" class="specimen">
+            <span>签字确认</span>
+            <img src="/maternal-ipad/particulars/clone.png" alt="" class="clone">
+        </p>
+        <div class="doctorBoard">
+            <a href="javascript:;" class="again doctorAgain">重新签名</a>
+        </div>
+        <div class="callBack">返回</div>
+        <div class="doctorYesBtn">确认</div>
+    </div>
+    <!-- 放弃本次编辑的弹框 -->
+    <div class="promptContent">
+        <p class="promptText">确定要放弃本次复检新增吗？</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">确认</a>
+        </div>
+    </div>
+
+    <!-- 校验弹窗 -->
+    <div class="verifyAlert clearfix">
+        <p>请仔细检查所填信息并完善</p>
+        <p class="reminder">请输入孕周时间</p>
+        <div class="verifyAlertLooks">再看一下</div>
+        <div class="verifyAlertConfirm">确定</div>
+    </div>
+
+</body>
+
+</html>

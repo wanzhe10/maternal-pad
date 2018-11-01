@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>管理中心</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+    />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/personalSettings/personalSettings.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/personalSettings/personalSettings.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <span class="management">个人设置</span>
+    <div class="container clearfix">
+        <div class="leftBox">
+            <!-- <div class="headline1">
+                <img src="/maternal-ipad/personalSettings/icon1.png" alt="" class="seticon">后台配置&nbsp;&nbsp;
+            </div> -->
+            <!-- <ul class="configurationTop">
+                <li class="womenInformationLi active">
+                    <i class="newsIcon2"></i>
+                    <i class="newsIcon icon2" style="display:block;"></i> 机构信息维护
+                </li>
+                <li class="newRecordLi">
+                    科室信息维护
+                </li>
+                <li class=" assessmentLi">
+                    人员信息维护
+                </li>
+                <li class="affirmLi">
+                    人员角色维护
+                </li>
+                <li class="jurisdiction">
+                    产检信息维护
+                </li>
+                <li class="report">
+                    报告单解读维护
+                </li>
+            </ul> -->
+            <div class="headline2">
+                <img src="/maternal-ipad/personalSettings/icon2.png" alt="" class="managementicon">信息管理
+            </div>
+            <ul class="configurationBottom">
+                <li class="">
+                    用户个人信息
+                </li>
+                <li class="">
+                    修改密码
+                </li>
+            </ul>
+            <div class="quitBtn">退出登录</div>
+        </div>
+        <!-- 右边模块 -->
+        <div class="rightBox">
+            <form class="layui-form" action="">
+                <!-- 机构信息维护 -->
+                <!-- <div class="content organization" style="display:block">
+                    <h3 class="tettle">机构基本信息维护</h3>
+                    <div class="organization_box clearfix">
+                        <div class="organization_box_left">
+                            <span>机构名称</span>
+                            <div class="mgr25">
+                                <select class="tepes">
+                                    <option value="0">三甲医院</option>
+                                </select>
+                            </div>
+                            <input type="text" class="hospitalName">
+                            <span>所在地区</span>
+                            <div class="mgr30 addrInputBox">
+                                <input class="addressProvince" type="text" placeholder="请输入省">
+                                <input class="addressCity" type="text" placeholder="请输入市">
+                                <input class="addressArea" type="text" placeholder="请输入区县">
+                            </div>
+                            <div class="mgb30">
+                                <span class="pb">详细地址</span>
+                                <textarea class="addressRemarks"></textarea>
+                            </div>
+                            <div class="">
+                                <span class="pb">机构描述</span>
+                                <textarea class="details"></textarea>
+                            </div>
+                        </div>
+                        <div class="organization_box_right">
+                            <div class="bgImg">
+                            </div>
+                            <div class="uploadingBtn">上传
+                                <input type="file" class="hospitalFile" accept="image/*" />
+                            </div>
+                        </div>
+                        <div class="wiet"></div>
+                        <span class="mgl50">联系人</span>
+                        <input type="text" class="Inpt mgl70 mgr103 mgb60 linkman">
+                        <span>联系电话</span>
+                        <input type="tel" class="Inpt mgl30 mgb60 userTelephone">
+                        <span class="mgl50">手机号</span>
+                        <input type="tel" class="Inpt mgl70 mgr103 telephone">
+                        <span>邮箱</span>
+                        <input type="text" class="Inpt mgl100 emails">
+                        <div class="wiet"></div>
+
+                        <div class="submitBtn updateSelfHospital">提 交</div>
+                    </div>
+
+                </div> -->
+
+                <!-- 科室信息维护 -->
+                <!-- <div class="content administrative">
+                    <h3 class="tettle">科室信息维护</h3>
+                    <div class="administrativeBox clearfix">
+                        <div class="administrativeCont">
+                            <div class="hospitalTittle clearfix">
+                                <span class="hospitalName">航天总医院</span>
+                                <a class="addDeptBtn" href="javascript:;">
+                                    <img src="/maternal-ipad/personalSettings/add.png" alt="">添加科室
+                                </a>
+                            </div>
+                            <div class="deptListBox">
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 人员信息维护 -->
+                <!-- <div class="content personnel">
+                    <h3 class="tettle">人员信息维护</h3>
+                    <div class="personnelBox">
+                        <div class="personnelBox_top">
+                            <div class="personnelBox_top1">
+                                <div>
+                                    <input type="text" placeholder="请输入关键字" class="paramDetails">
+                                    <i class="seekIcon"></i>
+                                </div>
+                                <div class="fr">
+                                    <div class="addPersonnel">
+                                        <i class="add2"></i>
+                                        <span>创建人员</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personnelBox_top2">
+                                <div class="w185">姓名</div>
+                                <div class="w265">手机号</div>
+                                <div class="w245">科室</div>
+                                <div class="w270">类型</div>
+                                <div class="w278">创建时间</div>
+                                <p class="w182">操作</p>
+                            </div>
+                        </div>
+                        <div class="personnelBox_main">
+
+                        </div>
+                        <div class="personnelBox_footer">
+                            <div id="test1"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 人员角色维护 -->
+                <!-- <div class="content role">
+                    <h3 class="tettle">人员角色维护</h3>
+                    <div class="roleBox">
+                        <div class="roleCont">
+                            <div class="hospitalTittle clearfix">
+                                <span class="hospitalName"></span>
+                                <a class="addRoleBtn" href="javascript:;">
+                                    <img src="/maternal-ipad/personalSettings/add.png" alt="">添加角色
+                                </a>
+                            </div>
+                            <div class="roleListBox">
+
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- 权限信息维护 -->
+                <!-- <div class="content jurisdiction">
+                    <h3 class="tettle"> 产检信息维护</h3>
+                    <div class="jurisdictionContant">
+                            <div class="jurisdiction_top clearfix">
+                                    <div class="normal recheck active">正常复检</div>
+                                    <div class="abnormal recheck">异常复检</div>
+                                <div class="jurisdictionSave">确认</div>
+                            </div>
+                            <div class="jurisdiction_bottom">
+                                <ul class="clearfix jurisdictionChunk">
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                             第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                             孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="jurisdictionDegree">
+                                            第一次产检
+                                        </div>
+                                        <div class="jurisdictionWeek">
+                                            孕6-13周
+                                        </div>
+                                    </li>
+                                    <li class="addAntenatal">
+                                        <img src="/maternal-ipad/statistics/addIcon.png" alt="添加">
+                                       <span>添加产检</span>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div> -->
+                <!-- 报告单解读维护 -->
+                <!-- <div class="content unscramble clearfix">
+                    <h3 class="tettle">报告单解读维护</h3>
+                    <div class="unscrambleBox">
+                        <div class="unscrambleBoxContant">
+                            <span>产检次数</span>
+                            <div class="selectInput">
+                                <select class="marryType">
+                              
+                                </select>
+                            </div>
+                            <span>报告单类型 (单选)</span>
+                            <div class="radioBox">
+                                <ul class="clearfix typeSelect">
+                                    <li class="plpr">宫高</li>
+                                    <li class="plpr">脐带</li>
+                                    <li class="plpr">胎囊</li>
+                                    <li class="plpr">胎心</li>
+                                    <li class="plpr">胎头</li>
+                                    <li class="plpr">胎芽</li>
+                                    <li class="plpr">腹围</li>
+                                    <li class="plpr">胎动</li>
+                                    <li>最大羊水深度</li>
+                                    <li>羊水指数</li>
+                                    <li>脐动脉</li>
+                                    <li>头臀长</li>
+                                    <li>股骨长</li>
+                                    <li>双顶径</li>
+                                    <li>头围</li>
+                                </ul>
+                            </div>
+                            <span>解读详情</span>
+                            <textarea name="" id="" cols="" rows="" class="unscrambleParticulars">
+宫高是指从下腹耻骨联合处到子宫底的长度，是判断子宮大小的数据之ー。测量宫高可以 估计胎儿体重，每次产前检查时测量宮高，有助动态观察胎儿发育。宫高通常配合腹围一 起测宫高这样测量：孕妇排尿后，平卧于床上，用软尺测量耻骨联合上绿中点至官底的距
+离，一般从怀孕20周开始，每4周测量1次；怀孕28～36周每2周测量一次怀孕36 周后每周测量次。测量结果画在妊娠图上，以观察胎儿发育与孕周是否相符。宫高值过低 通常代表胎儿宮内发育迟缓、羊水过少或胎位异常；宮高值过高通常代表多胎妊娠、胎儿
+畸形、巨大儿、臀位、胎头高浮、羊水过多、前置胎盘等。
+                                </textarea>
+                        </div>
+                    </div>
+                    <div class="unscrambleCancel">取消</div>
+                    <div class="unscrambleSave">保存</div>
+                </div> -->
+                <!-- 用户个人信息 start-->
+                <div class="content2 personalInformation" style="display:block">
+                    <h3 class="tettle">用户个人信息维护</h3>
+                    <div class="personalInformation_box clearfix">
+                        <div class="pbleft">
+                            <div class="headIcon"></div>
+                            <a class="fileBox" href="javascript:;">
+                                <input type="file" class="imgFileBtn">
+                                <div class="preview">上传</div>
+                            </a>
+                        </div>
+                        <div class="pbright">
+                            <div>
+                                <span>登录名</span>
+                                <p class="loginName"></p>
+                            </div>
+                            <div>
+                                <span>用户名</span>
+                                <p class="userName"></p>
+                            </div>
+                            <div>
+                                <span>手机号</span>
+                                <input class="telInput" type="tel" placeholder="请输入手机号">
+                            </div>
+                            <div>
+                                <span>邮箱</span>
+                                <input class="emailInput" type="text" placeholder="请输入邮箱">
+                            </div>
+                            <div>
+                                <span>备注</span>
+                                <textarea class="remarkInput"></textarea>
+                            </div>
+                        </div>
+                        <div class="centerInfoContent">
+                            <div class="infoItem">
+                                <span>创建时间</span>
+                                <p class="createDate"></p>
+                            </div>
+                            <div class="infoItem">
+                                <span>上次登录时间</span>
+                                <p class="loginDate"></p>
+                            </div>
+                            <div class="infoItem">
+                                <span>所在机构</span>
+                                <p class="hospitalName"></p>
+                            </div>
+                            <div class="infoItem">
+                                <span>所在科室</span>
+                                <p class="deptName"></p>
+                            </div>
+                        </div>
+                        <div class="submitBtn updateSelf">保 存</div>
+                    </div>
+                </div>
+                <!-- 用户个人信息 end-->
+                <!-- 修改密码 -->
+                <div class="content2 changePassword">
+                    <h3 class="tettle">修改密码</h3>
+                    <div class="changePassword_box clearfix">
+                        <div class="changeItem">
+                            <span>登 录 名</span>
+                            <input type="text" class="changePassword_userName" readonly="readonly"  onfocus="this.blur();">
+                        </div>
+                        <div class="changeItem">
+                            <span>原 密 码</span>
+                            <input type="password" class="oldPassword" placeholder="请输入原密码">
+                        </div>
+                        <div class="changeItem">
+                            <span>新 密 码</span>
+                            <input type="password" class="password" placeholder="8-16位含数字/字母2种组合">
+                        </div>
+                        <div class="changeItem">
+                            <span>确认密码</span>
+                            <input type="password" class="newPassword" placeholder="8-16位含数字/字母2种组合">
+                        </div>
+                        <a class="submitBtn changePassWord" href="javascript:;">确&nbsp;&nbsp;认</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 添加 修改 科室  start-->
+    <div class="deptContainer addDeptContent">
+        <div class="titleBox">
+            <h2>添加科室</h2>
+            <a class="addDeptClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>添加科室</h3>
+            <input type="text" placeholder="请输入" class="addDeptInput">
+            <a class="remarksBtn addDeptRemarks" href="javascript:;">禁用</a>
+        </div>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">完成</a>
+        </div>
+    </div>
+    <div class="affirmContent addDeptAffirm">
+        <p>是否保存科室信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <div class="deptContainer amendDeptContent">
+        <div class="titleBox">
+            <h2>修改科室</h2>
+            <a class="amendDeptClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>修改科室</h3>
+            <input type="text" placeholder="请输入" class="amendDeptInput">
+            <a class="remarksBtn amendDeptRemarks" href="javascript:;">禁用</a>
+        </div>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">完成</a>
+        </div>
+    </div>
+    <div class="affirmContent amendDeptAffirm">
+        <p>是否保存科室信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <!-- 添加 修改 科室 end-->
+    <!-- 角色 添加 修改 start -->
+    <div class="deptContainer addRoleContent">
+        <div class="titleBox">
+            <h2>添加角色</h2>
+            <a class="addRoleClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>添加角色</h3>
+            <input type="text" placeholder="请输入" class="addRoleInput">
+            <!-- <a class="remarksBtn addRoleRemarks" href="javascript:;">禁用</a> -->
+        </div>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">完成</a>
+        </div>
+    </div>
+    <div class="affirmContent addRoleAffirm">
+        <p>是否保存角色信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <div class="deptContainer amendRoleContent">
+        <div class="titleBox">
+            <h2>修改角色</h2>
+            <a class="amendRoleClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <div class="content">
+            <h3>修改角色</h3>
+            <input type="text" placeholder="请输入" class="amendRoleInput">
+            <!-- <a class="remarksBtn amendRoleRemarks" href="javascript:;">禁用</a> -->
+        </div>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">完成</a>
+        </div>
+    </div>
+    <div class="affirmContent amendRoleAffirm">
+        <p>是否保存角色信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <!-- 角色 添加 修改 end -->
+<div class="shadow"></div>
+    <!-- 人员添加 start-->
+    <div class="doctorContent addDoctorContnet">
+        <div class="titleBox">
+            <h2>创建人员</h2>
+            <a class="addDoctorClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <form class="layui-form" action="">
+            <div class="content">
+                <div class="item">
+                    <p>姓名</p>
+                    <input type="text" placeholder="请输入姓名" class="doctorName">
+                </div>
+                <div class="item">
+                    <p>科室</p>
+                    <select class="deptSelect" name="">
+
+                    </select>
+                </div>
+                <div class="item">
+                    <p>手机号</p>
+                    <input type="number" placeholder="请输入手机号" class="doctorTel">
+                </div>
+                <div class="item">
+                    <p>类型</p>
+                    <select class="titleSelect"></select>
+                </div>
+            </div>
+        </form>
+        <a class="remarksBtn addDoctorRemarks" href="javascript:;">禁用</a>
+        <a class="remarksBtn addDoctorManager" href="javascript:;">管理员</a>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <div class="affirmContent addDoctorAffirm">
+        <p>是否保存创建人员信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <div class="doctorContent amendDoctorContnet">
+        <div class="titleBox">
+            <h2>创建人员</h2>
+            <a class="amendDoctorClose" href="javascript:;"><img src="/maternal-ipad/personalSettings/clones.png" alt=""></a>
+        </div>
+        <form class="layui-form" action="">
+            <div class="content">
+                <div class="item">
+                    <p>姓名</p>
+                    <input type="text" placeholder="请输入姓名" class="amendDoctorName">
+                </div>
+                <div class="item">
+                    <p>科室</p>
+                    <select class="amendDeptSelect" name="">
+
+                    </select>
+                </div>
+                <div class="item">
+                    <p>手机号</p>
+                    <input type="number" placeholder="请输入手机号" class="amendDoctorTel">
+                </div>
+                <div class="item">
+                    <p>类型</p>
+                    <select class="amendTitleSelect"></select>
+                </div>
+            </div>
+        </form>
+        <a class="remarksBtn amendDoctorRemarks" href="javascript:;">禁用</a>
+        <a class="remarksBtn amendDoctorManager" href="javascript:;">管理员</a>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <div class="affirmContent amendDoctorAffirm">
+        <p>是否保存创建人员信息</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">否</a>
+            <a class="yesBtn" href="javascript:;">是</a>
+        </div>
+    </div>
+    <!-- 人员添加 end-->
+<!-- 图片的查看大图弹层 -->
+<div class="lookBigImgaes">
+    <img src="" alt="">
+</div>
+
+</body>
+
+</html>

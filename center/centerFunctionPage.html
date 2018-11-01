@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>孕产妇个人中心预览</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/center/centerFunctionPage.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/center/centerFunctionPage.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <span class="management">预览</span>
+    <div class="container clearfix">
+        <div class="leftBox">
+            <div class="leftBox_top">
+                <div class="headIcon"> </div>
+                <p class="name">王悦悦</p>
+                <div class="preview">低风险</div>
+            </div>
+            <ul>
+                <li class="womenInformationLi">
+                    <i class="newsIcon2"></i>
+                    <i class="newsIcon icon2" style="display:block;"></i>
+
+                    <span class="active">孕妇信息</span>
+                </li>
+                <li class="newRecordLi">
+                    <i class="recordIcon"></i>
+                    <i class="recordIcon2 icon2"></i>
+                    <span>配偶信息</span>
+                </li>
+                <li class=" assessmentLi">
+                    <i class="assessIcon"></i>
+                    <i class="assessIcon2 icon2"></i>
+                    <span>孕产信息</span>
+                </li>
+                <li class="affirmLi">
+                    <i class="affirmIcon"></i>
+                    <i class="affirmIcon2 icon2"></i>
+                    <span>体格检查</span>
+                </li>
+            </ul>
+            <div class="iocn"></div>
+        </div>
+        <!-- 右边模块 -->
+        <div class="rightBox">
+            <!-- 孕妇信息 -->
+            <div class="content womenInformation" style="display: block;">
+                <div class="wireTettle">
+                    <span>孕妇信息预览</span>
+                    <div class="wire"></div>
+                </div>
+                <div class="layui-tab layui-tab-brief tebBox" lay-filter="docDemoTabBrief">
+                    <div class="layui-tab-content  clearfix">
+                        <!-- 孕妇基本信息 -->
+                        <div class="essential">
+                            <!-- 第一块 -->
+                            <div class="essential_box1 clearfix">
+                                <div class=" essential_Fl">
+                                    <span>孕妇姓名：</span>
+                                    <i class="pregnantName"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>就诊卡号：</span>
+                                    <i class="pregnantFN "></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>证件类型：</span>
+                                    <i class="idType"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>身份证号：</span>
+                                    <i class="pregnantIdCard"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span class="ls20">手机号：</span>
+                                    <i class="pregnantPhone"></i>
+                                </div>
+
+                                <div class=" essential_Fl">
+                                    <span>出生年月：</span>
+                                    <i class="pregnantDateBirth"></i>/<i class="birth_age"></i>/<i class="birth_sex"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>结婚年龄：</span>
+                                    <i class="pregnantMarriageAge"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>孕前体重：</span>
+                                    <i class="pregnantWeight"></i>
+                                </div>
+                            </div>
+                            <!-- 第二块 -->
+                            <div class="essential_box2">
+                                <div class=" essential_Fl">
+                                    <span>结婚状况：</span>
+                                    <i class="marryType"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span class="ls30">婚检：</span>
+                                    <i class="marryCheck"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>近半年避孕方法：</span>
+                                    <i class=" contraception "></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span class="ls30">民族：</span>
+                                    <i class=" nation"> </i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>文化程度：</span>
+                                    <i class=" education"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span class="ls30">职业：</span>
+                                    <i class="job"></i>/<i class="work"></i>
+                                </div>
+                            </div>
+                            <!-- 第三块 -->
+                            <div class="essential_box3">
+                                <div>
+                                    <span>户口所在地：</span>
+                                    <i class="areaInput"></i>
+                                </div>
+                                <div>
+                                    <span>现住地址：</span>
+                                    <i class="areaInput2"></i>
+                                </div>
+                                <div>
+                                    <span>详细地址：</span>
+                                    <i class="presentAddress"></i>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 配偶信息 -->
+            <div class="content newRecord">
+                <div class="wireTettle">
+                    <span>配偶信息预览</span>
+                    <div class="wire"></div>
+                </div>
+                <div class="layui-tab layui-tab-brief tebBox" lay-filter="docDemoTabBrief">
+                    <div class="layui-tab-content  clearfix">
+                        <!-- 配偶一般信息 -->
+                        <div class="spouse">
+                            <!-- 第一块 -->
+                            <div class="spouse_box1 clearfix">
+                                <div class=" essential_Fl">
+                                    <span>配偶姓名：</span>
+                                    <i class="spouseName"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span class="ls20">手机号：</span>
+                                    <i class="spousePhone"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>证件类型：</span>
+                                    <i class="idType2"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>身份证号：</span>
+                                    <i class="spouseIdCard"></i>
+                                </div>
+
+                                <div class=" essential_Fl">
+                                    <span>结婚年龄：</span>
+                                    <i class="spouseMarriageAge"></i>
+                                </div>
+                                <div class=" essential_Fl">
+                                    <span>配偶年龄：</span>
+                                    <i class="spouseAge"></i>
+                                </div>
+                            </div>
+                            <!-- 第二块 -->
+
+                            <div class="spouse_box2 clearfix">
+                                <div class="">
+                                    <span>结婚状况：</span>
+                                    <i class=" spouseMarryType">
+                                    </i>
+                                </div>
+                                <div class="">
+                                    <span class="ls30">婚检：</span>
+                                    <i class=" spouseMarryCheck">
+                                    </i>
+                                </div>
+                                <div class="">
+                                    <span>健康状态：</span>
+                                    <i class=" healthType">
+                                    </i>
+                                </div>
+                                <div class="">
+                                    <span class="ls30">职业：</span>
+                                    <i class=" spouseJob">
+                                    </i>
+                                </div>
+                                <div class="">
+                                    <span>文化程度：</span>
+                                    <i class=" spouseEducation">
+                                    </i>
+                                </div>
+                            </div>
+                            <!-- 第三块 -->
+                            <div class="spouse_box3">
+                                <div class="">
+                                    <span>吸烟：</span>
+                                    <i class=" cigaretteNUm">/日
+                                    </i>
+                                </div>
+                                <div class="">
+                                    <span class="ls30">饮酒：</span>
+                                    <i class="drink">
+                                    </i>
+                                </div>
+                                <div class="" style="width: 100%;">
+                                    <span>家族史：</span>
+                                    <i class="patientHistory">
+                                    </i>
+                                </div>
+                            </div>
+                            
+                            <div class="spouse_box4">
+                                <div>
+                                    <span>现住地址：</span>
+                                    <i class="areaInput3"></i>
+                                </div>
+                                <div>
+                                    <span>详细地址：</span>
+                                    <i class="spouseSite"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 孕产信息 -->
+            <div class="content assessment">
+                <div class="wireTettle">
+                    <span>孕产信息预览</span>
+                    <div class="wire"></div>
+                </div>
+                <!-- 孕产信息模块 -->
+                <div class="recordBox">
+                    <!-- 第一块 -->
+                    <div class="recordBox1 clearfix">
+                        <div>
+                            <span>初诊日期：</span>
+                            <i class="firstCheckDate"></i>
+                        </div>
+                        <div>
+                            <span>末次月经：</span>
+                            <i class="dueDate"></i>
+                        </div>
+                        <div>
+                            <span>预产期：</span>
+                            <i class="lastMenstruation">3</i>
+                        </div>
+                        <div>
+                            <span>孕周：</span>
+                            <i class="gestationalWeek"></i>
+                        </div>
+                        <div>
+                            <span>月经史：</span>
+                            <i class="menstrualHistory"></i>
+                        </div>
+                    </div>
+                    <!-- 第二块 -->
+                    <div class="recordBox2">
+                        <div class="recordBox2_top">
+                            <div>
+                                <span>怀孕次数：</span>
+                                <i class="pregnancyNum"></i>
+                            </div>
+                        </div>
+                        <div class="recordBox2_bottom">
+                            <table class="layui-table dynamicTable" lay-even>
+                                <thead>
+                                    <tr>
+                                        <th class="w120">胎次</th>
+                                        <th class="w120">孕周</th>
+                                        <th class="w200">年-月-日</th>
+                                        <th class="w140">年龄</th>
+                                        <th class="w170">分娩方式</th>
+                                        <th class="w133">性别</th>
+                                        <th class="w170">健否</th>
+                                        <th class="w280">备注</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="kang">
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <!-- 第三块 -->
+                    <div class="recordBox3">
+                        <div>
+                            <span>孕期用药：</span>
+                            <i class="parturitionFrontPharmacy"></i>
+                        </div>
+                        <div>
+                            <span>尿酮体：</span>
+                            <i class="ketosis"></i>
+                        </div>
+                        <div>
+                            <span>早孕反应程度：</span>
+                            <i class="morningSickness"></i>
+                        </div>
+                        <div>
+                            <span>宠物接触：</span>
+                            <i class="animalContact"></i>
+                        </div>
+                        <div>
+                            <span>接触放射性：</span>
+                            <i class="contactRadioactiveRays"></i>
+                        </div>
+                    </div>
+                    <!-- 第四块 -->
+                    <div class="recordBox4">
+                        <div>
+                            <span>接触毒物：</span>
+                            <i class="contactToxicDate"></i>
+                        </div>
+                        <div>
+                            <span>病毒感染：</span>
+                            <i class="virus"></i>
+                        </div>
+                        <div>
+                            <span>家族史：</span>
+                            <i class="recordInquire"></i>
+                        </div>
+                        <div>
+                            <span>现病史：</span>
+                            <i class="presentrecordInquire"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 体格检查 -->
+            <div class="content affirm">
+                <div class="wireTettle">
+                    <span>体格检查预览</span>
+                    <div class="wire"></div>
+                </div>
+                <!-- 体格检查模块 -->
+                <div class="assessBox">
+                    <div class="assessBoxContant clearfix">
+                        <div class="wireTettle">
+                            <p class="assessBox_tettle">一般检查</p>
+                            <div class="wireDectel"></div>
+                        </div>
+                        <!-- 第一块 -->
+                        <div class="assessBox1">
+                            <div class="">
+                                <span>血&nbsp;&nbsp;&nbsp;压：</span>
+                                <i class="pressure"></i>
+                            </div>
+                            <div class="">
+                                <span>身&nbsp;&nbsp;&nbsp;高：</span>
+                                <i class="height"></i>
+                            </div>
+                            <div class="">
+                                <span>体&nbsp;&nbsp;&nbsp;重：</span>
+                                <i class="weight"></i>
+                            </div>
+                            <div>
+                                <span>心&nbsp;&nbsp;&nbsp;率：</span>
+                                <i class="baseHeartRate">
+                                </i>
+                            </div>
+                            <div>
+                                <span>肺：</span>
+                                <i class="baseLung">
+                                </i>
+                            </div>
+                            <div>
+                                <span>肝：</span>
+                                <i class="baseAbdomenLiver">
+                                </i>
+                            </div>
+                            <div>
+                                <span>脾：</span>
+                                <i class="baseAbdomenSpleen">
+                                </i>
+                            </div>
+                            <div>
+                                <span>脊&nbsp;&nbsp;&nbsp;柱：</span>
+                                <i class="baseSpinalLimbsDeformity">
+                                </i>
+                            </div>
+                            <div>
+                                <span>乳&nbsp;&nbsp;&nbsp;房：</span>
+                                <i class="baseBreasts">
+                                </i>
+                            </div>
+                            <div>
+                                <span>乳&nbsp;&nbsp;&nbsp;头：</span>
+                                <i class="baseNipple">
+                                </i>
+                            </div>
+                            <div>
+                                <span>四肢水肿：</span>
+                                <i class="baseSpinalLimbsEdema">
+                                </i>
+                            </div>
+
+                        </div>
+                        <div class="wireTettle">
+                            <p class="assessBox_tettle">妇科检查</p>
+                        </div>
+                        <!-- 第二块 -->
+                        <div class="assessBox2">
+                            <div class="">
+                                <span>外&nbsp;&nbsp;&nbsp;阴：</span>
+                                <i class="obstetricsVulva">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>阴&nbsp;&nbsp;&nbsp;道：</span>
+                                <i class="obstetricsVagina">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>宫&nbsp;&nbsp;&nbsp;颈：</span>
+                                <i class="obstetricsCervix">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>宫&nbsp;&nbsp;&nbsp;体：</span>
+                                <i class="obstetricsCorpus">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>附&nbsp;&nbsp;&nbsp;件：</span>
+                                <i class="obstetricsPairsAttachment">
+                                </i>
+                            </div>
+                        </div>
+                        <div class="wireTettle">
+                            <p class="assessBox_tettle">化验检查</p>
+                        </div>
+                        <!-- 第三块 -->
+                        <div class="assessBox3 clearfix">
+                            <div class="">
+                                <span>尿蛋白：</span>
+                                <i class="assayUrineProtein">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>血红蛋白：</span>
+                                <i class="assayHemoglobin">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>血小板：</span>
+                                <i class="assayBloodPlatelet">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>血&nbsp;&nbsp;&nbsp;型：</span>
+                                <i class="assayBloodType">
+                                </i>
+                            </div>
+                        </div>
+                        <div class="wireTettle">
+                            <p class="assessBox_tettle">产科检查</p>
+                        </div>
+                        <!-- 第四块 -->
+                        <div class="assessBox4">
+                            <div class="">
+                                <span>宫&nbsp;&nbsp;&nbsp;高：</span>
+                                <i class="obstetricsHeight">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>腹&nbsp;&nbsp;&nbsp;围：</span>
+                                <i class="obstetricsAbdominalGirth">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>先&nbsp;&nbsp;&nbsp;露：</span>
+                                <i class="obstetricsFirstDew">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>胎方位：</span>
+                                <i class="obstetricsPlacental">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>胎心率：</span>
+                                <i class="obstetricsFetalHeart">/分
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>盆骨出口横径：</span>
+                                <i class="obstetricsTransversePelvicDiameter">
+                                </i>
+                            </div>
+                        </div>
+                        <!-- 第五块 -->
+                        <div class="assessBox5 clearfix">
+                            <div class="">
+                                <span>诊断：</span>
+                                <i class="primaryDiagnosis">
+                                </i>
+                            </div>
+                            <div class="">
+                                <span>处置：</span>
+                                <i class="disposal">
+                                </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a href="/maternal-ipad/center/center.html">
+            <div class="nextStep">完成</div>
+        </a>
+
+    </div>
+</body>
+
+</html>

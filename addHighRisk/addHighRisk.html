@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>高危新增</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function(doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function() {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/addHighRisk/addHighRisk.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/addHighRisk/addHighRisk.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <h1>新增高危记录</h1>
+    <div class="leftContent">
+        <div class="navContent">
+            <a class="active assessmentBtn" href="javascript:;"><i class="navItem_one"></i><span>高危评估</span></a>
+            <a href="javascript:;"><i class="navItem_two"></i><span>签字确认</span></a>
+        </div>
+        <a class="goBackBtn" href="javascript:;">放弃本次编辑</a>
+    </div>
+    <div class="contaienr">
+        <!-- 高危评估 -->
+        <div class="content assessment active">
+            <div class="assessmentContent">
+                <!-- <h2 class="tilteText">基本情况</h2>
+                <div class="assessmentBox">
+                    <div class="topicBox">
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                    </div>
+                    <div class="scoreBox">
+                        <p>5分</p>
+                        <p>黄色</p>
+                    </div>
+                </div>
+                <h3 class="tilteText">孕产期合并发症</h3>
+                <div class="navContent">
+                    <a class="active" href="javascript:;">心血管</a>
+                    <a href="javascript:;">心血管</a>
+                </div>
+                <div class="bodyContent">
+                    <div class="item active">
+                        <div class="assessmentBox">
+                            <div class="topicBox">
+                                <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                                <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                                <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                                <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                            </div>
+                            <div class="scoreBox">
+                                <p>5分</p>
+                                <p>黄色</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item"></div>
+                </div>
+                <h2 class="tilteText">孕期并发症</h2>
+                <div class="assessmentBox">
+                    <div class="topicBox">
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                        <a class="topicItem" href="javascript:;">年龄≤35岁或≥18</a>
+                    </div>
+                    <div class="scoreBox">
+                        <p>5分</p>
+                        <p>黄色</p>
+                    </div>
+                </div> -->
+            </div>
+            <div class="nextStep nextStep3">下一步</div>
+        </div>
+        <!-- 签字确认 -->
+        <div class="content affirm">
+            <div class="affirmContent">
+                <div class="affirmBox1">
+                    <div class="affirmBox1_left">
+                        <p><span class="countNum">0</span>分</p>
+                        <p>初次筛查与评分</p>
+                    </div>
+                    <div class="affirmBox1_right">
+                        <p>评估信息</p>
+                        <span id="riskItem"></span>
+                        <p>
+                            <span>绿色(<i>0</i>)项</span>
+                            <span>黄色(<i class="fiveNum">0</i>)项</span>
+                            <span>橙色(<i class="tenNum">0</i>)项</span>
+                            <span>红色(<i class="twentyNum">0</i>)项</span>
+                            <span>紫色(<i class="purpleNum">0</i>)项</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="affirmBox2">
+                    <h3>评估详情</h3>
+                    <div class="cf clearfix">
+                        <span>绿色(低风险):</span>
+                        <div class="greenDiv"></div>
+                    </div>
+                    <div class="cf clearfix">
+                        <span>黄色(一般风险):</span>
+                        <div class="yellowDiv"></div>
+                    </div>
+                    <div class="cf clearfix">
+                        <span>橙色(较高风险):</span>
+                        <div class="orangeDiv"></div>
+                    </div>
+                    <div class="cf clearfix">
+                        <span>红色(高风险):</span>
+                        <div class="redDiv"></div>
+                    </div>
+                
+                    <div class="cf clearfix">
+                        <span>紫色(传染病):</span>
+                        <div class="purpleDiv"></div>
+                    </div>
+                    <h3>
+                        <span>备注信息</span>
+                        <input type="text" class="remark">
+                    </h3>
+                </div>
+                <div class="affirmBox3">
+                    <p>注意</p>
+                    <p>孕妇建档信息的真实准确关系到孕妇个人利益，请认真填写，如因信息错误引发的问题，医院将不承担责任；</p>
+                    <div class="sign clearfix">
+                        <div class="signLeft">
+                            <span>孕妇签字处</span>
+                            <div class="patientSignature"></div>
+                        </div>
+                        <div class="signRight">
+                            <span>医生签字处</span>
+                            <div class="doctorSignature"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nextStep accomplish">完成</div>
+        </div>
+    </div>
+
+
+    <!-- 确认签字患者弹框 -->
+    <div class="patientPopout">
+        <p class="popoutTop">
+            <img src="/maternal-ipad/particulars/specimen.png" alt="" class="specimen">
+            <span>签字确认</span>
+            <img src="/maternal-ipad/particulars/clone.png" alt="" class="clone">
+        </p>
+        <div class="board">
+            <a href="javascript:;" class="again patientAgain">重新签名</a>
+        </div>
+        <div class="callBack">返回</div>
+        <div class="yesBtn">确认</div>
+    </div>
+
+    <!-- 确认医生签字弹框 -->
+    <div class="doctorPopout">
+        <p class="popoutTop">
+            <img src="/maternal-ipad/particulars/specimen.png" alt="" class="specimen">
+            <span>签字确认</span>
+            <img src="/maternal-ipad/particulars/clone.png" alt="" class="clone">
+        </p>
+        <div class="doctorBoard">
+            <a href="javascript:;" class="again doctorAgain">重新签名</a>
+        </div>
+        <div class="callBack">返回</div>
+        <div class="doctorYesBtn">确认</div>
+    </div>
+
+    <div class="promptContent">
+        <p class="promptText">确定要放弃本次高危评估吗？</p>
+        <div class="btnBox">
+            <a class="noBtn" href="javascript:;">取消</a>
+            <a class="yesBtn" href="javascript:;">确认</a>
+        </div>
+    </div>
+    <!-- body遮罩 -->
+    <div class="shadow"></div>
+
+</body>
+
+</html>

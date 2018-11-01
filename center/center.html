@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>个人中心</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+    />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="Handheld    Friendly" content="true">
+    <script type="text/javascript">
+        !(function (doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function () {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/center/center.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/center/center.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/echarts.min.js"></script>
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="leftBox">
+            <div class="headIcon">
+                <a href="/maternal-ipad/center/centerFunctionPage.html">
+                    <div class="preview">预&nbsp;览</div>
+                </a>
+            </div>
+            <p>
+                <span class="name"> </span>
+                <span class="age"> </span>
+            </p>
+            <div class="BMLValue">BMI值</div>
+            <!-- <div class="gestationIcon">妊娠图</div> -->
+
+        </div>
+        <div class="rightBox clearfix">
+            <form action="" class="clearfix">
+                <div class="row-left">
+                    <label>档&nbsp;&nbsp;案&nbsp;&nbsp;号：</label>
+                    <input type="text" class="checkNumber" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>身份证号：</label>
+                    <input type="text" class="checkIdCard" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>建档时间：</label>
+                    <input type="text" class="filingDate" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>联系方式：</label>
+                    <input type="text" class="checkTelephone" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>出生年月：</label>
+                    <input type="text" class="checkBirthdayDate" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>孕前体重：</label>
+                    <input type="text" class="checkLastWeight" readonly="readonly">
+                </div>
+                <div class="row-left">
+                    <label>孕&nbsp;&nbsp;产&nbsp;&nbsp;史：</label>
+                    <input type="text" class="parturitionDetailHistory" readonly="readonly">
+                </div>
+                <div class="row-left blood">
+                    <label>&nbsp;&nbsp;血&nbsp;&nbsp;型：</label>
+                    <input type="text" class="healthAssayBloodType w450" readonly="readonly">
+                </div>
+                <div class="row-left factor">
+                    <label>高危因素：</label>
+                    <input type="text" class="highRiskDetails" readonly="readonly">
+                </div>
+                <br/>
+                <div class="row-left  familyHistory">
+                    <label>家&nbsp;&nbsp;族&nbsp;&nbsp;史：</label>
+                    <input type="text" class="parturitionDetailFamilyHistory" readonly="readonly">
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="layui-tab layui-tab-brief tebBox" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this recheck">复检记录</li>
+                <li class="evaluate">高危评估</li>
+                <li class="record">产后42天检查记录</li>
+            </ul>
+            <div class="layui-tab-content  clearfix">
+                <!-- 复检记录 -->
+                <div class="layui-tab-item layui-show recordBox">
+                    <div class="noneData">
+                    <img src="/maternal-ipad/images/available.png" alt="暂无数据" >
+                        <h2>您暂无复检记录...</h2>
+                        <p>快去新增记录吧！</p>
+                    </div>
+                    <!-- <table class="recordTable">
+                        <thead>
+                            <tr>
+                                <th class="clearfix" colspan='5'>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <a href="/maternal-ipad/particulars/examineParticulars.html" class="mgr50">查看详情></a>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>血&nbsp;压:
+                                    <span></span>
+                                    <span class="unit">mmHg</span>
+                                </td>
+                                <td>体&nbsp;重:
+                                    <span></span>
+                                    <span class="unit">kg</span>
+                                </td>
+                                <td>宫&nbsp;高:
+                                    <span></span>
+                                    <span class="unit">cm</span>
+                                </td>
+                                <td>腹&nbsp;围:
+                                    <span></span>
+                                    <span class="unit">cm</span>
+                                </td>
+                                <td>胎方位:
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>先&nbsp;露:
+                                    <span></span>
+                                </td>
+                                <td>胎心率:
+                                    <span></span>
+                                    <span class="unit"></span>
+                                </td>
+                                <td>衔&nbsp;接:
+                                    <span></span>
+                                </td>
+                                <td>浮&nbsp;肿:
+                                    <span></span>
+                                </td>
+                                <td>尿蛋白:
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan='5'>
+                                    <div class="resordTable_div">
+                                        <label>自觉不适:</label>
+                                        <input type="text" class="resordTableInput1 resordTableInput" readonly="readonly">
+                                    </div>
+                                    <div class="resordTable_div">
+                                        <label>指导处理意见:</label>
+                                        <input type="text" class="resordTableInput2 resordTableInput" readonly="readonly">
+                                    </div>
+                                    <div class="resordTable_div clearfix">
+                                        <label>预约下次日期及时间:</label>
+                                        <input type="text" class="resordTableInput3 resordTableInput" readonly="readonly">
+                                        <div class="operationDoctor">
+                                        </div>
+                                    </div>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                </div>
+                <!-- 高危评估块 -->
+                <div class="layui-tab-item assessBox">
+                    <img src="/maternal-ipad/center/none.png" alt="暂无数据" class="noneData">
+                    <div class="assessItem">
+                        <div class="titleBox">
+                            <p><span class="createDate">2018-06-20</span>|<span class="weeksDay">6-13周</span>|<span class="indexSeveral">第一次评估</span></p>
+                            <a class="detailsBtn" href="javascript:;">查看详情></a>
+                        </div>
+                        <div class="content">
+                            <h2>评估信息</h2>
+                            <p><span>绿色（5）项</span></p>
+                            <p><span>紫色(传染病) :</span><span class="text purpleText"></span></p>
+                            <h2>备注信息</h2>
+                            <p class="remarksText">法律的解放路撒酒疯拉丝机代理费家里发 </p>
+                        </div>
+                        <div class="doctorSignature">
+                            <span>评估医生 : </span><img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 产后42天模块 -->
+                <div class="layui-tab-item  fortyTwoBox">
+                    <div class="noneData3">
+                    <img src="/maternal-ipad/images/42days.png" alt="暂无数据" >
+                    <h2>预产期大于42天以后才能做产后检查....</h2>
+                    </div>
+                    <h2 class="notAvailable">您暂无产检信息....</h2>
+                    <div class="postpartum">
+                        <div class="titleBox">
+                            <p><span class="checkDate">2018-06-20</span>|<span class="checkDay">42天</span>|<span class="feedingType">母乳喂养</span></p>
+                            <a class="fortyTwoBtn" href="javascript:;">查看详情></a>
+                        </div>
+                        <div class="content">
+                            <div class="borderBottom">
+                                <h2>一般检查</h2>
+                                <p>
+                                    <span>血压 ：<i class="baseBloodPressureHigh">/</i><i class="fontSize">mmHg</i></span>|
+                                    <span>体重 ：<i class="baseWeight"></i><i class="fontSize">kg</i></span>|
+                                    <span>乳房 ：<i class="baseBreast"></i></span>|
+                                    <span>乳头 ：<i class="baseNipple"></i></span>|
+                                    <span>乳汁 ：<i class="baseLatex"></i></span>
+                                </p>
+                            </div>
+                            <div class="borderBottom">
+                                <h2>妇科检查</h2>
+                                <p>
+                                    <span>外阴 ：<i class="gynecologyVulva">未出现异常</i></span>|
+                                    <span>阴道 ：<i class="gynecologyVagina">未出现异常</i></span>|
+                                    <span>宫颈 ：<i class="gynecologyCervical">未出现异常</i></span>|
+                                    <span>子宫 ：<i class="gynecologyUterus">未出现异常</i></span>|
+                                    <span class="mgr280">双侧附件 ：<i class="gynecologyAttachmentOnBothSides">未出现异常</i></span>
+                                    
+                                </p>
+                                <span>恶露 ：<i class="gynecologyLochia">未出现异常</i></span>
+                            </div>
+                            <div class="borderBottom">
+                                <h2>婴儿情况</h2>
+                                <p>
+                                    <span>体重 ：<i class="babyWeight">40</i><i class="fontSize">kg</i></span>|
+                                    <span>身长 ：<i class="babyHigh">28</i><i class="fontSize">cm</i></span>|
+                                    <span>胸部 ：<i class="babyChest">未出现异常</i></span>|
+                                    <span>心 ：<i class="babyHeart">未出现异常</i></span>|
+                                    <span>肺 ：<i class="babyLungs">未出现异常</i></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="backBtn">返回</div>
+        <div class="increased">新增记录</div>
+        <div class="increased2">新增记录</div>
+    </main>
+    <div class="bigImgContent clearfix">
+        <img src="" alt="">
+        <a href="javascript:;">关闭</a>
+    </div>
+    <!-- BMI弹框 -->
+    <div class="BMIlayer">
+        <p class="popoutTopp clearfix"><span>BMI值</span> <img src="/maternal-ipad/images/clone.png" alt=关闭按钮 class="bmiCloneBtn">            </p>
+        <div class="BMIlayer_main">
+            <div class="BMIlayer_main_top">
+                <h3>BMI孕期体重管理曲线图</h3>
+                <p>孕前BMI:<span>18.5</span>-<span>24.9</span>kg/m</p>
+                <p>体重<span>正常</span>，建议孕期体重增长标准:11.5~16kg</p>
+            </div>
+            <div class="BMIlayer_main_bottom clearfix">
+                <p class="lengthways">体重增长（kg)</p>
+                <div id="chartmain"></div>
+                <p class="lengtweeks">孕周（周）</p>
+            </div>
+        </div>
+    </div>
+    <div class="shadow"></div>
+</body>
+</html>

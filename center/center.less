@@ -1,0 +1,780 @@
+@import "../css/reset.css";
+@import "../css/root.less";
+body {
+    background-color: hsl(0, 0%, 91%);
+    .padding-bottom(85);
+    position: relative;
+    .shadow {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 0.7;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+}
+
+.layui-tab-title .layui-this:after {
+    border-bottom-style: solid;
+    border-bottom-color: #68b7e7;
+    .height(70);
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+    .top(1);
+    border: none;
+    border-radius: 0;
+    .border-bottom(4);
+    border-bottom-style: solid;
+    border-bottom-color: #68b7e7;
+}
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+    color: #68b7e7;
+}
+
+.w450 {
+    .width(450) !important;
+}
+
+.mgr50 {
+    .margin-right(50);
+}
+
+.mgr100 {
+    .margin-right(100);
+}
+
+.mgr280 {
+    .margin-right(290);
+}
+
+.mgt30 {
+    .margin-top(30);
+}
+
+.fontSize {
+    .font-size(30);
+    color: #666666;
+}
+
+input {
+    ime-mode: disabled !important;
+}
+
+header {
+    .margin(0, 40, 20, 40);
+    .box-shadow();
+    background-color: #fff;
+    .padding-bottom(0);
+    .leftBox {
+        float: left;
+        .padding-top(40);
+        position: relative;
+        .width(460); // background-color: red;
+        &:before {
+            content: ' ';
+            position: absolute;
+            .top(84);
+            .right(0); // transform: translate(-50%,0);
+            .width(2);
+            .height(323);
+            background: #b3b3b3;
+        }
+        .headIcon {
+            overflow: hidden;
+            .width(173);
+            .height(173);
+            .border-radius(100, 100, 100, 100);
+            background-color: #ededed;
+            border-width: 1px;
+            border-style: solid;
+            position: relative;
+            border-color: #7dc1ea;
+            .margin(0, 0, 20, 152);
+            background-image: url("/maternal-ipad/center/woman.png");
+            background-repeat: none;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; // .background-size(173,173);
+            // img{
+            // .width(173);
+            // .height(173);
+            // }
+            a {
+                position: absolute;
+                .top(120);
+                left: 0;
+                .preview {
+                    text-align: center;
+                    background-color: black;
+                    opacity: 0.5;
+                    .height(50);
+                    .line-height(50);
+                    .width(167);
+                    .font-size(26);
+                    color: #fff;
+                }
+            }
+        }
+        p {
+            .margin(0,
+            0,
+            25,
+            130);
+        }
+        .name {
+            .font-size(40);
+            color: #333333;
+            .margin-right(30);
+        }
+        .age {
+            .font-size(36);
+            color: #666666;
+        }
+        p:nth-child(3) {
+            color: #b3b3b3;
+            .font-size(28);
+            span {
+                .font-size(28);
+                .margin-right(20);
+                color: #333333;
+            }
+            span:nth-child(2) {
+                .font-size(28);
+                .margin-left(20);
+                color: #333333;
+            }
+        }
+        .BMLValue {
+            .width(120);
+            .height(68);
+            background-color: #77bee9;
+            color: #fff;
+            text-align: center;
+            .line-height(68);
+            .font-size(26);
+            display: inline-block;
+            .margin-left(170);
+        }
+        .gestationIcon {
+            .width(120);
+            .height(68);
+            background-color: #77bee9;
+            color: #fff;
+            text-align: center;
+            .line-height(68);
+            .font-size(26);
+            display: inline-block;
+            .margin-left(15);
+        }
+    }
+    .rightBox {
+        .padding-top(30);
+        float: left;
+        .width(1460);
+        form {
+            .padding-left(40);
+            .row-left {
+                float: left;
+                .margin-bottom(20);
+                .margin-right(60);
+                label {
+                    .font-size(36);
+                    color: @333;
+                }
+                input {
+                    .width(430);
+                    .font-size(36);
+                    color: #666666;
+                    border: none;
+                    border-bottom: 1px solid #ccc !important;
+                    -moz-user-select: none;
+                    -webkit-user-select: none;
+                }
+            }
+            .factor,
+            .familyHistory {
+                input {
+                    .width(1150);
+                }
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    .margin(20,
+    40,
+    0,
+    40);
+    .padding-bottom(80);
+    .box-shadow();
+    background-color: #fff;
+    .tebBox {
+        .layui-tab-title {
+            position: relative;
+            left: 0; // .height(40);
+            white-space: nowrap;
+            font-size: 0; // border: 1px solid #ccc;
+            transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+        }
+        ul {
+            //   .height(102);
+            .padding-bottom(100);
+            li {
+                .font-size(40); // color: #68b7e7;
+                .margin(30,
+                0,
+                25,
+                45);
+                .padding(0,
+                15,
+                0,
+                15);
+                .line-height(40);
+                display: inline-block;
+                vertical-align: middle;
+                transition: all 0.2s;
+                -webkit-transition: all 0.2s;
+                position: relative;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+    }
+    .layui-tab-content {
+        padding: 0; //  .max-height(420);
+        .recordBox {
+            .padding(25,
+            20,
+            0,
+            20);
+            .height(750);
+            .min-height(750);
+            overflow: scroll;
+            position: relative;
+            .recordTable {
+                .margin-bottom(20);
+                width: 100%;
+                border: 1px solid #999999;
+                thead {
+                    tr {
+                        th {
+                            .height(90);
+                            background-color: #f6f6f6;
+                            width: 100%;
+                            color: #68b7e7;
+                            .font-size(36);
+                            span {
+                                .padding(0,
+                                37,
+                                0,
+                                37);
+                                position: relative;
+                                font-weight: 100;
+                            }
+                            .bias1 {
+                                &:before {
+                                    content: ' ';
+                                    position: absolute;
+                                    .top(0);
+                                    .right(0);
+                                    .width(2);
+                                    .height(50);
+                                    background: #68b7e7;
+                                }
+                            }
+                            .bias2 {
+                                &:before {
+                                    content: ' ';
+                                    position: absolute;
+                                    .top(0);
+                                    .right(0);
+                                    .width(2);
+                                    .height(50);
+                                    background: #68b7e7;
+                                }
+                            }
+                            a {
+                                color: #68b7e7;
+                                .font-size(32);
+                                float: right;
+                                font-weight: 100;
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        .font-size(36);
+                        td {
+                            .padding-left(30);
+                            .width(386);
+                            .height(88);
+                            border-width: 1px;
+                            border-color: #999999;
+                            border-style: solid;
+                            span {
+                                color: #666666;
+                            }
+                            .unit {
+                                .font-size(32);
+                                color: #666666;
+                            }
+                            .resordTable_div {
+                                .resordTableInput {
+                                    .font-size(36);
+                                    color: #666666;
+                                    .padding-left(30);
+                                    .margin-bottom(70); // border:1px solid #ccc !important;
+                                    border: none;
+                                    border-bottom: 1px;
+                                    border-bottom-color: #ccc;
+                                    border-bottom-style: solid;
+                                }
+                                .resordTableInput1 {
+                                    .width(1670);
+                                }
+                                .resordTableInput2 {
+                                    .width(1584);
+                                }
+                                .resordTableInput3 {
+                                    .width(400);
+                                }
+                                .operationDoctor {
+                                    .padding(20,
+                                    20,
+                                    20,
+                                    20);
+                                    text-align: right;
+                                    float: right;
+                                    >span {
+                                        .font-size(36);
+                                        color: #333333;
+                                    }
+                                    >img {
+                                        .width(223);
+                                        .height(121);
+                                        background: #f6f6f6;
+                                        border: 1px solid #999999;
+                                    }
+                                }
+                            }
+                            .resordTable_div:nth-child(1) {
+                                .margin-top(45);
+                            }
+                        }
+                    }
+                }
+            }
+            .noneData {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                img {
+                    .width(367);
+                    .height(240);
+                }
+                h2 {
+                    .font-size(36);
+                    color: #333333;
+                }
+                p {
+                    .font-size(30);
+                    color: #999999;
+                }
+            }
+        } // 高危评估块
+        .assessBox {
+            .padding(25,
+            20,
+            0,
+            20);
+            .height(750);
+            .min-height(750);
+            overflow: scroll;
+            position: relative;
+            .assessItem {
+                .margin-bottom(25);
+                border: 1px solid #999999;
+                .titleBox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .line-height(90);
+                    background: #f6f6f6;
+                    >p {
+                        .font-size(36);
+                        color: #68b7e7;
+                        >span {
+                            .padding(0,
+                            35,
+                            0,
+                            35);
+                        }
+                    }
+                    .detailsBtn {
+                        .font-size(32);
+                        color: #68b7e7;
+                        .padding(0,
+                        50,
+                        0,
+                        50);
+                    }
+                    .riskItem {
+                        display: inline-block;
+                        color: #fff;
+                        .font-size(30);
+                        .margin-left(38);
+                        .line-height(50);
+                    }
+                }
+                .content {
+                    .padding(0,
+                    20,
+                    0,
+                    20);
+                    >h2 {
+                        .font-size(36);
+                        color: #333333;
+                        .padding(30,
+                        0,
+                        30,
+                        0);
+                    }
+                    >p {
+                        display: flex;
+                        .font-size(34);
+                        color: #666666;
+                        .margin-bottom(32);
+                        .text {
+                            flex: 1;
+                            .padding-left(30);
+                            border-bottom: 1px solid #999999;
+                        }
+                    }
+                    .remarksText {
+                        border-bottom: 1px solid #999999;
+                    }
+                }
+                .doctorSignature {
+                    .padding(20,
+                    20,
+                    20,
+                    20);
+                    text-align: right;
+                    >span {
+                        .font-size(36);
+                        color: #333333;
+                    }
+                    >img {
+                        .width(223);
+                        .height(121);
+                        background: #f6f6f6;
+                        border: 1px solid #999999;
+                    }
+                }
+            }
+            .noneData {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .width(500);
+                .height(400);
+            }
+        } // 产后42天模块
+        .fortyTwoBox {
+            .padding(25,
+            20,
+            0,
+            20);
+            .height(750);
+            .min-height(750);
+            overflow: scroll;
+            position: relative;
+            .postpartum {
+                .margin-bottom(25);
+                border: 1px solid #999999;
+                .titleBox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .line-height(90);
+                    background: #f6f6f6;
+                    >p {
+                        .font-size(36);
+                        color: #68b7e7;
+                        >span {
+                            .padding(0,
+                            35,
+                            0,
+                            35);
+                        }
+                    }
+                    .fortyTwoBtn {
+                        .font-size(32);
+                        color: #68b7e7;
+                        .padding(0,
+                        50,
+                        0,
+                        50);
+                    }
+                    .riskItem {
+                        display: inline-block;
+                        color: #fff;
+                        .font-size(30);
+                        .margin-left(38);
+                        .line-height(50);
+                    }
+                }
+                .content {
+                    .padding(0,
+                    20,
+                    0,
+                    20);
+                    .borderBottom {
+                        border-bottom: 1px dashed #ccc;
+                        .padding-bottom(40);
+                        >h2 {
+                            .font-size(36);
+                            color: #333333;
+                            .padding(30,
+                            0,
+                            30,
+                            0);
+                        }
+                        >p {
+                            span {
+                                .padding(0,
+                                30,
+                                0,
+                                30);
+                                .font-size(32);
+                                i {
+                                    font-style: normal;
+                                }
+                            }
+                        }
+                        span {
+                            .padding(0,
+                            30,
+                            0,
+                            30);
+                            .font-size(32);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    }
+                }
+            }
+            .noneData3 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                img {
+                    .width(367);
+                    .height(240);
+                }
+                h2 {
+                    .font-size(36);
+                    color: #333333;
+                }
+            }
+            .notAvailable {
+                display: none;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                .font-size(36);
+                color: #333333;
+            }
+        }
+    }
+    input[type="button"] {
+        .font-size(40);
+        position: absolute;
+        .bottom(-50);
+    }
+    .backBtn {
+        .width(314);
+        .height(98);
+        border: 1px
+        /* 1/16 */
+        solid #999;
+        background-color: @ccc;
+        color: @666;
+        .left(40);
+        .font-size(40);
+        position: absolute;
+        .bottom(-50);
+        text-align: center;
+        .line-height(98);
+    }
+    .increased {
+        .width(316);
+        .height(100);
+        background-color: #68b7e7;
+        color: #fff;
+        .right(40);
+        .font-size(40);
+        position: absolute;
+        .bottom(-50);
+        text-align: center;
+        .line-height(98);
+    }
+    .increased2 {
+        display: none;
+        .width(316);
+        .height(100);
+        background-color: #68b7e7;
+        color: #fff;
+        .right(40);
+        .font-size(40);
+        position: absolute;
+        .bottom(-50);
+        text-align: center;
+        .line-height(98);
+    }
+    .active {
+        background-color: #cccccc;
+        color: #666666;
+    }
+}
+
+// 查看大图-start
+.bigImgContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    display: none;
+    .width(1505);
+    .height(1000);
+    background: #f6f6f6;
+    .padding(55,
+    55,
+    55,
+    55);
+    >img {
+        .width(1390);
+        .height(760);
+        border: 1px solid #999999;
+    }
+    >a {
+        float: right;
+        .margin-top(43);
+        .width(240);
+        text-align: center;
+        .line-height(86);
+        .font-size(34);
+        color: #ffffff;
+        background: #68b7e7;
+    }
+}
+
+// 查看大图-end
+// BMI弹窗 -star
+.BMIlayer {
+    background-color: #f2f2f2;
+    .width(1410);
+    .box-shadow();
+    border: 2px solid #b3b3b3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    .popoutTopp {
+        width: 100%;
+        .height(90);
+        background-color: #ededed;
+        .padding(0,
+        40,
+        0,
+        40);
+        .padding-top(30);
+        span {
+            float: left;
+            .font-size(36);
+            color: black;
+        }
+        img {
+            float: right;
+            .width(32);
+            .height(32);
+        }
+    }
+    .BMIlayer_main {
+        background-color: #f5f5f5;
+        .padding(30,
+        30,
+        30,
+        30);
+        .BMIlayer_main_top {
+            background-color: #fff;
+            .padding-left(50);
+            .padding-bottom(53);
+            .box-shadow();
+            .margin-bottom(20);
+            H3 {
+                .font-size(36);
+                color: black;
+                .padding-top(40);
+                .padding-bottom(15);
+            }
+            p {
+                .font-size(28);
+                color: #333333;
+                .padding-bottom(15);
+            }
+        }
+        .BMIlayer_main_bottom {
+            background-color: #fff;
+            vertical-align: middle;
+            .padding(0,
+            0,
+            30,
+            0);
+            .box-shadow();
+            .lengthways {
+                writing-mode: tb-rl;
+                .font-size(36);
+                float: left;
+                .letter-spacing(20);
+                .padding(125,
+                30,
+                0,
+                30);
+            }
+            #chartmain {
+                float: left;
+                .margin-bottom(30);
+                .width(1210) !important;
+                .height(500) !important;
+            }
+            .lengtweeks {
+                text-align: center;
+                margin: 0 auto;
+                .font-size(36);
+            }
+        }
+    }
+}
+
+// BMI弹窗 -end

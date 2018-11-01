@@ -1,0 +1,400 @@
+@import "../css/reset.css";
+@import "../css/root.less";
+body {
+    background: #ededed;
+    .padding(0, 40, 0, 40);
+        .shadow{
+        display: none;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.7;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+   
+    
+}
+}
+
+h1 {
+    .font-size(48);
+    color: #666666;
+    border-left: 4px solid #68b7e7;
+    .margin(55, 0, 55, 22);
+    .padding-left(16);
+    
+}
+
+.leftContent {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .width(324);
+    .height(1256);
+    background: #fff;
+    .navContent {
+        >a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            .line-height(120);
+            text-align: center;
+            border-bottom: 2px solid #cccccc;
+            .font-size(36);
+            color: #666666;
+            font-weight: bold;
+            .navItem_one {
+                .width(50);
+                .height(54);
+                .margin-right(25);
+                background: url("./icon3.png") no-repeat;
+                .background-size(50,
+                54);
+            }
+            .navItem_two {
+                .width(50);
+                .height(54);
+                .margin-right(25);
+                background: url("./icon4.png") no-repeat;
+                .background-size(50,
+                54);
+            }
+            &.active {
+                color: #68b7e7;
+                .navItem_one {
+                    background: url("./icon3.3.png") no-repeat;
+                    .background-size(50,
+                    54);
+                }
+                .navItem_two {
+                    background: url("./icon4.4.png") no-repeat;
+                    .background-size(50,
+                    54);
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 1px;
+                    width: 0;
+                    height: 0;
+                    border-left: 0.45rem solid #fff;
+                    border-top: 0.45rem solid transparent;
+                    border-bottom: 0.45rem solid transparent;
+                    border-right: none;
+                    transform: translate(100%, -50%);
+                }
+            }
+        }
+    }
+    .goBackBtn {
+        .margin(0,
+        20,
+        25,
+        20);
+        .line-height(94);
+        text-align: center;
+        .font-size(36);
+        color: #777777;
+        background: #d8d8d8;
+    }
+}
+
+.contaienr {
+    float: right;
+    .width(1612); // .height(1256);
+    // overflow-y: scroll;
+    background: #fff;
+    .content {
+        display: none;
+    }
+    .active {
+        display: block;
+    } // 高危评估页
+    .assessment {
+        position: relative;
+        .padding(20,
+        22,
+        70,
+        22);
+        .assessmentContent {
+            .height(1166);
+            overflow-y: scroll;
+            .tilteText {
+                .font-size(40);
+                color: #333333;
+                .line-height(84);
+                .padding-left(40);
+            }
+            >h2 {
+                border-bottom: 1px solid #999;
+            }
+            .assessmentBox {
+                border-left: 1px solid #999999;
+                border-right: 1px solid #999999;
+                border-bottom: 1px solid #999999;
+                display: flex;
+                .topicBox {
+                    display: flex;
+                    flex: 1;
+                    flex-wrap: wrap;
+                    .padding(30,
+                    0,
+                    30,
+                    30);
+                    >a {
+                        .font-size(32);
+                        color: #666666;
+                        .line-height(60);
+                        .padding-left(50);
+                        .margin-right(30);
+                        background: url("./radio_false.png") no-repeat left center;
+                        .background-size(32,
+                        32);
+                        &.active {
+                            background: url("./radio_true.png") no-repeat left center;
+                            .background-size(32,
+                            32);
+                        }
+                    }
+                }
+                .scoreBox {
+                    display: flex;
+                    .width(140);
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-left: 1px solid #999999;
+                    >p {
+                        .font-size(32);
+                        color: #333333;
+                        .line-height(52);
+                    }
+                }
+            }
+            .navContent {
+                display: flex;
+                >a {
+                    display: flex;
+                    flex: 1;
+                    text-align: center;
+                    .font-size(36);
+                    color: #666666;
+                    .height(92);
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px solid #999999;
+                    &.active {
+                        border: 1px solid #999;
+                        border-bottom: none;
+                        color: #68b7e7;
+                    }
+                }
+            }
+            .bodyContent {
+                .item {
+                    display: none;
+                }
+                .active {
+                    display: block;
+                }
+            }
+        }
+    } // 签字确认页
+    .affirm {
+        position: relative;
+        .padding(45,
+        53,
+        45,
+        120);
+        .affirmContent {
+            .height(1166);
+            overflow-y: scroll;
+            .affirmBox1 {
+                border-bottom: 1px dashed #999999;
+                div {
+                    display: inline-block;
+                    .padding-bottom(30);
+                }
+                .affirmBox1_left {
+                    text-align: center;
+                    .padding-right(25);
+                    .border-right(1);
+                    border-right-color: #999999;
+                    border-right-style: dashed;
+                    p:nth-child(1) {
+                        .font-size(60);
+                        color: #68b7e7;
+                    }
+                    p:nth-child(2) {
+                        .font-size(32);
+                        color: #666666;
+                    }
+                }
+                .affirmBox1_right {
+                    .padding-left(35);
+                    vertical-align: top;
+                    p:nth-child(1) {
+                        .font-size(36);
+                        color: #333333;
+                        .margin-bottom(30);
+                    }
+                    p:nth-child(3) {
+                        .font-size(36);
+                        color: #666666;
+                        span {
+                            .padding-right(33);
+                            i {
+                                font-style: normal;
+                            }
+                        }
+                    }
+                       #riskItem {
+                    display: inline-block;
+                    color: #fff;
+                    .font-size(30);
+                    .margin-left(38);
+                    .line-height(50);
+                    .padding(0,10,0,10);
+                }
+
+                }
+            }
+            .affirmBox2 {
+                border-bottom: 1px dashed #999999;
+                overflow: hidden;
+             
+                .padding-right(40);
+                h3 {
+                    display: block;
+                    .font-size(36);
+                    color: #333333;
+                    .margin(45,
+                    0,
+                    60,
+                    0);
+                    .remark {
+                        .width(1200);
+                        border: none !important;
+                        border-bottom: 1px solid #333 !important;
+                        .padding-left(30);
+                    }
+                }
+                .cf {
+                    // float: left;
+                    .margin(20,0,20,0);
+                       display: flex;
+                    span {
+                        // float: left;
+                        .font-size(32);
+                        color: #666666;
+                        display: inline-block;
+                    }
+                    div{
+                        flex: 1;
+                        border-bottom: 1px solid black;
+                        .width(1100);
+                        .margin-left(30);
+                        .padding-top(40);
+                        .padding-left(30);
+                    }
+                }
+            }
+            .affirmBox3 {
+                .padding-top(40);
+                p:nth-child(1) {
+                    .font-size(30);
+                    color: #68b7e7;
+                    .margin-bottom(30);
+                }
+                p:nth-child(2) {
+                    .font-size(28);
+                    color: #666666;
+                    .margin-bottom(70);
+                }
+                .signLeft {
+                    float: left;
+                    .patientSignature {
+                        .width(500);
+                        .height(270);
+                        background-color: #f6f6f6;
+                        .margin(40,
+                        0,
+                        40,
+                        0);
+                    }
+                }
+                .signRight {
+                    float: right;
+                    .doctorSignature {
+                        .width(500);
+                        .height(270);
+                        background-color: #f6f6f6;
+                        .margin(40,
+                        170,
+                        40,
+                        0);
+                    }
+                }
+                span {
+                    .font-size(40);
+                    color: #666666;
+                }
+            }
+        }
+    }
+}
+
+.nextStep {
+    position: absolute;
+    .bottom(-50);
+    .right(45);
+    .width(316);
+    text-align: center;
+    .line-height(100);
+    color: #ffffff;
+    .font-size(40);
+    background: #68b7e7;
+}
+.promptContent {
+    display: none;
+    .width(740);
+    .height(400);
+    background: #fff;
+    .padding(50,
+    100,
+    0,
+    100);
+    >p {
+        text-align: center;
+        .font-size(40);
+        .line-height(90);
+        color: #333333;
+    }
+    .btnBox {
+        .margin-top(120);
+        display: flex;
+        justify-content: space-between;
+        >a {
+            .width(246);
+            .line-height(92);
+            .font-size(36);
+            text-align: center;
+            .border-radius();
+            &.noBtn {
+                border: 1px solid #cccccc;
+                color: #666666;
+                background: #fff;
+            }
+            &.yesBtn {
+                color: #ffffff;
+                background: #68b7e7;
+            }
+        }
+    }
+}

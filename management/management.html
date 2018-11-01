@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 网站标题 google：66个字符也就是33个文字以内 百度：60个字符也就是30个文字以内 -->
+    <title>孕产妇档案管理</title>
+    <!-- 用户是否可以通过他的手势来缩放整个应用程序 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <!-- 作者 -->
+    <meta name="author" content="">
+    <!-- 描述 google：240个字符即120个文字以内 百度：220个字符即110个文字以内 -->
+    <meta name="description" content="">
+    <!-- 关键字 不超过100个字符50个文字以内 -->
+    <meta name="Keywords" content="">
+    <meta name="full-screen" content="yes" />
+    <!-- 将不识别手机号 -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 将不识别邮箱 -->
+    <meta name="format-detection" content="email=no" />
+    <!-- 禁止跳转至地图 -->
+    <meta name="format-detection" content="address=no" />
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <script type="text/javascript">
+        !(function(doc, win) {
+            var docEle = doc.documentElement, //获取html元素
+                event = "onorientationchange" in window ? "orientationchange" : "resize",
+                fn = function() {
+                    var width = docEle.clientWidth;
+                    width && (docEle.style.fontSize = (width / 51.2) + "px");
+                }
+            win.addEventListener(event, fn, false);
+            win.addEventListener("DOMContentLoaded", fn, false);
+            win.addEventListener("resize", fn, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" href="/maternal-ipad/plugins/layui/css/layui.css">
+    <link rel="stylesheet/less" type="text/css" href="/maternal-ipad/management/management.less" />
+    <script src="/maternal-ipad/js/jquery.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/plugins/layui/layui.all.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/less.min.js"></script>
+    <script src="/maternal-ipad/js/utils.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/js/root.js" charset="utf-8"></script>
+    <script src="/maternal-ipad/management/management.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- <script type="text/javascript">
+        var tempData = "123654";
+        function QRCodeText(data) {
+            tempData = data;
+            var postData;
+            // var pageNum = 1;
+            // var pageSize = 10;
+            // var filingType = 1;
+             if ($(".nameInput").val() == '' && $(".numInput").val() == '') {
+                postData = {
+                    "paramDetail": tempData,
+                    "paramType": 2,
+                    "pageNum": pageNum,
+                    "pageSize": pageSize,
+                    "filingType": filingType,
+                    "orderByType": 0,
+                    "token": token,
+                }
+            }
+            
+                // 档案列表查询
+                HttpRequstForPost(httpUrl.findListWithParamForFiling, 'json', postData, function sucFn(data) {
+                    if (data.status == 20200) {
+                        tempArr = data.patientCenterBeanList;
+                        var _html = '';
+                        for (var i = 0; i < tempArr.length; i++) {
+                           
+                            // console.log(totalNumArr)
+                            // 高危评分类型 0.无-默认 1.黄 2.橙 3.红 4.紫
+                            if (tempArr[i].highRiskClass == 0) {
+                                _html += '<tr><td class="id">' + ((pageNum - 1) * pageSize + i + 1) + '<div class="tag"></div></td>';
+                            } else if (tempArr[i].highRiskClass == 1) {
+                                _html += '<tr><td class="id">' + ((pageNum - 1) * pageSize + i + 1) + '<div class="tag level1"></div></td>';
+                            } else if (tempArr[i].highRiskClass == 2) {
+                                _html += '<tr><td class="id">' + ((pageNum - 1) * pageSize + i + 1) + '<div class="tag level2"></div></td>';
+                            } else if (tempArr[i].highRiskClass == 3) {
+                                _html += '<tr><td class="id">' + ((pageNum - 1) * pageSize + i + 1) + '<div class="tag level3"></div></td>';
+                            } else if (tempArr[i].highRiskClass == 4) {
+                                _html += '<tr><td class="id">' + ((pageNum - 1) * pageSize + i + 1) + '<div class="tag level4"></div></td>';
+                            }
+                            _html += '<td class="username">' + tempArr[i].checkName + '</td>\
+                            <td class="idCard">' + tempArr[i].checkIdCard + '</td>\
+                            <td class="age">' + tempArr[i].checkAge + '</td>\
+                            <td class="gestational">' + tempArr[i].newAgeOfMenarche + '+' + tempArr[i].newAgeOfMenarcheDay + '</td>\
+                            <td class="pregnant">' + tempArr[i].parturitionDetailDueDate + '</td>';
+                            // 体格检查-血型 0.O型-默认 1.A型 2.B型 3.AB型 4.RH型
+                            if (tempArr[i].healthAssayBloodType == '') {
+                                _html += '<td class="blood"></td>';
+                            } else if (tempArr[i].healthAssayBloodType == 0) {
+                                _html += '<td class="blood">O型</td>';
+                            } else if (tempArr[i].healthAssayBloodType == 1) {
+                                _html += '<td class="blood">A型</td>';
+                            } else if (tempArr[i].healthAssayBloodType == 2) {
+                                _html += '<td class="blood">B型</td>';
+                            } else if (tempArr[i].healthAssayBloodType == 3) {
+                                _html += '<td class="blood">AB型</td>';
+                            } else if (tempArr[i].healthAssayBloodType == 4) {
+                                _html += '<td class="blood">RH型</td>';
+                            }
+                            _html += '<td class="grade">' + tempArr[i].highRiskNumber + '</td>'
+                            if (tempArr[i].highRiskTotalNum !== '') {
+                                var totalNumArr = eval("(" + tempArr[i].highRiskTotalNum + ")");
+                                if (totalNumArr.purple > 0) {
+                                    _html += '<td class="element">紫色' + "（" + totalNumArr.purple + "）" + '项</td>';
+                                } else if (totalNumArr.red > 0) {
+                                    _html += '<td class="element">红色' + "（" + totalNumArr.red + "）" + '项</td>';
+                                } else if (totalNumArr.orange > 0) {
+                                    _html += '<td class="element">橙色' + "（" + totalNumArr.orange + "）" + '项</td>';
+
+                                } else if (totalNumArr.yellow > 0) {
+                                    _html += '<td class="element">黄色' + "（" + totalNumArr.yellow + "）" + '项</td>';
+
+                                } else {
+                                    _html += '<td class="element">绿色' + "（" + totalNumArr.green + "）" + '项</td>';
+
+                                }
+                            } else {
+                                _html += '<td></td>'
+                            }
+                            
+                            if (filingType == 1) {
+                                _html += "<td class='operation'><a href='javascript:;' class='look' data='" + JSON.stringify(tempArr[i]) + "'>查看</a></td>";
+                            } else {
+                                _html += "<td class='operation'><a href='javascript:;' class='supplement' data='" + JSON.stringify(tempArr[i]) + "'>补充档案</a></td>";
+                            }
+                            _html += '</tr>'
+                        }
+                        
+                        $(".recordBody").html(_html);
+                    } else if (data.status == 20250) {
+                        // window.location = '/maternal-ipad/login/login.html';
+                    } else if (data.status == 20209) {
+                        $(".recordBody").html('');
+                    }
+                },
+                    function errfn(err) {
+                        $(".numInput").val(data);
+                         layer.msg('操作失败，请稍后重试');
+                        layer.msg('操作失败');
+                    });
+        }
+    </script> -->
+    <span class="management">档案管理</span>
+    <div class="box">
+        <header>
+            <div class="item-ifo">
+                <input type="text" placeholder="请输入姓名" class="nameInput">
+                <i class="my"></i>
+            </div>
+            <div class="item-ifo">
+                <input type="tel" placeholder="请输入孕妇手机号" class="numInput">
+                <i class="lookpng"></i>
+            </div>
+            <a href="javascript:;">
+                <img src="/maternal-ipad/management/ma.png" alt="扫码" class="scanCode">
+            </a>
+            <div class="inquire">查询/刷新</div>
+        </header>
+        <main>
+            <div class="tableBox">
+                <table class="layui-table" lay-even>
+                    <thead>
+                        <tr>
+                            <th class="w112">序号</th>
+                            <th class="w165">姓名</th>
+                            <th class="w470">身份证</th>
+                            <th class="w125">年龄</th>
+                            <th class="w130">孕周</th>
+                            <th class="w243">预产期</th>
+                            <th class="w116">血型</th>
+                            <th class="w112">评分<br/>等级</th>
+                            <th class="">高危因素</th>
+                            <th class="w180">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="recordBody">
+                        <tr>
+                            <td class="id">1
+                                <div class="tag"></div>
+                            </td>
+                            <td class="username">陈鑫磊</td>
+                            <td class="idCard">1302281988092741118</td>
+                            <td class="age">29</td>
+                            <td class="gestational">26+3</td>
+                            <td class="pregnant">2017-10-03</td>
+                            <td class="blood">B</td>
+                            <td class="grade">10</td>
+                            <td class="element">
+                                <p class="greenStrip">绿色(0)项</p>
+                                <p class="yellowStrip">黄色（12）项</p>
+                                <p class="orangeStrip">橙色（12）项</p>
+                                <p class="proponStrip">紫色（12）项</p>
+                                <p class="redStrip">红色（12）项</p>
+                            </td>
+                            <td class="operation">
+                                <a href="javascript:;" class="look">查看</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pageBox clearfix">
+                <div id="test1"></div>
+                <b>操作人：
+                    <span class="name">某某某</span>医生</b>
+            </div>
+            <div class="backBtn">返回</div>
+            <div class="likeBtnBox">
+                <div class="likeBtn" name='1'>新申请列表</div>
+                <div class="sup"></div>
+            </div>
+            <a href="/maternal-ipad/functionPage/functionPage.html">
+                <div class="newBtn">新建档案</div>
+            </a>
+        </main>
+    </div>
+</body>
+
+</html>

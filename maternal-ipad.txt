@@ -1,9 +1,5 @@
-# maternal-pad
-#pad端高危孕产妇项目
-
-    
-        ## maternal-ipad 孕产妇-ipad端 目录结构 ##
- /maternal-ipad
+maternal-ipad 孕产妇-ipad端 目录结构
+/maternal-ipad
     /js                         公共js
         /search.js  家族史模糊搜索
     /css                        公共css
@@ -15,20 +11,20 @@
         /index.less
         *.png
         *.jpg
-     ###/login                                        登录###
+    /login                                        登录
         /login.html
         /login.js
         /login.less
         *.png
         *.jpg
 
-    ###/management                                  档案管理###
+    /management                                  档案管理
          /management.html
         /management.js
         /management.less
         *.png
 
-    ###/center                                      个人中心###
+    /center                                      个人中心
         /center.heml
         /center.less
         /center.js
@@ -39,24 +35,24 @@
 
   
 
-    ###/functionPage                                  新建功能页###
+    /functionPage                                  新建功能页
         functionPage.less
         functionPage.js
         *.png
         
-    ###/supplement                                    补充档案###
+    /supplement                                    补充档案
              /supplement.html
 
 
-    ###/added                                         新增记录###
+    /added                                         新增记录
              /addExamineParticulars                         新增复检记录
     /addFortyTwo 
             /addFortyTwo.html                               新增产后42天
             /fortyTwoParticulars.html                       产后42天详情
             
-   ### /addHighRisk                                   高危新增###
+    /addHighRisk                                   高危新增
         /addHighRisk.html
-   ### /particulars                                   详情 ###
+    /particulars                                   详情
         /examineParticulars.html                             复检详情页
             examineParticulars.less
             examineParticulars.js
@@ -64,11 +60,11 @@
             assessmentParticulars.less
             assessmentParticulars.js
 
-    ### /personalSettings                             个人设置 ###
+    /personalSettings                             个人设置
              /personalSettings.html
 
-   ### /statistics
-        /statistics.html                          统计     ###
+    /statistics
+        /statistics.html                          统计     
     /BuildFile
         /BuildFile.html                           已建档患者全部数据列表
     /today
@@ -76,9 +72,32 @@
 
     /badNum 
         badNum.html                              预分娩床位数量统计
-    
+        
 
+--------------------------------
+ $.ajax({
+     type: 'POST',
+     url: httpUrl.findForFilingList,
+     xhrFields: {
+         withCredentials: true
+     },
+     dataType: 'json',
+     data: {
 
+     },
+    //  async: false,
+    // crossDomain: true,
+    // global: false,
+     success: function (data) {
+         console.log(data)
+         if (data.status == 20200) {
 
-    
-  
+         } else {
+
+         }
+     },
+     error: function (err) {
+
+     },
+ });
+
